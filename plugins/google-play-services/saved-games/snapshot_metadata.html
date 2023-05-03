@@ -122,12 +122,38 @@
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
+                        <p class="content">
+                            The SnapshotMetadata struct is designed to mimic the SnapshotMetadata provided by the Google Play Services SDK for the Snapshots service.
+                            It contains various additional pieces of information about a snapshot.
+                        </p>
+                        <p class="content">
+                            The read and write fields of the SnapshotMetadata struct are Description, PlayedTime and ProgressValue.
+                            These values can be changed during save and conflict resolution actions.
+                            The PlayedTime and ProgressValue fields can work with the provided <a href="resolution_policy.html">Conflict Resolution Policies</a> <span style="font-weight: 500">RESOLUTION_POLICY_LONGEST_PLAYTIME</span> and <span style="font-weight: 500">RESOLUTION_POLICY_HIGHEST_PROGRESS</span> respectively.
+                        </p>
+                        <p class="content">
+                            The read only fields of the SnapshotMetadata struct are SnapshotID, UniqueName, Title, LastModifiedTimestamp and DeviceName.
+                            These values cannot be changed, with the exception of LastModifiedTimestamp and DeviceName which automatically get updated when overwriting a Snapshot with the <a href="saving_game.html">Saving a Game</a> blueprint node.
+                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            Snapshot Metadata Struct shows information about a snapshot.
+                            By using the <a href="fetch_games.html">Fetch Games</a> blueprint node, developers can easily retrieve and store information about their game's snapshots, and use it to build a better gaming experience for their users.
                         </p>
                     </div>
                 </div>
-                <canvas class="my-4 w-100" id="myChart"></canvas>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; align-items: center;">
+                        <img src="../../../images/SavedGames/SavedGames_Object_SnapshotMetadata.png" style="max-width: 70%;">
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Table of fields, types and descritpions goes here...
+                        </p>
+                    </div>
+                </div>
+                <div style="margin-bottom: 150px">
+                </div>
             </main>
         </div>
       </div>

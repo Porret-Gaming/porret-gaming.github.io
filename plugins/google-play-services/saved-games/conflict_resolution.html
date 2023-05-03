@@ -70,6 +70,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link inactive" href="fetch_games.html">
+                                Fetch Games
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" href="conflict_resolution.html">
                                 Conflict Resolution
                             </a>
@@ -86,6 +91,16 @@
                         <li class="nav-item">
                             <a class="nav-link inactive" href="snapshot.html">
                                 Snapshot
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="resolution_policy.html">
+                                Resolution Policy
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="snapshot_error.html">
+                                Snapshot Error
                             </a>
                         </li>
                         <hr/>
@@ -106,13 +121,36 @@
                     <h1 class="h2">Conflict Resolution</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="jumbotron" style="padding: 20px; margin-bottom: 0rem;">
+                    <div class="info">
+                        <p class="content">
+                            This is an asynchronous function which allows you to save a game to a snapshot in Google Play Services.
+                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            Conflict Resolution is an option used when saving/loading games to define how the user would like to handle conflicts.
+                            The parameters include the name of the slot to save to, a description of the save game, the amount of time played, a progress value, the save game object to be saved and the conflict resolution policy to be used.
+                            <br/>Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
                         </p>
                     </div>
                 </div>
-                <canvas class="my-4 w-100" id="myChart"></canvas>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/SavedGames/SavedGames_Plugin_SetManualConflictResolution.png" style="max-width: 70%;">
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                    <span class="badge badge-primary">1</span>
+                    <div class="info">
+                        <p class="content">
+                            <b>Slot Name</b>
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The slot name is a string that uniquely identifies the slot where the save game will be stored.
+                            A slot represents a specific point in time that the game was saved, and multiple snapshots can be stored under different slot names.
+                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it will overwrite the existing slots data.
+                        </p>
+                    </div>
+                </div>
+                <div style="margin-bottom: 150px">
+                </div>
             </main>
         </div>
       </div>
@@ -120,20 +158,20 @@
     <footer class="bg-dark text-light">
     <div class="container py-4">
         <div class="row">
-        <div class="col-md-6 mb-4 mb-md-0">
-            <h5><b>Links</b></h5>
-            <ul class="list-unstyled mb-0">
-            <li><a href="index.html" class="text-light">Home</a></li>
-            <li><a href="contact.html" class="text-light">Contact</a></li>
-            <li><a href="privacy_policy.html" class="text-light">Squiggle Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="col-md-6 mb-4 mb-md-0">
-            <h5><b>Contact</b></h5>
-            <ul class="list-unstyled mb-0">
-            <li class="text-light">Email: porretgaming@gmail.com</li>
-            </ul>
-        </div>
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h5><b>Links</b></h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="../../../index.html" class="text-light">Home</a></li>
+                    <li><a href="../../../contact.html" class="text-light">Contact</a></li>
+                    <li><a href="../../../privacy_policy.html" class="text-light">Squiggle Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h5><b>Contact</b></h5>
+                <ul class="list-unstyled mb-0">
+                <li class="text-light">Email: porretgaming@gmail.com</li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="bg-dark py-2">

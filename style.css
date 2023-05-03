@@ -21,9 +21,6 @@ nav {
     background: black;
     /* overflow: hidden; */
 }
-img {
-    opacity: 0.6;
-} 
 .overlay-text {
     position: absolute;
     top: 50%;
@@ -73,3 +70,31 @@ hr {
 .content {
     font-size: 1.1rem;
 }
+
+.info {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px #ccc;
+    padding: 10px;
+    margin-bottom: 0rem;
+    font-size: 1.25rem;
+    font-weight: 350;
+    /* text-align: center; */
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.3);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-weight: bold;
+  }

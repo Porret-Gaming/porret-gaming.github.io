@@ -30,9 +30,10 @@
             </ul>
         </div>
     </nav>
-    <!-- Side Navigation Bar -->
+    
     <div class="container-fluid">
         <div class="row">
+            <!-- Side Navigation Bar -->        
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
                 <div class="sidebar-sticky" style = "margin-top: 20px">
                     <ul class="nav flex-column">
@@ -101,24 +102,150 @@
                 </div>
             </nav>
       
+            <!-- Content -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Saving a Game</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="jumbotron" style="padding: 20px; margin-bottom: 0rem;">
+                    <div class="info">
                         <p class="content">
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            This is an asynchronous function which allows you to save a game to a snapshot in Google Play Services.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            The parameters include the name of the slot to save to, a description of the save game, the amount of time played, a progress value, the save game object to be saved and the conflict resolution policy to be used.
+                            <br/>Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
                         </p>
                     </div>
                 </div>
-                <canvas class="my-4 w-100" id="myChart"></canvas>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/SavedGames/SaveGame_Blueprint.png" style="max-width: 70%;">
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                    <span class="badge badge-primary">1</span>
+                    <div class="info">
+                        <p class="content">
+                            <b>Slot Name</b>
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The slot name is a string that uniquely identifies the slot where the save game will be stored.
+                            A slot represents a specific point in time that the game was saved, and multiple snapshots can be stored under different slot names.
+                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it will overwrite the existing slots data.
+                        </p>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Save Game Description</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A brief description of the saved game data. This can be used to help the player identify different saved games in the future.
+                                This value is stored in the Snapshots metadata.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Played Time</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The amount of time that the player has spent playing the game, in milliseconds.
+                                This value is typically used to track progress and help the player resume from where they left off in the game.
+                                This value is stored in the Snapshots metadata and can optionally be used in a provided conflict resolution strategy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Progress Value</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A numeric value representing the player's progress in the game.
+                                This can be used to track the player's progress and help them resume from the correct point in the game.
+                                This value is stored in the Snapshots metadata and can optionally be used in a provided conflict resolution strategy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">5</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Save Game Object</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The game data that will be saved to the snapshot.
+                                This can be any object that extends UObject in Unreal Engine.
+                                This can include data such as player inventory, level progress, and game settings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">6</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Conflict Resolution Policy</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The policy to be used when there is a conflict between the locally saved snapshot and the snapshot stored on the server.
+                                This policy determines which snapshot will be used and how the conflict will be resolved behind the scenes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">7</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A delegate that will be called when the snapshot is successfully saved.
+                                This can be used to notify the player or perform other actions in the game once the snapshot has successfully been saved.
+                                You can simply click and drag this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">8</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A delegate that will be called if there is an error during the snapshot save operation.
+                                The delegate will produce an error type for the developer to handle appropriately.
+                                You can simply click and drag this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 150px">
+
+                </div>
+                <!-- <canvas class="my-4 w-100" id="myChart"></canvas> -->
             </main>
         </div>
-      </div>
+    </div>
     
     <footer class="bg-dark text-light">
     <div class="container py-4">

@@ -98,3 +98,8 @@ hr {
     color: #555;
     font-weight: bold;
   }
+
+  .list-group-item {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }

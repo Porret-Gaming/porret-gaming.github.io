@@ -123,11 +123,15 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which allows you to save a game to a snapshot in Google Play Services.
+                            This is an synchronous function which allows you to define the method to be used during manual conflict resolution.
+                        </p>
+                        <p class="content">
+                            The only parameter is a function defining how to manually resolve conflicts encountered when making use of the <a href="saving_game.html">Saving a Game</a> and <a href="loading_game.html">Loading a Game</a> blueprint nodes.
+                            The function provided will be used when <span style="font-weight: 500">RESOLUTION_POLICY_MANUAL</span> is selected as a Conflict <a href="resolution_policy.html">Resolution Policy</a>.
+                            This function only needs to be called once at game startup before saving and loading any games.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The parameters include the name of the slot to save to, a description of the save game, the amount of time played, a progress value, the save game object to be saved and the conflict resolution policy to be used.
-                            <br/>Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
+                            If this blueprint node is not used and <span style="font-weight: 500">RESOLUTION_POLICY_MANUAL</span> is selected, <span style="font-weight: 500">RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED</span> will be used instead.
                         </p>
                     </div>
                 </div>
@@ -142,10 +146,14 @@
                         <p class="content">
                             <b>Manual Conflict Resolution Stategy</b>
                         </p>
+                        <p class="content">
+                            This is a delegate has two <a href="snapshot.html">Snapshot</a> parameters as inputs and requires one <a href="snapshot.html">Snapshot</a> to be returned.
+                            The input parameters provided are the cloud version and local version of the snapshot. The output parameter is the final version to be used to resolve the conflict and load/save.
+                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The slot name is a string that uniquely identifies the slot where the save game will be stored.
-                            A slot represents a specific point in time that the game was saved, and multiple snapshots can be stored under different slot names.
-                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it will overwrite the existing slots data.
+                            <span style="font-weight: 500">Note:</span></br>
+                            When dragging off this pin to create a function, you need to use the <span style="font-weight: 500">Event Dispatchers</span> dropdown and then select the <span style="font-weight: 500">Create Event</span> option.
+                            Once this option is selected, it will create a blueprint node to create an event, you can then use its dropdown to <span style="font-weight: 500">[Create a matching function]</span> with the matching function signature.
                         </p>
                     </div>
                 </div>

@@ -129,11 +129,65 @@
                 </div>
                 <div style="padding-top: 30px">
                     <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <div class="info">
-                            <p class="content" style="margin-bottom: 0rem;">
-                                Table of fields, types and descritpions goes here...
-                            </p>
-                        </div>
+                        <table class="table table-striped table-bordered" style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Resolution Policy</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SELECT_SNAPSHOT_FAILED</td>
+                                    <td>
+                                        Failure when attempting to show Google's external selection UI.</br>
+                                        Can occur when using the <a href="external-ui.html">External Selection UI</a>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>OPEN_SNAPSHOT_FAILED</td>
+                                    <td>
+                                        The contents of the snapshot were not found on the server.</br>
+                                        Can occur at all points when attempting to operate on a single Snapshot.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>COMMIT_SNAPSHOT_FAILED</td>
+                                    <td>
+                                        The snapshot failed to be committed to the server (both offline and online).</br>
+                                        Can occur when <a href="saving_game.html">Saving a Game</a>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>READ_SNAPSHOT_FAILED</td>
+                                    <td>
+                                        The binary contents of the snapshot are corrupt.</br>
+                                        Can occur at all points when attempting to extract the binary data of a Snapshot.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>DELETE_SNAPSHOT_FAILED</td>
+                                    <td>
+                                        Failure when deleting a Snapshot.</br>
+                                        Can occur when <a href="deleting_game.html">Deleting a Game</a>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>LOAD_SNAPSHOT_FAILED</td>
+                                    <td>
+                                        Failure fetchinig all Snapshot metadata.</br>
+                                        Can occur when <a href="fetch_games.html">Fetching Games</a>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RESOLVE_CONFLICT_FAILED</td>
+                                    <td>
+                                        The conflict resolution strategy failed to execute.</br>
+                                        Can occur when <a href="saving_game.html">Saving a Game</a> and <a href="loading_game.html">Loading a Game</a>.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <canvas class="my-4 w-100" id="myChart"></canvas>

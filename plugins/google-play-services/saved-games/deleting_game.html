@@ -123,11 +123,11 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which allows you to save a game to a snapshot in Google Play Services.
+                            This is an asynchronous function which allows you to delete a snapshot in its entirety.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The parameters include the name of the slot to save to, a description of the save game, the amount of time played, a progress value, the save game object to be saved and the conflict resolution policy to be used.
-                            <br/>Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
+                            The parameters include the name of the slot where the Snapshot resides to be deleted.</br>
+                            Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
                         </p>
                     </div>
                 </div>
@@ -143,9 +143,7 @@
                             <b>Slot Name</b>
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The slot name is a string that uniquely identifies the slot where the save game will be stored.
-                            A slot represents a specific point in time that the game was saved, and multiple snapshots can be stored under different slot names.
-                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it will overwrite the existing slots data.
+                            The slot name is a string that uniquely identifies the slot of the game to be deleted.
                         </p>
                     </div>
                 </div>
@@ -157,8 +155,9 @@
                                 <b>On Success</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A brief description of the saved game data. This can be used to help the player identify different saved games in the future.
-                                This value is stored in the Snapshots metadata.
+                                A delegate that will be called when the snapshot has successfully been deleted.
+                                This can be used to notify the player or perform other actions in the game once the snapshot has successfully been removed.
+                                You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>
                     </div>
@@ -171,9 +170,9 @@
                                 <b>On Failure</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                The amount of time that the player has spent playing the game, in milliseconds.
-                                This value is typically used to track progress and help the player resume from where they left off in the game.
-                                This value is stored in the Snapshots metadata and can optionally be used in a provided conflict resolution strategy.
+                                A delegate that will be called if there is an error during the snapshot save operation.
+                                The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for the developer to handle appropriately.
+                                You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>
                     </div>

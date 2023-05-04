@@ -123,11 +123,11 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which allows you to save a game to a snapshot in Google Play Services.
+                            This is an asynchronous function which allows you fetch <a href="snapshot_metadata.html">SnapshotMetadata</a> about all the Snapshots on the server.
+                            You can make use of this data to generate your own UI instead of using Google's provided <a href="external-ui.html">External Selection UI</a> or anything else you might want to do.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The parameters include the name of the slot to save to, a description of the save game, the amount of time played, a progress value, the save game object to be saved and the conflict resolution policy to be used.
-                            <br/>Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
+                            Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
                         </p>
                     </div>
                 </div>
@@ -143,9 +143,9 @@
                             <b>On Saved Games Retrieved</b>
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The slot name is a string that uniquely identifies the slot where the save game will be stored.
-                            A slot represents a specific point in time that the game was saved, and multiple snapshots can be stored under different slot names.
-                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it will overwrite the existing slots data.
+                            A delegate that will be called once all the snapshots metadata on the server have been succesfully fetched.
+                            The delegate has a list of <a href="snapshot_metadata.html">Snapshot Metadata</a> as a parameter for you to use.
+                            You can simply click and drag this pin to create a custom event.
                         </p>
                     </div>
                 </div>
@@ -157,8 +157,9 @@
                                 <b>On Failure</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A brief description of the saved game data. This can be used to help the player identify different saved games in the future.
-                                This value is stored in the Snapshots metadata.
+                                A delegate that will be called if there is an error fetching all the saved games operation.
+                                The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for the developer to handle appropriately.
+                                You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>
                     </div>

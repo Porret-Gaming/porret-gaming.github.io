@@ -123,11 +123,12 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which allows you to save a game to a snapshot in Google Play Services.
+                            This is an asynchronous function which pulls up the Google's provided Selection User Interface.</br>
+                            When called with various configurable parameters shown below, this will present the player with a screen to view their Saved Games.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The parameters include the name of the slot to save to, a description of the save game, the amount of time played, a progress value, the save game object to be saved and the conflict resolution policy to be used.
-                            <br/>Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
+                            The parameters include the Title of the UI, number of saved games to show and whether they can add or delete save games.
+                            </br>Once the asynchronous operation has completed, one of three delegates will be called to handle when a user adds a new saved game, deletes a game or a failure has occured.
                         </p>
                     </div>
                 </div>
@@ -140,12 +141,11 @@
                     <span class="badge badge-primary">1</span>
                     <div class="info">
                         <p class="content">
-                            <b>Slot Name</b>
+                            <b>Title</b>
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The slot name is a string that uniquely identifies the slot where the save game will be stored.
-                            A slot represents a specific point in time that the game was saved, and multiple snapshots can be stored under different slot names.
-                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it will overwrite the existing slots data.
+                            This will be the title of the external ui showed to the user.
+                            The title is presented at the top left of the UI.
                         </p>
                     </div>
                 </div>
@@ -157,8 +157,8 @@
                                 <b>Saved Games Count</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A brief description of the saved game data. This can be used to help the player identify different saved games in the future.
-                                This value is stored in the Snapshots metadata.
+                                The number of saved games to show in the external UI in order of recently modified.
+                                You can provide a value of <span style="font-weight: 500">-1</span> to show all saved games.
                             </p>
                         </div>
                     </div>
@@ -171,9 +171,8 @@
                                 <b>Allow Add</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                The amount of time that the player has spent playing the game, in milliseconds.
-                                This value is typically used to track progress and help the player resume from where they left off in the game.
-                                This value is stored in the Snapshots metadata and can optionally be used in a provided conflict resolution strategy.
+                                A boolean value indicating whether or not a button enabling the user to add a new saved game shows.
+                                This button will call the delegate <span style="font-weight: 500">On Add New Saved Game</span> described below.
                             </p>
                         </div>
                     </div>
@@ -186,9 +185,9 @@
                                 <b>Allow Delete</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A numeric value representing the player's progress in the game.
-                                This can be used to track the player's progress and help them resume from the correct point in the game.
-                                This value is stored in the Snapshots metadata and can optionally be used in a provided conflict resolution strategy.
+                                a boolean value indicating whether or not an option is available to remove saved games from the list presented to the user.
+                                When true, an option to delete the saved game will be present on each save game record shown to the user.
+                                When this button is used, it will automatically delete the Snapshot in the server.
                             </p>
                         </div>
                     </div>
@@ -201,9 +200,10 @@
                                 <b>On Add New Saved Game</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                The game data that will be saved to the snapshot.
-                                This can be any object that extends UObject in Unreal Engine.
-                                This can include data such as player inventory, level progress, and game settings.
+                                A delegate that will be called when the add button is pressed on the external UI.
+                                This delegate can only be called if the <span style="font-weight: 500">Allow Add</span> parameter is set to true and the player uses the generated add button on the external UI.
+                                The delegate has no parameters and will not automatically create a Snapshot for you, you will have to make use of the <a href="saving_game.html">Saving a Game</a> blueprint node in conjunction with this delegate.
+                                You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>
                     </div>
@@ -216,8 +216,10 @@
                                 <b>On Saved Game Selected</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                The policy to be used when there is a conflict between the locally saved snapshot and the snapshot stored on the server.
-                                This policy determines which snapshot will be used and how the conflict will be resolved behind the scenes.
+                                A delegate that will be called if the player selects a snapshot presented in the UI.
+                                The delegate has a <span style="font-weight: 500">Slot Name</span> as a parameter and will not automatically load a game for you.
+                                The <span style="font-weight: 500">Slot Name</span> parameter can be used in conjunction with the <a href="loading_game.html">Loading a Game</a> blueprint node to load the game selected.
+                                You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>
                     </div>
@@ -230,8 +232,8 @@
                                 <b>On Failure</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called when the snapshot is successfully saved.
-                                This can be used to notify the player or perform other actions in the game once the snapshot has successfully been saved.
+                                A delegate that will be called if there is an error generating and displaying the external UI.
+                                The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for the developer to handle appropriately.
                                 You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>

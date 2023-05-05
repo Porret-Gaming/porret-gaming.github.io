@@ -54,11 +54,15 @@ nav {
     padding-left: 20px;
 }
 
-.nav-link.inactive{
+.nav-link.inactive {
     background-color: rgb(236, 236, 236);
     color: rgb(0, 0, 0);
     border-radius: 10px;
     margin-bottom: 5px;
+}
+
+.nav-link.inactive:hover {
+    background-color: rgb(214, 214, 214);
 }
 
 hr {

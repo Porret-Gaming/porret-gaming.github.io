@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
-  <title>UE4 Plugin | Saved Games</title>
-  <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Saved Games</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
 </head>
+
 <body>
     <!-- Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../../../index.html">
             <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../Squiggle.html">Squiggle</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="../../../Squiggle.html">Squiggle</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UE Plugins
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./overview.html">Google Play: Saved Games</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../../../contact.html">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../privacy_policy.html">Squiggle Privacy Policy</a>
-                </li>
             </ul>
         </div>
     </nav>
-    
+
     <div class="container-fluid">
         <div class="row">
-            <!-- Side Navigation Bar -->        
+            <!-- Side Navigation Bar -->
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="sidebar-sticky" style = "margin-top: 20px">
+                <div class="sidebar-sticky" style="margin-top: 20px">
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link disabled">Developer Guidelines</a>
@@ -83,7 +98,7 @@
                                 Conflict Resolution
                             </a>
                         </li>
-                        <hr/>
+                        <hr />
                         <li class="nav-item">
                             <a class="nav-link disabled">Object Definitions</a>
                         </li>
@@ -107,7 +122,7 @@
                                 Snapshot Error
                             </a>
                         </li>
-                        <hr/>
+                        <hr />
                         <li class="nav-item">
                             <a class="nav-link disabled">Support</a>
                         </li>
@@ -119,20 +134,25 @@
                     </ul>
                 </div>
             </nav>
-      
+
             <!-- Content -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Saving a Game</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which allows you to save a game to a snapshot in Google Play Services.
+                            This is an asynchronous function which allows you to save a game to a snapshot in Google
+                            Play Services.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The parameters include the name of the slot to save to, a description of the save game, the amount of time played, a progress value, the save game object to be saved and the conflict resolution policy to be used.
-                            <br/>Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
+                            The parameters include the name of the slot to save to, a description of the save game, the
+                            amount of time played, a progress value, the save game object to be saved and the conflict
+                            resolution policy to be used.
+                            <br />Once the asynchronous operation has completed, one of two delegates will be called to
+                            handle the success and failure situations.
                         </p>
                     </div>
                 </div>
@@ -148,9 +168,12 @@
                             <b>Slot Name</b>
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The slot name is a string that uniquely identifies the slot where the save game will be stored.
-                            A slot represents a specific point in time that the game was saved, and multiple snapshots can be stored under different slot names.
-                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it will overwrite the existing slots data.
+                            The slot name is a string that uniquely identifies the slot where the save game will be
+                            stored.
+                            A slot represents a specific point in time that the game was saved, and multiple snapshots
+                            can be stored under different slot names.
+                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it
+                            will overwrite the existing slots data.
                         </p>
                     </div>
                 </div>
@@ -162,7 +185,8 @@
                                 <b>Save Game Description</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A brief description of the saved game data. This can be used to help the player identify different saved games in the future.
+                                A brief description of the saved game data. This can be used to help the player identify
+                                different saved games in the future.
                                 This value is stored in the Snapshots metadata.
                             </p>
                         </div>
@@ -177,8 +201,10 @@
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 The amount of time that the player has spent playing the game, in milliseconds.
-                                This value is typically used to track progress and help the player resume from where they left off in the game.
-                                This value is stored in the Snapshots metadata and can optionally be used in a provided conflict resolution strategy.
+                                This value is typically used to track progress and help the player resume from where
+                                they left off in the game.
+                                This value is stored in the Snapshots metadata and can optionally be used in a provided
+                                conflict resolution strategy.
                             </p>
                         </div>
                     </div>
@@ -192,8 +218,10 @@
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 A numeric value representing the player's progress in the game.
-                                This can be used to track the player's progress and help them resume from the correct point in the game.
-                                This value is stored in the Snapshots metadata and can optionally be used in a provided conflict resolution strategy.
+                                This can be used to track the player's progress and help them resume from the correct
+                                point in the game.
+                                This value is stored in the Snapshots metadata and can optionally be used in a provided
+                                conflict resolution strategy.
                             </p>
                         </div>
                     </div>
@@ -221,8 +249,10 @@
                                 <b>Conflict Resolution Policy</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                The <a href="resolution_policy.html">Resolution Policy</a> to be used when there is a conflict between the locally saved snapshot and the snapshot stored on the server.
-                                This policy determines which snapshot will be used and how the conflict will be resolved behind the scenes.
+                                The <a href="resolution_policy.html">Resolution Policy</a> to be used when there is a
+                                conflict between the locally saved snapshot and the snapshot stored on the server.
+                                This policy determines which snapshot will be used and how the conflict will be resolved
+                                behind the scenes.
                             </p>
                         </div>
                     </div>
@@ -236,7 +266,8 @@
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 A delegate that will be called when the snapshot is successfully saved.
-                                This can be used to notify the player or perform other actions in the game once the snapshot has successfully been saved.
+                                This can be used to notify the player or perform other actions in the game once the
+                                snapshot has successfully been saved.
                                 You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>
@@ -251,7 +282,8 @@
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 A delegate that will be called if there is an error during the snapshot save operation.
-                                The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for the developer to handle appropriately.
+                                The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for
+                                the developer to handle appropriately.
                                 You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>
@@ -262,33 +294,33 @@
             </main>
         </div>
     </div>
-    
+
     <footer class="bg-dark text-light">
-    <div class="container py-4">
-        <div class="row">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h5><b>Links</b></h5>
-                <ul class="list-unstyled mb-0">
-                    <li><a href="../../../index.html" class="text-light">Home</a></li>
-                    <li><a href="../../../contact.html" class="text-light">Contact</a></li>
-                    <li><a href="../../../privacy_policy.html" class="text-light">Squiggle Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h5><b>Contact</b></h5>
-                <ul class="list-unstyled mb-0">
-                <li class="text-light">Email: porretgaming@gmail.com</li>
-                </ul>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5><b>Links</b></h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="../../../index.html" class="text-light">Home</a></li>
+                        <li><a href="../../../contact.html" class="text-light">Contact</a></li>
+                        <li><a href="../../../privacy_policy.html" class="text-light">Squiggle Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5><b>Contact</b></h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="text-light">Email: porretgaming@gmail.com</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="bg-dark py-2">
-        <div class="container text-center">
-        <p class="text-light mb-0">Copyright &copy; 2023 
-            <a href="#" class="text-light">Porret Gaming</a>
-        </p>
+        <div class="bg-dark py-2">
+            <div class="container text-center">
+                <p class="text-light mb-0">Copyright &copy; 2023
+                    <a href="#" class="text-light">Porret Gaming</a>
+                </p>
+            </div>
         </div>
-    </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

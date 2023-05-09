@@ -160,6 +160,39 @@
                         </p>
                     </div>
                 </div>
+                <div style="margin-top: 50px">
+                    <h1 class="h3">Example</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative; margin-top: 15px;">
+                    <div class="info">
+                        <p class="content">
+                            <b>Creating a new Snapshot</b>
+                        </p>
+                        <p class="content">
+                            In the event that you want to combine both <a href="snapshot.html">Snapshot</a> parameters you can break each struct and create a new one with the desired values.</br>
+                            To create an entirely new snapshot, you can create two local variables within your function of type <a href="snapshot.html">Snapshot</a> and <a href="snapshot_metadata.html">SnapshotMetadata</a>.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            In the below example, we are combining the <span style="font-weight: 500">PlayedTime</span> and <span style="font-weight: 500">ProgressValue</span> values within the <a href="snapshot_metadata.html">SnapshotMetadata</a> and choosing the Local Save Game Object. </br>
+                            You can simply reuse this pattern with any values the <a href="snapshot.html">Snapshot</a> structure provides.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/SavedGames/SavedGames_Plugin_ConflictExample.png" style="max-width: 90%;" data-toggle="modal" data-target="#Modal1">
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div id="modalBody1">
+                        <div class="modal-body">
+                            <img id="modal1-image" src="../../../images/SavedGames/SavedGames_Plugin_ConflictExample.png" alt="Your Image" >
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 <div style="margin-bottom: 150px">
                 </div>
             </main>
@@ -194,6 +227,17 @@
     </div>
     </footer>
 
+    <script>
+        var modal = document.getElementById("modalBody1");
+        var img = document.getElementById("modal1-image");
+    
+        // // Set the image as the source of the modal
+        // modal.querySelector('img').src = img.src;
+    
+        // // Set the width and height of the modal to match the image
+        modal.style.width = img.width + "px";
+        modal.style.height = img.height + "px";
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

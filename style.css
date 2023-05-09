@@ -107,3 +107,9 @@ hr {
     font-size: 1.25rem;
     font-weight: 500;
   }
+
+  .modal-dialog.modal-dialog-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

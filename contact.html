@@ -9,10 +9,11 @@
   <title>Porret Gaming | Contact</title>
   <link rel="icon" type="image/png" href="./images/PorretGaming_Logo_Cut.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.html">
       <img src="./images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
     </a>
@@ -23,22 +24,21 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Games
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="./Squiggle.html">Squiggle</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             UE Plugins
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="plugins/google-play-services/saved-games/overview.html">Google Play:
-                Saved Games</a></li>
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="plugins/google-play-services/saved-games/overview.html">Google Play: Saved Games</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -88,6 +88,7 @@
     </div>
   </footer>
 
+  <script src="./script.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

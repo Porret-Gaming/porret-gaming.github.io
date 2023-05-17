@@ -69,3 +69,48 @@ dropdownMenu2.addEventListener("mouseleave", function (event) {
     dropdownToggle2.click();
   }
 });
+
+/* Documentation Sidebar  */
+document.addEventListener("DOMContentLoaded", function () {
+  const headerNavbar = document.querySelector('.navbar');
+  const sidebar = document.querySelector('.sidebar');
+  const footer = document.querySelector('footer');
+  const scrollOffset = 37;
+  const sidebarWidth = sidebar.offsetWidth;
+
+  if (sidebar != null) {
+    function toggleFixedClass() {
+      const scrollPosition = window.pageYOffset;
+      const pageHeight = document.documentElement.scrollHeight;
+      const headerNavbarHeight = headerNavbar.offsetHeight;
+      const footerHeight = footer.offsetHeight;
+      const viewportHeight = window.innerHeight;
+
+      const sidebarHeight = sidebar.offsetHeight;
+      
+
+      var footerColided = false;
+      if (viewportHeight < pageHeight - footerHeight) // ensure there is a scrollbar
+      {
+        footerColided = scrollPosition + (sidebarHeight + 40) > pageHeight - footerHeight
+      }
+
+      if (footerColided) {
+        sidebar.style.top = (pageHeight - footerHeight) - (scrollPosition + (sidebarHeight + 40)) + "px";
+        sidebar.style.maxWidth = sidebarWidth + "px";
+      }
+      else {
+        if (scrollPosition - scrollOffset >= headerNavbarHeight) {
+          sidebar.classList.add('fixed-top');
+          sidebar.style.maxWidth = sidebarWidth + "px";
+        } else {
+          sidebar.classList.remove('fixed-top');
+          idebar.style.removeProperty('max-width');
+        }
+        sidebar.style.top = 0;
+      }
+    }
+
+    window.addEventListener('scroll', toggleFixedClass);
+  }
+});

@@ -27,13 +27,7 @@ body {
 
 .navbar .nav-link.dropdown-toggle {
     outline: none;
-    /* Remove the outline */
     -webkit-tap-highlight-color: transparent;
-    /* Disable tap highlighting on mobile */
-}
-
-.navbar .nav-link.dropdown-toggle:hover {
-    /* Add any hover styles as needed */
 }
 
 .nav-link.active {
@@ -48,7 +42,7 @@ body {
 }
 
 .nav-link.inactive {
-    background-color: rgb(236, 236, 236);
+    background-color: rgba(247, 247, 247, 0.8);
     color: rgb(0, 0, 0);
     border-radius: 10px;
     margin-bottom: 5px;
@@ -57,7 +51,7 @@ body {
 }
 
 .nav-link.inactive:hover {
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(235, 235, 235);
 }
 
 .overlay-text {
@@ -105,7 +99,8 @@ hr {
     margin-bottom: 0rem;
     font-size: 1.25rem;
     font-weight: 350;
-    /* text-align: center; */
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
 }
 
 .badge {
@@ -123,11 +118,18 @@ hr {
     align-items: center;
     color: #555;
     font-weight: bold;
+    z-index: 2;
 }
 
 .list-group-item {
     font-size: 1.25rem;
     font-weight: 500;
+    /* border-radius: 20px !important; */
+    border-bottom-left-radius: 20px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
 }
 
 .modal-dialog.modal-dialog-centered {
@@ -230,12 +232,26 @@ hr {
 .sidebar-custom {
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 5px;
+    padding-top: 20px;
     height: 858px;
-    box-shadow: 0.1px 0.1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0.1px 0.1px 3px rgba(53, 53, 53, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
 }
 
 .fixed-top {
     margin-left: 22px; 
 }
 
-/* 15 + 3 = 18 */
+.documentation-body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('./images/Documentation_Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.table-documentation {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+}

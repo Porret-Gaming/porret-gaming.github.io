@@ -105,12 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
           sidebar.style.maxWidth = sidebarWidth + "px";
         } else {
           sidebar.classList.remove('fixed-top');
-          idebar.style.removeProperty('max-width');
+          sidebar.style.removeProperty('max-width');
         }
         sidebar.style.top = 0;
       }
     }
-
     window.addEventListener('scroll', toggleFixedClass);
   }
 });

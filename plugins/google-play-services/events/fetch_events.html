@@ -53,7 +53,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
                         aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="overview.html">
+                            <a class="dropdown-item" href="../saved-games/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
                                         alt="Google Play Saved Games" class="dropdown-item-image">
@@ -65,7 +65,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../events/overview.html">
+                            <a class="dropdown-item" href="overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
                                         alt="Google Play Events" class="dropdown-item-image">
@@ -84,9 +84,10 @@
             </ul>
         </div>
     </nav>
-    <!-- Side Navigation Bar -->
+
     <div class="container-fluid">
         <div class="row" style="margin-left: 7px">
+            <!-- Side Navigation Bar -->
             <nav class="col-md-2 d-none d-md-block sidebar sidebar-custom">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
@@ -104,33 +105,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="saving_game.html">
-                                Saving a Game
+                            <a class="nav-link inactive" href="incrementing_event.html">
+                                Incrementing an Event
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="loading_game.html">
-                                Loading a Game
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="deleting_game.html">
-                                Deleting a Game
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="external-ui.html">
-                                External Selection UI
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="fetch_games.html">
-                                Fetch Games
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="conflict_resolution.html">
-                                Conflict Resolution
+                            <a class="nav-link active" href="fetch_events.html">
+                                Fetching Events
                             </a>
                         </li>
                         <hr />
@@ -138,23 +119,8 @@
                             <a class="nav-link disabled">Object Definitions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="snapshot_metadata.html">
-                                Snapshot Metadata
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="snapshot.html">
-                                Snapshot
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="resolution_policy.html">
-                                Resolution Policy
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="snapshot_error.html">
-                                Snapshot Error
+                            <a class="nav-link inactive" href="event.html">
+                                Event
                             </a>
                         </li>
                         <hr />
@@ -167,43 +133,47 @@
                             </a>
                         </li>
                     </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
                 </div>
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">External Selection UI</h1>
+                    <h1 class="h2 text-white-shadow">Fetch Games</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which pulls up the Google's provided Selection User
-                            Interface.</br>
-                            When called with various configurable parameters shown below, this will present the player
-                            with a screen to view their Saved Games.
+                            This is an asynchronous function which allows you fetch <a
+                                href="snapshot_metadata.html">SnapshotMetadata</a> about all the Snapshots on the
+                            server.
+                            You can make use of this data to generate your own UI instead of using Google's provided <a
+                                href="external-ui.html">External Selection UI</a> or anything else you might want to do.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The parameters include the Title of the UI, number of saved games to show and whether they
-                            can add or delete save games.
-                            </br>Once the asynchronous operation has completed, one of three delegates will be called to
-                            handle when a user adds a new saved game, deletes a game or a failure has occured.
+                            Once the asynchronous operation has completed, one of two delegates will be called to handle
+                            the success and failure situations.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/SavedGames/SavedGames_Plugin_ShowUI.png" style="max-width: 70%;">
+                        <img src="../../../images/SavedGames/SavedGames_Plugin_FetchGames.png" style="max-width: 70%;">
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
                     <span class="badge badge-primary">1</span>
                     <div class="info">
                         <p class="content">
-                            <b>Title</b>
+                            <b>On Saved Games Retrieved</b>
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            This will be the title of the external ui showed to the user.
-                            The title is presented at the top left of the UI.
+                            A delegate that will be called once all the snapshots metadata on the server have been
+                            succesfully fetched.
+                            The delegate has a list of <a href="snapshot_metadata.html">Snapshot Metadata</a> as a
+                            parameter for you to use.
+                            You can simply click and drag this pin to create a custom event.
                         </p>
                     </div>
                 </div>
@@ -212,98 +182,11 @@
                         <span class="badge badge-primary">2</span>
                         <div class="info">
                             <p class="content">
-                                <b>Saved Games Count</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The number of saved games to show in the external UI in order of recently modified.
-                                You can provide a value of <span style="font-weight: 500">-1</span> to show all saved
-                                games.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">3</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Allow Add</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A boolean value indicating whether or not a button enabling the user to add a new saved
-                                game shows.
-                                This button will call the delegate <span style="font-weight: 500">On Add New Saved
-                                    Game</span> described below.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">4</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Allow Delete</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                a boolean value indicating whether or not an option is available to remove saved games
-                                from the list presented to the user.
-                                When true, an option to delete the saved game will be present on each save game record
-                                shown to the user.
-                                When this button is used, it will automatically delete the Snapshot in the server.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">5</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Add New Saved Game</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called when the add button is pressed on the external UI.
-                                This delegate can only be called if the <span style="font-weight: 500">Allow Add</span>
-                                parameter is set to true and the player uses the generated add button on the external
-                                UI.
-                                The delegate has no parameters and will not automatically create a Snapshot for you, you
-                                will have to make use of the <a href="saving_game.html">Saving a Game</a> blueprint node
-                                in conjunction with this delegate.
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">6</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Saved Game Selected</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called if the player selects a snapshot presented in the UI.
-                                The delegate has a <span style="font-weight: 500">Slot Name</span> as a parameter and
-                                will not automatically load a game for you.
-                                The <span style="font-weight: 500">Slot Name</span> parameter can be used in conjunction
-                                with the <a href="loading_game.html">Loading a Game</a> blueprint node to load the game
-                                selected.
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">7</span>
-                        <div class="info">
-                            <p class="content">
                                 <b>On Failure</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called if there is an error generating and displaying the
-                                external UI.
+                                A delegate that will be called if there is an error fetching all the saved games
+                                operation.
                                 The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for
                                 the developer to handle appropriately.
                                 You can simply click and drag this pin to create a custom event.
@@ -311,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin-bottom: 150px">
+                <div style="margin-bottom: 300px">
                 </div>
             </main>
         </div>

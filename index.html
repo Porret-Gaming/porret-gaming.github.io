@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="body-background-generic-blur">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.html">
       <img src="./images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
@@ -53,7 +53,8 @@
             <li>
               <a class="dropdown-item" href="plugins/google-play-services/saved-games/overview.html">
                 <div class="dropdown-item-content">
-                  <img src="./images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png" alt="Google Play Saved Games" class="dropdown-item-image">
+                  <img src="./images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png" alt="Google Play Saved Games"
+                    class="dropdown-item-image">
                   <div class="dropdown-item-text">
                     Google Play: Saved Games
                     <span class="dropdown-item-subtext">Android Plugin</span>
@@ -64,7 +65,8 @@
             <li>
               <a class="dropdown-item" href="plugins/google-play-services/events/overview.html">
                 <div class="dropdown-item-content">
-                  <img src="./images/Events/GooglePlay_Events_Plugin_Logo.png" alt="Google Play Events" class="dropdown-item-image">
+                  <img src="./images/Events/GooglePlay_Events_Plugin_Logo.png" alt="Google Play Events"
+                    class="dropdown-item-image">
                   <div class="dropdown-item-text">
                     Google Play: Events
                     <span class="dropdown-item-subtext">Android Plugin</span>
@@ -81,8 +83,13 @@
     </div>
   </nav>
 
-  <div style="position: fixed; z-index: -50;">
+  <!-- <div style="position: fixed; z-index: -50;">
     <div class="row justify-content-between" style="margin-top: -50px; margin-right: -5vw; margin-left: -5vw">
+      <div class="col overflow-visible">
+        <div class="background fade-top">
+          <img src="images/Squiggle/MediumLevel.png" class="img-fluid" alt="...">
+        </div>
+      </div>
       <div class="col overflow-visible">
         <div class="background fade-top">
           <img src="images/Squiggle/EasyLevel.png" class="img-fluid" alt="...">
@@ -90,12 +97,80 @@
       </div>
       <div class="col overflow-visible">
         <div class="background fade-top">
-          <img src="images/Squiggle/CharacterShop.PNG" class="img-fluid" alt="...">
+          <img src="images/Squiggle/MediumLevel.PNG" class="img-fluid" alt="...">
         </div>
       </div>
-      <div class="col overflow-visible">
-        <div class="background fade-top">
-          <img src="images/Squiggle/MediumLevel.png" class="img-fluid" alt="...">
+    </div>
+  </div> -->
+
+  <div style="padding-top: 100px"></div>
+
+  <div class="container d-flex justify-content-center align-items-center">
+    <img src="images/PorretGaming_Feature_Image.png" alt="Feature Image">
+  </div>
+
+  <div style="padding-top: 50px"></div>
+
+  <div class="plugin-section">
+    <div class="container">
+      <h1 class="section-header" style="color:rgb(134, 207, 255)" >UNREAL ENGINE</h1>
+      <div class="row">
+        <div class="col-4">
+          <a href="./plugins/google-play-services/saved-games/overview.html" class="text-decoration-none">
+            <div class="card text-center card-custom">
+              <div class="card-header card-header-custom">
+                <h5 style="margin-bottom: 0;">Google Play Saved Games</h5>
+              </div>
+              <img src="images/SavedGames/SavedGames_Plugin_Showcase.png" class="card-img-top" alt="...">
+              <div class="card-body card-body-custom">
+                <p class="card-text">
+                  Pack of Unreal Engine blueprint nodes exposing Google Play's cloud-saving service to Android Game
+                  Developers.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="./plugins/google-play-services/saved-games/overview.html" class="text-decoration-none">
+            <div class="card text-center card-custom">
+              <div class="card-header card-header-custom">
+                <h5 style="margin-bottom: 0;">Google Play Events</h5>
+              </div>
+              <img src="images/SavedGames/SavedGames_Plugin_Showcase.png" class="card-img-top" alt="...">
+              <div class="card-body card-body-custom">
+                <p class="card-text">
+                  Pack of Unreal Engine blueprint nodes exposing Google Play's event analytics service to Android Game
+                  Developers.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 40px"></div>
+
+  <div class="game-section">
+    <div class="container">
+      <h1 class="section-header" style="color:rgb(151, 255, 220)">GAMES</h1>
+      <div class="row">
+        <div class="col-4">
+          <a href="./Squiggle.html" class="text-decoration-none">
+            <div class="card text-center card-custom">
+              <div class="card-header card-header-custom">
+                <h5 style="margin-bottom: 0;">Squiggle</h5>
+              </div>
+              <img src="images/Squiggle/MainMenu.png" class="card-img-top" alt="...">
+              <div class="card-body card-body-custom">
+                <p class="card-text">
+                  A free procedurally generated endless runner with high scores, achievements and quests.
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -103,58 +178,7 @@
 
   <div style="padding-top: 100px"></div>
 
-  <div class="container">
-    <div class="jumbotron">
-      <p class="lead">Porret Gaming is a one-person game development company founded by an individual developer who is
-        deeply passionate about creating high-quality, engaging, and unique games. The company's main focus is on
-        procedural generation, a technique used in game development to create game content algorithmically, rather than
-        by hand. This allows for infinite possibilities and keeps the gameplay fresh and exciting with each playthrough.
-      </p>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <a href="./Squiggle.html" class="text-decoration-none">
-          <div class="card text-center">
-            <div class="card-header" style="background-color: #e9ecef;">
-              <h5 style="margin-bottom: 0;">Mobile Game</h5>
-            </div>
-            <img src="images/Squiggle/MainMenu.png" class="card-img-top" alt="...">
-            <div class="card-body" style="background-color: #e9ecef;">
-              <h5 class="card-title">Squiggle</h5>
-              <p class="card-text">
-                A free procedurally generated endless runner with high scores, achievements and quests.
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6">
-        <a href="./plugins/google-play-services/saved-games/overview.html" class="text-decoration-none">
-          <div class="card text-center">
-            <div class="card-header" style="background-color: #e9ecef;">
-              <h5 style="margin-bottom: 0;">Unreal Engine Plugin</h5>
-            </div>
-            <img src="images/SavedGames/SavedGames_Plugin_Showcase.png" class="card-img-top" alt="...">
-            <div class="card-body" style="background-color: #e9ecef;">
-              <h5 class="card-title">Google Play Services: Saved Games</h5>
-              <p class="card-text">
-                Pack of blueprint nodes exposing Google Play's cloud-saving service to Android Game Developers using
-                Unreal Engine.
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div style="padding-top: 210px"></div>
-
-  <footer class="bg-dark text-light" style="margin-left: -5vw; margin-right: -5vw">
+  <footer class="bg-dark text-light footer-custom">
     <div class="container py-4">
       <div class="row">
         <div class="col-md-4 offset-md-4 text-center">

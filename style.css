@@ -277,6 +277,13 @@ hr {
     background-attachment: fixed;
 }
 
+.game-body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('./images/Game_Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .table-documentation {
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
@@ -284,4 +291,70 @@ hr {
 
 .text-white-shadow {
     text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.card-header-custom {
+    background-color: #ffffff;
+}
+
+.card-body-custom {
+    background-color: #ffffff;
+}
+
+.card-custom {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #969696;
+}
+
+.plugin-section {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    background-image: url('./images/Documentation_Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 20px 0px #00000063;
+    
+}
+
+.game-section {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    background-image: url('./images/Game_Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 20px 0px #00000063;
+}
+
+.section-header {
+    font-size: 40px;
+    font-weight: 700;
+    /* color: rgb(255, 255, 255); */
+    text-shadow:rgb(0, 0, 0) 1px 0 3px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.footer-custom {
+    box-shadow: 0px 0px 20px 0px #00000063;
+    margin-left: -5vw;
+    margin-right: -5vw;
+}
+
+.body-background-generic-blur {
+    background-image: url('./images/Generic_Background.png');
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('./images/Generic_Background.png'); */
+    backdrop-filter: blur(10px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.body-background-generic {
+    background-image: url('./images/Generic_Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }

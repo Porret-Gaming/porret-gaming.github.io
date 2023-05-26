@@ -295,11 +295,20 @@ hr {
 
 .card-header-custom {
     /* background-color: rgba(56, 63, 69, 1);
+    
     color: white; */
 }
 
+.blue {
+    background-color:rgb(211, 239, 255);
+}
+
+.aquamarine {
+    background-color:rgb(221, 255, 244);
+}
+
 .card-body-custom {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 0.5rem;
     padding-bottom: 1.5rem;
     position: relative;

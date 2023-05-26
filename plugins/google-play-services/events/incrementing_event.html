@@ -111,7 +111,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link inactive" href="fetch_events.html">
-                                Fetching Events
+                                Loading Events
                             </a>
                         </li>
                         <hr />
@@ -142,20 +142,16 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="container border-bottom"
                     style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Saving a Game</h1>
+                    <h1 class="h2 text-white-shadow">Incrementing an Event</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which allows you to save a game to a snapshot in Google
-                            Play Services.
+                            This is an synchronous function which increments the value of a specific <a href=event.html>Google Play Event</a> in Google Play Services.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The parameters include the name of the slot to save to, a description of the save game, the
-                            amount of time played, a progress value, the save game object to be saved and the conflict
-                            resolution policy to be used.
-                            <br />Once the asynchronous operation has completed, one of two delegates will be called to
-                            handle the success and failure situations.
+                            The parameters include the EventId to increment and the amount to increment by.</br>
+                            Once completed, it will return a boolean value indicating if it was successful or not.
                         </p>
                     </div>
                 </div>
@@ -168,15 +164,11 @@
                     <span class="badge badge-primary">1</span>
                     <div class="info">
                         <p class="content">
-                            <b>Slot Name</b>
+                            <b>Event ID</b>
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The slot name is a string that uniquely identifies the slot where the save game will be
-                            stored.
-                            A slot represents a specific point in time that the game was saved, and multiple snapshots
-                            can be stored under different slot names.
-                            Providing a new slot name will result in a new snapshot, whereas if it already exists, it
-                            will overwrite the existing slots data.
+                            The Event ID of the Event to be incremented.</br>
+                            This value can be retrieved either by <a href="fetch_events.html">Fetching All Events</a> or from the Google Play Console.
                         </p>
                     </div>
                 </div>
@@ -185,114 +177,16 @@
                         <span class="badge badge-primary">2</span>
                         <div class="info">
                             <p class="content">
-                                <b>Save Game Description</b>
+                                <b>Increment Amount</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A brief description of the saved game data. This can be used to help the player identify
-                                different saved games in the future.
-                                This value is stored in the Snapshots metadata.
+                                The integer value to increase the Event's ammount by.</br>
+                                This can be seen when <a href="fetch_events.html">Fetching the Event</a> and accessing the Value in the <a href=event.html>Google Play Event</a> returned.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">3</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Played Time</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The amount of time that the player has spent playing the game, in milliseconds.
-                                This value is typically used to track progress and help the player resume from where
-                                they left off in the game.
-                                This value is stored in the Snapshots metadata and can optionally be used in a provided
-                                conflict resolution strategy.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">4</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Progress Value</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A numeric value representing the player's progress in the game.
-                                This can be used to track the player's progress and help them resume from the correct
-                                point in the game.
-                                This value is stored in the Snapshots metadata and can optionally be used in a provided
-                                conflict resolution strategy.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">5</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Save Game Object</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The game data that will be saved to the snapshot.
-                                This can be any object that extends UObject in Unreal Engine.
-                                This can include data such as player inventory, level progress, and game settings.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">6</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Conflict Resolution Policy</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The <a href="resolution_policy.html">Resolution Policy</a> to be used when there is a
-                                conflict between the locally saved snapshot and the snapshot stored on the server.
-                                This policy determines which snapshot will be used and how the conflict will be resolved
-                                behind the scenes.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">7</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Success</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called when the snapshot is successfully saved.
-                                This can be used to notify the player or perform other actions in the game once the
-                                snapshot has successfully been saved.
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">8</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Failure</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called if there is an error during the snapshot save operation.
-                                The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for
-                                the developer to handle appropriately.
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-bottom: 150px">
+                <div style="margin-bottom: 350px">
                 </div>
             </main>
         </div>

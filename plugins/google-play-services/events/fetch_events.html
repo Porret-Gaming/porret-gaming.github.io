@@ -111,7 +111,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="fetch_events.html">
-                                Fetching Events
+                                Loading Events
                             </a>
                         </li>
                         <hr />
@@ -140,16 +140,17 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Fetch Games</h1>
+                    <h1 class="h2 text-white-shadow">Loading Events</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which allows you fetch <a
-                                href="snapshot_metadata.html">SnapshotMetadata</a> about all the Snapshots on the
-                            server.
-                            You can make use of this data to generate your own UI instead of using Google's provided <a
-                                href="external-ui.html">External Selection UI</a> or anything else you might want to do.
+                            This is an asynchronous function which allows you fetch <a href="event.html">Google Play Events</a> in the Cloud.
+                            You can make use of this to create personalized experiences tailored to individual players.
+                        </p>
+                        <p class="content">
+                            The parameters include whether or not to clear the local cache and the Event ID's to fetch.</br>
+                            Once the asynchronous operation has completed, one of two delegates will be called to handle the success and failure situations.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
                             Once the asynchronous operation has completed, one of two delegates will be called to handle
@@ -166,14 +167,12 @@
                     <span class="badge badge-primary">1</span>
                     <div class="info">
                         <p class="content">
-                            <b>On Saved Games Retrieved</b>
+                            <b>Clear Local Cache</b>
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            A delegate that will be called once all the snapshots metadata on the server have been
-                            succesfully fetched.
-                            The delegate has a list of <a href="snapshot_metadata.html">Snapshot Metadata</a> as a
-                            parameter for you to use.
-                            You can simply click and drag this pin to create a custom event.
+                            A boolean value to indicate whether or not to clear the local cache on the Android device.</br>
+                            When set to true, it will fetch from the cloud, potentially taking longer to complete.
+                            When false, will be much faster but will access the locally cached version if its there.
                         </p>
                     </div>
                 </div>
@@ -182,13 +181,38 @@
                         <span class="badge badge-primary">2</span>
                         <div class="info">
                             <p class="content">
+                                <b>Event Ids</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                An array of Event ID's to fetch. If an empty array is provided, it will fetch all Events.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A delegate that will be called when the Events have successfully been retrieved.
+                                The delegate will produce an Array of <a href="event.html">Events</a> for you to use.</br>
+                                You can simply click and drag this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info">
+                            <p class="content">
                                 <b>On Failure</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called if there is an error fetching all the saved games
-                                operation.
-                                The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for
-                                the developer to handle appropriately.
+                                A delegate that will be called if there is an error fetching the events.</br>
                                 You can simply click and drag this pin to create a custom event.
                             </p>
                         </div>

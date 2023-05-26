@@ -76,9 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const sidebar = document.querySelector('.sidebar');
   const footer = document.querySelector('footer');
   const scrollOffset = 37;
-  const sidebarWidth = sidebar.offsetWidth;
 
   if (sidebar != null) {
+    const sidebarWidth = sidebar.offsetWidth;
+ 
     function toggleFixedClass() {
       const scrollPosition = window.pageYOffset;
       const pageHeight = document.documentElement.scrollHeight;

@@ -31,7 +31,18 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1"
                         aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../../../Squiggle.html">Squiggle</a></li>
+                        <li>
+                            <a class="dropdown-item" href="../../../Squiggle.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Squiggle/Squiggle_Logo.png" alt="Squiggle"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Squiggle
+                                        <span class="dropdown-item-subtext">Android Mobile Game</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -41,7 +52,30 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
                         aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./overview.html">Google Play: Saved Games</a></li>
+                        <li>
+                            <a class="dropdown-item" href="overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
+                                        alt="Google Play Saved Games" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Google Play: Saved Games
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../events/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
+                                        alt="Google Play Events" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Google Play: Events
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -157,13 +191,13 @@
                                 Go to the Library tab and find the plugin and add it to the engine.
                             </p>
                             <li class="list-group-item">
-                                Enable Google Play Saved Games Plugin
+                                Enable Play Services Saved Games Plugin
                             </li>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
                                 In Unreal Engine, the plugin will be available in the plugins section.</br>
                                 Go to <span style="font-weight: 500">Settings</span> -> <span
                                     style="font-weight: 500">Plugins</span> -> Search for "<span
-                                    style="font-weight: 500">Google Play: Saved Games</span>" and ensure it is enabled.
+                                    style="font-weight: 500">Play Services Saved Games</span>" and ensure it is enabled.
                             </p>
                             <div class="container" style="margin-left: 0px; padding-left: 0px;">
                                 <div style="display: flex; justify-content: center; align-items: center;">
@@ -174,7 +208,7 @@
                                 Add Snapshot Support
                             </li>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                Enable Google Play Support and Snapshot Support on Google Play Login.</br>
+                                Enable "Google Play Support", "Snapshot Support on Google Play Login" and ensure your "Games App ID" is set appropriately for your app.</br>
                                 Go to <span style="font-weight: 500; white-space: nowrap;">Project Settings</span> ->
                                 <span style="font-weight: 500; white-space: nowrap;">Android</span> -> <span
                                     style="font-weight: 500; white-space: nowrap;">Google Play Services</span> and
@@ -197,7 +231,7 @@
                             </p>
                             <div class="container" style="margin-left: 0px; padding-left: 0px;">
                                 <div style="display: flex; justify-content: center; align-items: center;">
-                                    <img src="../../../images/SavedGames/SavedGames_Plugin_GoogleLogin.png">
+                                    <img src="../../../images/UE_Blueprint_GoogleLogin.png">
                                 </div>
                             </div>
                         </ol>

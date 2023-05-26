@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
-    <title>UE Plugin | Saved Games</title>
+    <title>UE Plugin | Contact</title>
     <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../style.css">
@@ -53,7 +53,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
                         aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="overview.html">
+                            <a class="dropdown-item" href="../saved-games/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
                                         alt="Google Play Saved Games" class="dropdown-item-image">
@@ -65,7 +65,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../events/overview.html">
+                            <a class="dropdown-item" href="overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
                                         alt="Google Play Events" class="dropdown-item-image">
@@ -84,9 +84,10 @@
             </ul>
         </div>
     </nav>
-    <!-- Side Navigation Bar -->
+
     <div class="container-fluid">
         <div class="row" style="margin-left: 7px">
+            <!-- Side Navigation Bar -->
             <nav class="col-md-2 d-none d-md-block sidebar sidebar-custom">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
@@ -104,33 +105,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="saving_game.html">
-                                Saving a Game
+                            <a class="nav-link inactive" href="incrementing_event.html">
+                                Incrementing an Event
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="loading_game.html">
-                                Loading a Game
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="deleting_game.html">
-                                Deleting a Game
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="external-ui.html">
-                                External Selection UI
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="fetch_games.html">
-                                Fetch Games
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="conflict_resolution.html">
-                                Conflict Resolution
+                            <a class="nav-link inactive" href="fetch_events.html">
+                                Loading Events
                             </a>
                         </li>
                         <hr />
@@ -138,23 +119,8 @@
                             <a class="nav-link disabled">Object Definitions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="snapshot_metadata.html">
-                                Snapshot Metadata
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="snapshot.html">
-                                Snapshot
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="resolution_policy.html">
-                                Resolution Policy
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="snapshot_error.html">
-                                Snapshot Error
+                            <a class="nav-link inactive" href="event.html">
+                                Event
                             </a>
                         </li>
                         <hr />
@@ -162,94 +128,30 @@
                             <a class="nav-link disabled">Support</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="contact.html">
+                            <a class="nav-link active" href="contact.html">
                                 Contact
                             </a>
                         </li>
                     </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
                 </div>
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Snapshot Error</h1>
+                    <h1 class="h2 text-white-shadow">Contact</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content" style="margin-bottom: 0rem;">
-                            The Snapshot Error enumeration is a list of possible error's that can occur during actions
-                            taken with all the blueprint nodes.
+                            You can get support by emailing us at "porretgaming@gmail.com". </br></br>
+                            A discord server will be launched soon to enable our community to assist you on issues with
+                            any of the plugins offered by Porret Gaming.
                         </p>
                     </div>
                 </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <table class="table table-striped table-bordered table-documentation"
-                            style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>Resolution Policy</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>SELECT_SNAPSHOT_FAILED</td>
-                                    <td>
-                                        Failure when attempting to show Google's external selection UI.</br>
-                                        Can occur when using the <a href="external-ui.html">External Selection UI</a>.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>OPEN_SNAPSHOT_FAILED</td>
-                                    <td>
-                                        The contents of the snapshot were not found on the server.</br>
-                                        Can occur at all points when attempting to operate on a single Snapshot.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>COMMIT_SNAPSHOT_FAILED</td>
-                                    <td>
-                                        The snapshot failed to be committed to the server (both offline and
-                                        online).</br>
-                                        Can occur when <a href="saving_game.html">Saving a Game</a>.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>READ_SNAPSHOT_FAILED</td>
-                                    <td>
-                                        The binary contents of the snapshot are corrupt.</br>
-                                        Can occur at all points when attempting to extract the binary data of a
-                                        Snapshot.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>DELETE_SNAPSHOT_FAILED</td>
-                                    <td>
-                                        Failure when deleting a Snapshot.</br>
-                                        Can occur when <a href="deleting_game.html">Deleting a Game</a>.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>LOAD_SNAPSHOT_FAILED</td>
-                                    <td>
-                                        Failure fetchinig all Snapshot metadata.</br>
-                                        Can occur when <a href="fetch_games.html">Fetching Games</a>.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>RESOLVE_CONFLICT_FAILED</td>
-                                    <td>
-                                        The conflict resolution strategy failed to execute.</br>
-                                        Can occur when <a href="saving_game.html">Saving a Game</a> and <a
-                                            href="loading_game.html">Loading a Game</a>.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div style="margin-bottom: 400px">
+                <div style="margin-bottom: 800px">
                 </div>
             </main>
         </div>

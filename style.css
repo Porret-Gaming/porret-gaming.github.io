@@ -529,6 +529,7 @@ hr {
     top: 10%;
     overflow: auto;
     height: 85%;
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.7);
     border-radius: 20px;
 }

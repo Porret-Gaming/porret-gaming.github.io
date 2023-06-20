@@ -11,15 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../style.css">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-0PNJQ6P759');
-</script>
 <body class="documentation-body">
     <!-- Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -95,8 +87,9 @@
     
     <div class="container-fluid">
         <div class="row" style="margin-left: 7px">
+            <button class="mobile-button">></button>
             <!-- Side Navigation Bar -->
-            <nav class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -176,7 +169,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div style="margin-bottom: 100px">
+                    <div style="margin-bottom: 20px">
                     </div>
                 </div>
             </nav>

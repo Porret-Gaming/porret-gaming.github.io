@@ -1,3 +1,7 @@
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+
 // Get the dropdown toggle elements by their unique IDs
 var dropdownToggle1 = document.getElementById("navbarDropdown1");
 var dropdownToggle2 = document.getElementById("navbarDropdown2");
@@ -79,8 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (sidebar != null) {
     const sidebarWidth = sidebar.offsetWidth;
- 
+
     function toggleFixedClass() {
+      if (isMobileDevice()) {
+        return;
+      }
       const scrollPosition = window.pageYOffset;
       const pageHeight = document.documentElement.scrollHeight;
       const headerNavbarHeight = headerNavbar.offsetHeight;
@@ -88,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const viewportHeight = window.innerHeight;
 
       const sidebarHeight = sidebar.offsetHeight;
-      
+
 
       var footerColided = false;
       if (viewportHeight < pageHeight - footerHeight) // ensure there is a scrollbar
@@ -114,3 +121,26 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', toggleFixedClass);
   }
 });
+
+
+
+// Get references to the button and sidebar elements
+const mobileButton = document.querySelector('.mobile-button');
+const sidebar = document.querySelector('#sidebar');
+
+// Add a click event listener to the button
+if (mobileButton) {
+  mobileButton.addEventListener('click', function () {
+    // Toggle the 'show-sidebar' class on the sidebar element
+    console.log("Got here!!");
+    sidebar.classList.toggle('show-sidebar');
+    sidebar.classList.toggle('d-none');
+
+    // Toggle the text of the button
+    mobileButton.innerText = mobileButton.innerText === '>' ? '<' : '>';
+
+    // Toggle the background color class
+    mobileButton.classList.toggle('toggled');
+  });
+}
+

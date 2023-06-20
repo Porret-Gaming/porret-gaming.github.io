@@ -152,19 +152,19 @@ hr {
     content: "";
     position: absolute;
     top: 0;
-    left: -12px;
+    left: -11px;
     width: 0;
     height: 0;
     border-top: 12px solid #ff6000;
-    border-bottom: 12px solid #ff6000;
+    border-bottom: 14px solid #ff6000;
     border-left: 12px solid transparent;
   }
 
 .badge-alert::after {
   border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
+  border-bottom: 14px solid transparent;
   border-left: 12px solid #ff6000;
-  right: -12px;
+  right: -11px;
 }
 
 .list-group-item {
@@ -386,7 +386,7 @@ hr {
 
 .plugin-section {
     padding-top: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     background-image: url('./images/Documentation_Background.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -397,7 +397,7 @@ hr {
 
 .game-section {
     padding-top: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     background-image: url('./images/Game_Background.png');
     background-repeat: no-repeat;
     background-size: cover;

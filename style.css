@@ -513,19 +513,45 @@ hr {
         font-weight: 1000;
     }
 
+    .mobile-button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 0;
+        height: 0;
+        border-width: 7px 0 7px 12px;
+        border-style: solid;
+        border-color: transparent transparent transparent rgba(255, 255, 255, 0.8);
+    }
+
     .mobile-button.toggled {
         background-color: rgba(255, 255, 255, 0.95);
         border: 3px solid rgba(65, 65, 65, 0.26);
         color: rgba(65, 65, 65, 0.26);
         box-shadow: 0 0 80px rgba(0, 0, 0, 0.7);
     }
+
+    .mobile-button.toggled::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-70%, -50%);
+        width: 0;
+        height: 0;
+        border-width: 7px 12px 7px 0;
+        border-style: solid;
+        border-color: transparent rgba(65, 65, 65, 0.26) transparent transparent;
+    }
 }
 
 .show-sidebar {
     position: fixed !important;
-    width: 80% !important;
+    width: 77% !important;
     z-index: 999;
-    left: 11%;
+    left: 12%;
     top: 10%;
     overflow: auto;
     height: 85%;

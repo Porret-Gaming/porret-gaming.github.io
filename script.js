@@ -136,9 +136,6 @@ if (mobileButton) {
     sidebar.classList.toggle('show-sidebar');
     sidebar.classList.toggle('d-none');
 
-    // Toggle the text of the button
-    mobileButton.innerText = mobileButton.innerText === '>' ? '<' : '>';
-
     // Toggle the background color class
     mobileButton.classList.toggle('toggled');
   });

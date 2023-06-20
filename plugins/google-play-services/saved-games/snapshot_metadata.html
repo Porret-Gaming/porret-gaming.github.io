@@ -95,7 +95,9 @@
     <!-- Side Navigation Bar -->
     <div class="container-fluid">
         <div class="row" style="margin-left: 7px">
-            <nav class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -196,8 +198,8 @@
                             These values can be changed during save and conflict resolution actions.
                             The PlayedTime and ProgressValue fields can work with the provided <a
                                 href="resolution_policy.html">Conflict Resolution Policies</a> <span
-                                style="font-weight: 500">RESOLUTION_POLICY_LONGEST_PLAYTIME</span> and <span
-                                style="font-weight: 500">RESOLUTION_POLICY_HIGHEST_PROGRESS</span> respectively.
+                                style="font-weight: 500; font-size: 14px">RESOLUTION_POLICY_LONGEST_PLAYTIME</span> and <span
+                                style="font-weight: 500; font-size: 14px">RESOLUTION_POLICY_HIGHEST_PROGRESS</span> respectively.
                         </p>
                         <p class="content">
                             The read only fields of the SnapshotMetadata struct are SnapshotID, UniqueName, Title,
@@ -219,7 +221,7 @@
                             style="max-width: 70%;">
                     </div>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px;">
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto">
                     <table class="table table-striped table-bordered table-documentation"
                         style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
                         <thead class="thead-dark">
@@ -251,7 +253,7 @@
                             <tr>
                                 <td>ProgressValue</td>
                                 <td>int64</td>
-                                <td>
+                                <td style="min-width: 300px;">
                                     A value indicating how far the player has progressed with this Snapshot.</br>
                                     Used with <a href="resolution_policy.html">Resolution Policy</a>
                                     RESOLUTION_POLICY_HIGHEST_PROGRESS.</br>

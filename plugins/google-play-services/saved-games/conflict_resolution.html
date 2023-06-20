@@ -95,7 +95,9 @@
     <!-- Side Navigation Bar -->
     <div class="container-fluid">
         <div class="row" style="margin-left: 7px">
-            <nav class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -193,15 +195,15 @@
                             making use of the <a href="saving_game.html">Saving a Game</a> and <a
                                 href="loading_game.html">Loading a Game</a> blueprint nodes.
                             The function provided will be used when <span
-                                style="font-weight: 500">RESOLUTION_POLICY_MANUAL</span> is selected as a Conflict <a
+                                style="font-weight: 500; font-size: 14px">RESOLUTION_POLICY_MANUAL</span> is selected as a Conflict <a
                                 href="resolution_policy.html">Resolution Policy</a>.
                             This function only needs to be called once at game startup before saving and loading any
                             games.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
                             If this blueprint node is not used and <span
-                                style="font-weight: 500">RESOLUTION_POLICY_MANUAL</span> is selected, <span
-                                style="font-weight: 500">RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED</span> will be used
+                                style="font-weight: 500; font-size: 14px">RESOLUTION_POLICY_MANUAL</span> is selected, <span
+                                style="font-weight: 500; font-size: 14px;word-wrap: break-word;">RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED</span> will be used
                             instead.
                         </p>
                     </div>

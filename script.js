@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isMobileDevice()) {
         return;
       }
+
       const scrollPosition = window.pageYOffset;
       const pageHeight = document.documentElement.scrollHeight;
       const headerNavbarHeight = headerNavbar.offsetHeight;

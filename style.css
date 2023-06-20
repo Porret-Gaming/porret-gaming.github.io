@@ -141,11 +141,11 @@ hr {
 
 .badge-alert::before,
 .badge-alert::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
 }
 
 .badge-alert::before {
@@ -158,13 +158,13 @@ hr {
     border-top: 12px solid #ff6000;
     border-bottom: 14px solid #ff6000;
     border-left: 12px solid transparent;
-  }
+}
 
 .badge-alert::after {
-  border-top: 12px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left: 12px solid #ff6000;
-  right: -11px;
+    border-top: 12px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 12px solid #ff6000;
+    right: -11px;
 }
 
 .list-group-item {
@@ -346,11 +346,11 @@ hr {
 }
 
 .blue {
-    background-color:rgb(211, 239, 255);
+    background-color: rgb(211, 239, 255);
 }
 
 .aquamarine {
-    background-color:rgb(221, 255, 244);
+    background-color: rgb(221, 255, 244);
 }
 
 .card-body-custom {
@@ -374,14 +374,20 @@ hr {
 
 .btn-custom {
     position: absolute;
-    bottom: -40px;
+    /* bottom: -50%; */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    /* padding: 10px; */
     background-color: transparent;
     border: none;
+}
+
+/* Adjust bottom value for smaller screens */
+@media (max-width: 768px) {
+    .btn-custom {
+        bottom: -80%;
+    }
 }
 
 .plugin-section {

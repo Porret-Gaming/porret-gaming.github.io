@@ -114,8 +114,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="querying_product_details.html">
-                                Querying Product Details
+                            <a class="nav-link inactive" href="query_product_details.html">
+                                Query Product Details
                             </a>
                         </li>
                         <li class="nav-item">
@@ -224,52 +224,6 @@
                     </table>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">EFeatureType</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
-                    <table class="table table-striped table-bordered table-documentation"
-                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>Name</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>SUBSCRIPTIONS</td>
-                                <td>
-                                    Purchase/query for subscriptions.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>SUBSCRIPTIONS_UPDATE</td>
-                                <td>
-                                    Subscriptions update/replace.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>PRICE_CHANGE_CONFIRMATION</td>
-                                <td>
-                                    Launch a price change confirmation flow.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>IN_APP_MESSAGING</td>
-                                <td>
-                                    Show in-app messages.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>PRODUCT_DETAILS</td>
-                                <td style="min-width: 300px">
-                                    Play billing library support for querying and purchasing.
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
                     <h1 class="h3 text-white-shadow">EBillingResponseCode</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
@@ -352,6 +306,120 @@
                                 <td>NETWORK_ERROR</td>
                                 <td>
                                     A network error occurred during the operation.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EFeatureType</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SUBSCRIPTIONS</td>
+                                <td>
+                                    Purchase/query for subscriptions.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SUBSCRIPTIONS_UPDATE</td>
+                                <td>
+                                    Subscriptions update/replace.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PRICE_CHANGE_CONFIRMATION</td>
+                                <td>
+                                    Launch a price change confirmation flow.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IN_APP_MESSAGING</td>
+                                <td>
+                                    Show in-app messages.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PRODUCT_DETAILS</td>
+                                <td style="min-width: 300px">
+                                    Play billing library support for querying and purchasing.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EPurchaseState</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UNSPECIFIED_STATE</td>
+                                <td style="min-width: 300px">
+                                    A rare state where the purchase is neither pending nor purchased.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PURCHASED</td>
+                                <td>
+                                    The purchase has succesfully been processed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PENDING</td>
+                                <td>
+                                    The purchase is still being processed.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">ERecurrenceMode</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INFINITE_RECURRING</td>
+                                <td>
+                                    The billing plan payment recurs for infinite billing periods unless cancelled.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FINITE_RECURRING</td>
+                                <td style="min-width: 300px">
+                                    The billing plan payment recurs for a fixed number of billing period set in billingCycleCount.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NON_RECURRING</td>
+                                <td>
+                                    The billing plan payment is a one time charge that does not repeat.
                                 </td>
                             </tr>
                         </tbody>

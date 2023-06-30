@@ -104,7 +104,7 @@
                             <a class="nav-link disabled">Developer Guidelines</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="overview.html">
+                            <a class="nav-link inactive" href="overview.html">
                                 Overview
                             </a>
                         </li>
@@ -163,7 +163,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="enumerations.html">
+                            <a class="nav-link active" href="enumerations.html">
                                 Enumerations
                             </a>
                         </li>
@@ -183,56 +183,181 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="container border-bottom"
-                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Billing Overview</h1>
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom;">
+                    <h1 class="h2 text-white-shadow">Enumerations</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content">
-                            <b>The Google Play Service: Billing</b>
-                        </p>
-                        <p class="content">
-                            The Google Play Billing Library is a powerful tool provided by Google Play Services that enables developers to implement in-app purchases and subscription services in their Android games. With this library, developers can monetize their games, offer premium content, and provide a seamless purchasing experience for players.
-                        </p>
-                        <ul>
-                            <li class="blue-diamond">Fetch All Product Information</li>
-                            <li class="blue-diamond">Launch the Billing Flow for your Products</li>
-                            <li class="blue-diamond">Fetch Purchase History Information</li>
-                            <li class="blue-diamond">Check if a Feature is Supported</li>
-                            <li class="blue-diamond">Handle Pending Purchases/Transactions</li>
-                            <li class="blue-diamond">Show In-App Messages (Price Change Confirmations)</li>
-                            <li class="blue-diamond">Acknowledge/Consume Purchases Automatically in Google Play</li>
-                            <li class="blue-diamond">Indicate Personalised Prices</li>
-                        </ul>
                         <p class="content" style="margin-bottom: 0rem;">
-                            By leveraging the capabilities of the Google Play Billing Library, developers can unlock new revenue streams, engage their player base, and create a sustainable business model for their Android games.
+                            Here is a list of enumerations you will find throughout the plugin.
+                            These enumerations are named after the same enumerations/constants found in the billing library.
                         </p>
                     </div>
-                    <div class="info" style="margin-top: 20px">
-                        <p class="content">
-                            <b>The Unreal Engine Plugin</b>
-                        </p>
-                        <p class="content">
-                            Introducing the Unreal Engine plugin for the Billing service, a powerful tool that brings the features of <span style="font-weight: 500">Google Play Billing Version 6</span> directly to your Unreal Engine projects.
-                            This plugin is designed to expose the Billing service's functionality to blueprint scripting, simplifying the integration process for game developers.
-                        </p>
-                        <p class="content">
-                            With an intuitive and user-friendly interface seamlessly integrated into the Unreal Engine editor, connecting to the service becomes a breeze.
-                            Whether you're a seasoned Unreal Engine developer or new to the platform, our plugin empowers you to easily perform all the features provided by the Google Play Billing Library, enhancing the capabilities of your game.
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            Action has been taken to update Unreal Engines existing integration with the older billing library to adhere to any of the breaking changes from the library update.
-                            <span style="font-weight: 500">Billing functionality implemented in your project must therefore only interact with this plugin's billing functionality and not Unreal Engine provided Google Play billing services.</span>
-                        </p>
-                    </div>
-                    <!-- <div class="info" style="margin-top: 20px"> -->
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/Billing/Billing_Plugin_AllNodes.png" style="width: 80%">
-                    </div>
-                    <!-- </div> -->
-                    <div style="margin-bottom: 400px">
-                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EProductType</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INAPP</td>
+                                <td style="min-width: 300px">
+                                    A Product type for Android apps in-app products.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SUBS</td>
+                                <td>
+                                    A Product type for Android apps subscriptions.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EFeatureType</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SUBSCRIPTIONS</td>
+                                <td>
+                                    Purchase/query for subscriptions.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SUBSCRIPTIONS_UPDATE</td>
+                                <td>
+                                    Subscriptions update/replace.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PRICE_CHANGE_CONFIRMATION</td>
+                                <td>
+                                    Launch a price change confirmation flow.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IN_APP_MESSAGING</td>
+                                <td>
+                                    Show in-app messages.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PRODUCT_DETAILS</td>
+                                <td style="min-width: 300px">
+                                    Play billing library support for querying and purchasing.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EBillingResponseCode</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FEATURE_NOT_SUPPORTED</td>
+                                <td>
+                                    The requested feature is not supported by the Play Store on the current device.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SERVICE_DISCONNECTED</td>
+                                <td style="min-width: 300px">
+                                    The app is not connected to the Play Store service via the Google Play Billing Library.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>OK</td>
+                                <td>
+                                    Success.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>USER_CANCELED</td>
+                                <td>
+                                    Transaction was canceled by the user.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SERVICE_UNAVAILABLE</td>
+                                <td>
+                                    The service is currently unavailable.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BILLING_UNAVAILABLE</td>
+                                <td>
+                                    A user billing error occurred during processing.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ITEM_UNAVAILABLE</td>
+                                <td>
+                                    The requested product is not available for purchase.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DEVELOPER_ERROR</td>
+                                <td>
+                                    Error resulting from incorrect usage of the API.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ERROR</td>
+                                <td>
+                                    Fatal error during the API action.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ITEM_ALREADY_OWNED</td>
+                                <td>
+                                    The purchase failed because the item is already owned.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ITEM_NOT_OWNED</td>
+                                <td>
+                                    Requested action on the item failed since it is not owned by the user.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NETWORK_ERROR</td>
+                                <td>
+                                    A network error occurred during the operation.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-bottom: 150px">
                 </div>
             </main>
         </div>

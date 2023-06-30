@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Billing</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../../Squiggle.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Squiggle/Squiggle_Logo.png" alt="Squiggle"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Squiggle
+                                        <span class="dropdown-item-subtext">Android Mobile Game</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UE Plugins
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../saved-games/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
+                                        alt="Google Play Saved Games" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Saved Games
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
+                                        alt="Google Play Events" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Events
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="querying_product_details.html">
+                                Querying Product Details
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="launch_billing_flow.html">
+                                Launch Billing Flow
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="check_for_purchases.html">
+                                Check for Purchases
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="query_purchase_history.html">
+                                Query Purchase History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="show_inapp_messages.html">
+                                Show In-App Messages
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="supporting_nodes.html">
+                                Supporting Nodes
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="product_details.html">
+                                Product Details
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="purchase.html">
+                                Purchase
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="purchase_history_record.html">
+                                Purchase History Record
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom;">
+                    <h1 class="h2 text-white-shadow">Product Details</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            The ProductDetails struct is designed to mimic the ProductDetails almost exactly as provided by the Google Play Billing
+                            SDK for the Billing service.
+                            It contains various information about the the product in question.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The ProductDetails struct contains additional structs to mimic the libraries representation of information and represent the products information.
+                            These include structs for OneTimePurchaseOfferDetails (used for consumable/non-consumable products) and SubscriptionOfferDetails (used for subscriptions).
+                            The SubscriptionOfferDetails struct contains PricingPhases (another struct) with information about the offers pricing phases.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">FProductDetails</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OneTimePurchaseOfferDetails</td>
+                                <td>FOneTimePurchaseOfferDetails</td>
+                                <td>
+                                    When the product is a consumable/non-consumable (non subscription) product this will contain the pricing information about the product.</br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td>FString</td>
+                                <td>
+                                    The description of the Product as setup in the Google Play Console.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>FString</td>
+                                <td>
+                                    The name of the Product as setup in the Google Play Console.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ProductType</td>
+                                <td><a href="enumerations.html">EProductType</a></td>
+                                <td style="min-width: 300px">
+                                    The type of product, being subscription or inapp.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Title</td>
+                                <td>FString</td>
+                                <td>
+                                    The Title of the product as setup in the Google Play Console.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SubscriptionOfferDetails</td>
+                                <td>TArray&#60;FSubscriptionOfferDetails&#62;</td>
+                                <td>
+                                    When the product is a subscription, this will contain a list of the offers (base-plan/offer combinations) for the subscription.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">FOneTimePurchaseOfferDetails</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PriceAmountMicros</td>
+                                <td>int64</td>
+                                <td style="min-width: 300px">
+                                    The price for the payment in micro-units, where 1,000,000 micro-units equal one unit of the currency
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FormattedPrice</td>
+                                <td>FString</td>
+                                <td>
+                                    The formatted price for the payment, including its currency sign.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PriceCurrencyCode</td>
+                                <td>FString</td>
+                                <td>
+                                    The ISO 4217 currency code for price.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">FSubscriptionOfferDetails</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PricingPhases</td>
+                                <td>TArray&#60;FPricingPhase&#62;</td>
+                                <td>
+                                    The pricing phases for the subscription product.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BasePlanId</td>
+                                <td>FString</td>
+                                <td>
+                                    The base plan id associated with the subscription product as setup in the Google Play Console.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>OfferId</td>
+                                <td>FString</td>
+                                <td>
+                                    The offer id associated with the subscription product as setup in the Google Play Console.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>OfferToken</td>
+                                <td>FString</td>
+                                <td style="min-width: 300px">
+                                    The offer token required to pass in <a href="launch_billing_flow.html">Launch Billing Flow</a> to purchase the subscription product with these pricing phases.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>OfferTags</td>
+                                <td>TArray&#60;FString&#62;</td>
+                                <td>
+                                    The offer tags associated with this Subscription Offer as setup in the Google Play Console.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IsVisible</td>
+                                <td>bool</td>
+                                <td>
+                                    Whether or not the Event is visible as setup in the Google Play Console.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">FPricingPhases</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BillingCycleCount</td>
+                                <td>int32</td>
+                                <td>
+                                    Number of cycles for which the billing period is applied.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RecurrenceMode</td>
+                                <td>int32</td>
+                                <td style="min-width: 300px">
+                                    The recurrence mode of the pricing phase.</br>
+                                    This can be 0, for Finite Recurring (recurs for a fixed number of billing periods set in billingCycleCount) </br>
+                                    1, an infinite period untill cancelled </br>
+                                    2, a one time charge (non-recurring).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PriceAmountMicros</td>
+                                <td>int64</td>
+                                <td>
+                                    The price for the payment cycle in micro-units, where 1,000,000 micro-units equal one unit of the currency.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BillingPeriod</td>
+                                <td>FString</td>
+                                <td>
+                                    Billing period for which the given price applies, specified in ISO 8601 format.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FormattedPrice</td>
+                                <td>FString</td>
+                                <td>
+                                    The formatted price for the payment cycle, including its currency sign.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PriceCurrencyCode</td>
+                                <td>FString</td>
+                                <td>
+                                    The ISO 4217 currency code for price.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-bottom: 150px">
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2023
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

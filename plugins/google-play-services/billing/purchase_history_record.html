@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
-    <title>UE Plugin | Events</title>
+    <title>UE Plugin | Billing</title>
     <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../style.css">
@@ -114,13 +114,33 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="incrementing_event.html">
-                                Incrementing an Event
+                            <a class="nav-link inactive" href="querying_product_details.html">
+                                Querying Product Details
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="fetch_events.html">
-                                Loading Events
+                            <a class="nav-link inactive" href="launch_billing_flow.html">
+                                Launch Billing Flow
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="check_for_purchases.html">
+                                Check for Purchases
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="query_purchase_history.html">
+                                Query Purchase History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="show_inapp_messages.html">
+                                Show In-App Messages
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="supporting_nodes.html">
+                                Supporting Nodes
                             </a>
                         </li>
                         <hr />
@@ -128,13 +148,23 @@
                             <a class="nav-link disabled">Object Definitions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="event.html">
-                                Event
+                            <a class="nav-link inactive" href="product_details.html">
+                                Product Details
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="event_error.html">
-                                Event Error
+                            <a class="nav-link inactive" href="purchase.html">
+                                Purchase
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="purchase_history_record.html">
+                                Purchase History Record
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
                             </a>
                         </li>
                         <hr />
@@ -153,86 +183,79 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Loading Events</h1>
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom;">
+                    <h1 class="h2 text-white-shadow">Purchase History Record</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content">
-                            This is an asynchronous function which allows you fetch <a href="event.html">Google Play Events</a> in the Cloud.
-                            You can make use of this to create personalized experiences tailored to individual players.
-                        </p>
-                        <p class="content">
-                            The parameters include whether or not to clear the local cache and the Event ID's to fetch.</br>
-                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            Once the asynchronous operation has completed, one of two delegates will be called to handle
-                            the success and failure situations.
+                            The Purchase History Record struct is designed to mimic the Purchase History Record almost exactly as provided by the Google Play Billing
+                            SDK for the Billing service. </br>
+                            It contains various information about the the historical details of a purchase of an in-app product.
                         </p>
                     </div>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Events/Events_Plugin_Load.png" style="max-width: 70%;">
-                    </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">FPurchaseHistoryRecord</h1>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                    <span class="badge badge-primary">1</span>
-                    <div class="info">
-                        <p class="content">
-                            <b>Clear Local Cache</b>
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            A boolean value to indicate whether or not to clear the local cache on the Android device.</br>
-                            When set to true, it will fetch from the cloud, potentially taking longer to complete.
-                            When false, will be much faster but will access the locally cached version if its there.
-                        </p>
-                    </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Quantity</td>
+                                <td>int32</td>
+                                <td>
+                                    The quantity of the purchased product.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PurchaseTime</td>
+                                <td>int64</td>
+                                <td>
+                                    The time the product was purchased, in milliseconds since the epoch (Jan 1, 1970).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DeveloperPayload</td>
+                                <td>FString</td>
+                                <td>
+                                    The payload specified when the purchase was acknowledged or consumed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PurchaseToken</td>
+                                <td>FString</td>
+                                <td>
+                                    A token that uniquely identifies a purchase for a given item and user pair.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Signature</td>
+                                <td>FString</td>
+                                <td>
+                                    A String containing the signature of the purchase data that was signed with the private key of the developer.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Products</td>
+                                <td>TArray&#60;FString&#62;</td>
+                                <td>
+                                    The product Ids.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Event Ids</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                An array of Event ID's to fetch. If an empty array is provided, it will fetch all Events.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">3</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Success</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called when the Events have successfully been retrieved.
-                                The delegate will produce an Array of <a href="event.html">Events</a> for you to use.</br>
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">4</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Failure</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called if there is an error fetching the events.
-                                The delegate will produce an <a href="event_error.html">Event Error type</a> for the developer to handle appropriately.
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-bottom: 300px">
+                <div style="margin-bottom: 400px">
                 </div>
             </main>
         </div>

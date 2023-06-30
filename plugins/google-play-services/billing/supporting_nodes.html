@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
-    <title>UE Plugin | Events</title>
+    <title>UE Plugin | Billing</title>
     <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../style.css">
@@ -114,13 +114,33 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="incrementing_event.html">
-                                Incrementing an Event
+                            <a class="nav-link inactive" href="querying_product_details.html">
+                                Querying Product Details
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="fetch_events.html">
-                                Loading Events
+                            <a class="nav-link inactive" href="launch_billing_flow.html">
+                                Launch Billing Flow
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="check_for_purchases.html">
+                                Check for Purchases
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="query_purchase_history.html">
+                                Query Purchase History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="show_inapp_messages.html">
+                                Show In-App Messages
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="supporting_nodes.html">
+                                Supporting Nodes
                             </a>
                         </li>
                         <hr />
@@ -128,13 +148,23 @@
                             <a class="nav-link disabled">Object Definitions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="event.html">
-                                Event
+                            <a class="nav-link inactive" href="product_details.html">
+                                Product Details
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="event_error.html">
-                                Event Error
+                            <a class="nav-link inactive" href="purchase.html">
+                                Purchase
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="purchase_history_record.html">
+                                Purchase History Record
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
                             </a>
                         </li>
                         <hr />
@@ -154,39 +184,87 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Loading Events</h1>
+                    <h1 class="h2 text-white-shadow">Supporting Nodes</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which allows you fetch <a href="event.html">Google Play Events</a> in the Cloud.
-                            You can make use of this to create personalized experiences tailored to individual players.
+                            This is a list of supporting blueprint nodes for this function.
                         </p>
                         <p class="content">
-                            The parameters include whether or not to clear the local cache and the Event ID's to fetch.</br>
+                            The list includes checking if a feature is supported, checking if there is a connection to the billing service and extracting a subscription offer token.
                         </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            Once the asynchronous operation has completed, one of two delegates will be called to handle
-                            the success and failure situations.
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Is Feature Supported</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            A blueprint node to check if a specific billing feature is supported by the installed Google Play Store version on the players phone.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Events/Events_Plugin_Load.png" style="max-width: 70%;">
+                        <img src="../../../images/Billing/Billing_Plugin_IsFeatureSupported.png" style="max-width: 70%;">
                     </div>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                    <span class="badge badge-primary">1</span>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Feature Type</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Choose which <a href="enumerations.html">Feature Type</a> you would like to check.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Is Billing Ready</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            A blueprint node to check if there is an active connection ready to the Billing service.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Billing/Billing_Plugin_IsBillingReady.png" style="max-width: 70%;">
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Subscription Token</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            <b>Clear Local Cache</b>
+                            A Quality of life blueprint node which finds the offer token from the <a href="product_details.html">Product Details</a> retrieved when <a href="querying_product_details.html">Querying Product Details</a>.
                         </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            A boolean value to indicate whether or not to clear the local cache on the Android device.</br>
-                            When set to true, it will fetch from the cloud, potentially taking longer to complete.
-                            When false, will be much faster but will access the locally cached version if its there.
-                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Billing/Billing_Plugin_GetSubscriptionOfferToken.png" style="max-width: 70%;">
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Subscription Products</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A list of Subscription <a href="product_details.html">Product Details</a> retrieved when <a href="querying_product_details.html">Querying Product Details</a>.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div style="padding-top: 30px">
@@ -194,10 +272,10 @@
                         <span class="badge badge-primary">2</span>
                         <div class="info">
                             <p class="content">
-                                <b>Event Ids</b>
+                                <b>Product ID</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                An array of Event ID's to fetch. If an empty array is provided, it will fetch all Events.
+                                The product ID of the subscription (retrieved from the Google Play Console).
                             </p>
                         </div>
                     </div>
@@ -207,12 +285,10 @@
                         <span class="badge badge-primary">3</span>
                         <div class="info">
                             <p class="content">
-                                <b>On Success</b>
+                                <b>Base Plan ID</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called when the Events have successfully been retrieved.
-                                The delegate will produce an Array of <a href="event.html">Events</a> for you to use.</br>
-                                You can simply click and drag this pin to create a custom event.
+                                The base plan ID of the subscription (retrieved from the Google Play Console).
                             </p>
                         </div>
                     </div>
@@ -222,12 +298,11 @@
                         <span class="badge badge-primary">4</span>
                         <div class="info">
                             <p class="content">
-                                <b>On Failure</b>
+                                <b>Offer ID</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called if there is an error fetching the events.
-                                The delegate will produce an <a href="event_error.html">Event Error type</a> for the developer to handle appropriately.
-                                You can simply click and drag this pin to create a custom event.
+                                The offer ID of the offer on the base plan of the subscription (retrieved from the Google Play Console). </br>
+                                When left blank, it will produce the blueprint node will produce the offer token for the selected base plan.
                             </p>
                         </div>
                     </div>

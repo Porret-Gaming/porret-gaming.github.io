@@ -274,7 +274,7 @@ hr {
     margin-bottom: 20px;
     border-radius: 5px;
     padding-top: 20px;
-    height: 890px;
+    height: 858px;
     box-shadow: 0.1px 0.1px 3px rgba(53, 53, 53, 0.3);
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
@@ -516,6 +516,22 @@ hr {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.7);
     border-radius: 20px;
+}
+
+.blue-diamond {
+    list-style-type: none;
+    position: relative;
+}
+
+.blue-diamond:before {
+    content: "";
+    display: inline-block;
+    background-color: #62cced;
+    width: 0.6em;
+    height: 0.6em;
+    border: 1px solid black;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
 }
 
 .show-sidebar::-webkit-scrollbar {

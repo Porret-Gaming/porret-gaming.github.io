@@ -302,6 +302,48 @@
                         </div>
                     </div>
                 </div>
+                <div style="margin-top: 50px">
+                    <h1 class="h3">Examples</h1>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; position: relative; margin-top: 15px;">
+                    <div class="info">
+                        <p class="content">
+                            In the below example, we are initiating a purchase of an INAPP product given the product ID retrieved from the Google Play Console.</br>
+                            Depending on your use case, you can create your own function to handle the purchase of the in app product and reward the player appropriately. Similarly you can create your own method to handle errors.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            For INAPP product purchases, there are no offer tokens required, so you can simply leave this field blank.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Billing/LaunchBillingFlow_INAPP_Example.png" style="max-width: 80%;">
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; position: relative; margin-top: 15px;">
+                    <div class="info">
+                        <p class="content">
+                            In the below example, we are initiating a purchase of a Subscription product given the product ID retrieved from the Google Play Console.</br>
+                            Depending on your use case, you can create your own function to handle the purchase of the subscription product and reward the player appropriately. Similarly you can create your own method to handle errors.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The only difference here is the use of the provided <a href="supporting_nodes.html">Get Subscription Offer Token</a> quality of life blueprint node.</br>
+                            In the event when you have multiple base plans and/or offers on these base plans, you may want to choose which one to use.
+                            In this case, you would want to have saved the <b>Subscription Product Details</b> when <a href="query_product_details.html">Querying Subscription Product Details</a> to a variable to be used here.</br>
+                            In the event you do not have multiple offers/base plans on a subscription, you can simply leave the offer token blank and it will take the first (and only) offer seen.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Billing/LaunchBillingFlow_SUBS_Example.png" style="max-width: 80%;">
+                    </div>
+                </div>
                 <div style="margin-bottom: 300px">
                 </div>
             </main>

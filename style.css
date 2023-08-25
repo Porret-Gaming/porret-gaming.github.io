@@ -518,6 +518,11 @@ hr {
     border-radius: 20px;
 }
 
+.two-column-table {
+    width: 60%; /* Make the table fill its container */
+    margin-left: 3.5%;
+}
+
 .blue-diamond {
     list-style-type: none;
     position: relative;

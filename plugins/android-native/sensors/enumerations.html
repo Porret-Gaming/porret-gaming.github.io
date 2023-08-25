@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Android Sensors</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../../Squiggle.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Squiggle/Squiggle_Logo.png" alt="Squiggle"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Squiggle
+                                        <span class="dropdown-item-subtext">Android Mobile Game</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UE Plugins
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
+                                        alt="Google Play Saved Games" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Saved Games
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/events/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
+                                        alt="Google Play Events" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Events
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Billing
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="sensor_availability.html">
+                                Checking Sensor Availability
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="register_sensor.html">
+                                Registering a Sensor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="deregister_sensor.html">
+                                Deregistering a Sensor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="sensor_listener.html">
+                                Setup Sensor Event Listener
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="supporting_nodes.html">
+                                Supporting Nodes
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="sensor.html">
+                                Sensor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="sensor_event.html">
+                                Sensor Event
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="supporting_structs.html">
+                                Supporting Structs
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom;">
+                    <h1 class="h2 text-white-shadow">Enumerations</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Here is a list of enumerations you will find throughout the plugin. </br>
+                            These enumerations are named after the same enumerations/constants found within the Android SDK.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">ESensorType</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UNDEFINED</td>
+                                <td>Default value (should be unused)</td>
+                            </tr>
+                            <tr>
+                                <td>ACCELEROMETER</td>
+                                <td>Measures the acceleration force in m/s<sup>2</sup> that is applied to a device on all three physical axes (x, y, and z), including the force of gravity.</td>
+                            </tr>
+                            <tr>
+                                <td>ACCELEROMETER_UNCALIBRATED</td>
+                                <td>Same as ACCELEROMETER, but incorporates an estimated bias compensation.</td>
+                            </tr>
+                            <tr>
+                                <td>AMBIENT_TEMPERATURE</td>
+                                <td>Measures the ambient room temperature in degrees Celsius (°C).</td>
+                            </tr>
+                            <tr>
+                                <td>GAME_ROTATION_VECTOR</td>
+                                <td>
+                                    The game rotation vector sensor is identical to the ROTATION_VECTOR sensor, except it does not use the geomagnetic field.
+                                    Therefore the Y axis does not point north but instead to some other reference.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GEOMAGNETIC_ROTATION_VECTOR</td>
+                                <td>
+                                    Similar to TYPE_ROTATION_VECTOR, but using a magnetometer instead of using a gyroscope.
+                                    This sensor uses lower power than the other rotation vectors, because it doesn't use the gyroscope.
+                                    However, it is more noisy and will work best outdoors.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY</td>
+                                <td>Measures the force of gravity in m/s<sup>2</sup> that is applied to a device on all three physical axes (x, y, z).</td>
+                            </tr>
+                            <tr>
+                                <td>GYROSCOPE</td>
+                                <td>Measures a device's rate of rotation in rad/s around each of the three physical axes (x, y, and z).</td>
+                            </tr>
+                            <tr>
+                                <td>GYROSCOPE_UNCALIBRATED</td>
+                                <td>Same as GYROSCOPE, but includes estimated drift.</td>
+                            </tr>
+                            <tr>
+                                <td>LIGHT</td>
+                                <td>Measures the ambient light level (illumination) in lx</td>
+                            </tr>
+                            <tr>
+                                <td>LINEAR_ACCELERATION</td>
+                                <td>Measures the acceleration force in m/s<sup>2</sup> that is applied to a device on all three physical axes (x, y, and z), excluding the force of gravity.</td>
+                            </tr>
+                            <tr>
+                                <td>MAGNETIC_FIELD</td>
+                                <td>Measures the ambient geomagnetic field for all three physical axes (x, y, z) in μT.</td>
+                            </tr>
+                            <tr>
+                                <td>MAGNETIC_FIELD_UNCALIBRATED</td>
+                                <td>Same as MAGNETIC_FIELD, but includes an iron bias estimation.</td>
+                            </tr>
+                            <tr>
+                                <td>MOTION_DETECT</td>
+                                <td>
+                                    The motion detect sensor triggers an event if the device has been in motion for at least 5 seconds with a maximal latency of 5 additional seconds.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PRESSURE</td>
+                                <td>Measures the ambient air pressure in hPa or mbar.</td>
+                            </tr>
+                            <tr>
+                                <td>PROXIMITY</td>
+                                <td>Measures the proximity of an object in cm relative to the view screen of a device.</td>
+                            </tr>
+                            <tr>
+                                <td>RELATIVE_HUMIDITY</td>
+                                <td>Measures the relative ambient humidity in percent (%).</td>
+                            </tr>
+                            <tr>
+                                <td>ROTATION_VECTOR</td>
+                                <td>Measures the orientation of a device by providing the three elements of the device's rotation vector.</td>
+                            </tr>
+                            <tr>
+                                <td>SIGNIFICANT_MOTION</td>
+                                <td>
+                                    The significant motion sensor triggers an event each time significant motion is detected and then it disables itself. </br>
+                                    <span style="font-weight: 500">NOTE:</span> You will need to register it again once triggered if you want to continously monitor for events. 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>STATIONARY_DETECT</td>
+                                <td>
+                                    The stationary detect sesnsor triggers an event if the device has been stationary for at least 5 seconds with a maximal latency of 5 additional seconds.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>STEP_COUNTER</td>
+                                <td>
+                                    The step counter sensor provides the number of steps taken by the user since the last reboot while the sensor was activated. </br>
+                                    The step counter has more latency (up to 10 seconds) but more accuracy than the step detector sensor. </br>
+                                    <span style="font-weight: 500">NOTE:</span> You must declare the <span style="font-weight: 500">android.permission.ACTIVITY_RECOGNITION</span> to use this sensor. </br>
+                                    <span style="font-weight: 500">NOTE:</span> You will need to register it again once triggered if you want to continously monitor for events. 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>STEP_DETECTOR</td>
+                                <td>
+                                    The step detector sensor triggers an event each time the user takes a step. The latency is expected to be below 2 seconds. </br>
+                                    <span style="font-weight: 500">NOTE:</span> You must declare the <span style="font-weight: 500">android.permission.ACTIVITY_RECOGNITION</span> to use this sensor. </br>
+                                    <span style="font-weight: 500">NOTE:</span> You will need to register it again once triggered if you want to continously monitor for events. 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EDirectReportRate</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RATE_STOP</td>
+                                <td>
+                                    Sensor stopped (no event output).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RATE_NORMAL</td>
+                                <td>
+                                    Sensor operates between 55% to 220% of nominal rate (50Hz) therefore 27.5Hz to 110Hz.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RATE_FAST</td>
+                                <td>
+                                    Sensor operates between 55% to 220% of nominal rate (200Hz) therefore 110Hz to 440Hz.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RATE_VERY_FAST</td>
+                                <td>
+                                    Sensor operates between 55% to 220% of nominal rate (800Hz) therefore 440Hz to 1760Hz.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RATE_UNDEFINED</td>
+                                <td>
+                                    Default value (should be unused).
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EReportingMode</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>REPORTING_MODE_CONTINUOUS</td>
+                                <td>
+                                    Events are reported at a constant rate.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>REPORTING_MODE_ON_CHANGE</td>
+                                <td>
+                                    Events are reported only when the value changes.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>REPORTING_MODE_ONE_SHOT</td>
+                                <td>
+                                    Events are reported in one-shot mode,
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>REPORTING_MODE_SPECIAL_TRIGGER</td>
+                                <td>
+                                    Events are reported as described in the description of the sensor.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>REPORTING_MODE_UNDEFINED</td>
+                                <td>
+                                    Default value (should be unused).
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">ESensorAccuracy</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SENSOR_STATUS_UNRELIABLE</td>
+                                <td>
+                                    The values returned by the sensor cannot be trusted, calibration is needed or the environment doesn't allow readings.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SENSOR_STATUS_ACCURACY_LOW</td>
+                                <td>
+                                    The sensor is reporting data with low accuracy, calibration with the environment is needed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SENSOR_STATUS_ACCURACY_MEDIUM</td>
+                                <td>
+                                    The sensor is reporting data with an average level of accuracy, calibration with the environment may improve the readings.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SENSOR_STATUS_ACCURACY_HIGH</td>
+                                <td>
+                                    The sensor is reporting data with maximum accuracy.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">ESensorDelay</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SENSOR_DELAY_FASTEST</td>
+                                <td>
+                                    A delay of 0 microseconds between events.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SENSOR_DELAY_GAME</td>
+                                <td>
+                                    A delay of 20 000 microseconds between events.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SENSOR_DELAY_NORMAL</td>
+                                <td>
+                                    A delay of 200 000 microseconds between events.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SENSOR_DELAY_UI</td>
+                                <td>
+                                    A delay of 60 000 microseconds between events.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-bottom: 150px">
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2023
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Android Sensors</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0PNJQ6P759');
+</script>
+
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../../Squiggle.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Squiggle/Squiggle_Logo.png" alt="Squiggle"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Squiggle
+                                        <span class="dropdown-item-subtext">Android Mobile Game</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UE Plugins
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
+                                        alt="Google Play Saved Games" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Saved Games
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/events/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
+                                        alt="Google Play Events" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Events
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png"
+                                        alt="Google Play Billing" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Billing
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../android-native/sensors/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Android Sensors
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="sensor_availability.html">
+                                Checking Sensor Availability
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="register_sensor.html">
+                                Registering a Sensor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="deregister_sensor.html">
+                                Deregistering a Sensor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="sensor_listener.html">
+                                Setup Sensor Event Listener
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="supporting_nodes.html">
+                                Supporting Nodes
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="sensor.html">
+                                Sensor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="sensor_event.html">
+                                Sensor Event
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="supporting_structs.html">
+                                Supporting Structs
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Supporting Nodes</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            This is a comprehensive list of additional blueprint nodes offered by this plugin.
+                            These functions are not part of the default Sensors API; they are provided for your convenience.
+                        </p>
+                        <p class="content">
+                            In the Sensors API, all <a href='sensor_event.html'>Sensor Events</a> generated by the <a href='sensor_listener.html'>Sensor Listener</a> contain an array of floats to report their respective sensor values.
+                            This mirrors how the Sensors API exposes these values, which can make the mapping between specific values in the array and their corresponding sensors more complex.
+                            The functions listed below are designed to simplify this mapping process, ensuring a more streamlined experience for you.
+                        </p>
+                        <p class="content">
+                            All utility functions below accept only one parameter; the float array of values produced by the <a href='sensor_listener.html'>Sensor Listener</a>'s "On Sensor Value Changed" delegate.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Temperature</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces a single float representing the ambient air temperature measured in °C.</br>
+                            This node corresponds to the <span style="font-weight: 500">AMBIENT_TEMPERATURE</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetTemperature.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Light</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces a single float representing the illuminance measured in lx.</br>
+                            This node corresponds to the <span style="font-weight: 500">LIGHT</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetLight.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Pressure</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces a single float representing the ambient air pressure measured in hPa or mbar.</br>
+                            This node corresponds to the <span style="font-weight: 500">PRESSURE</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetPressure.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Humidity</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces a single float representing the ambient relative humidity measured in %.</br>
+                            This node corresponds to the <span style="font-weight: 500">RELATIVE_HUMIDITY</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetHumidity.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Game Rotation</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces an FVector with the rotation around the corresponding axis (sin(θ/2)).</br>
+                            This node corresponds to the <span style="font-weight: 500">GAME_ROTATION_VECTOR</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetGameRotation.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Device Orientation</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Additional supporting node which uses the SDK's getRotationMatrix and getOrientation functions as well as Unreal Engine's FQuat for use with SetRotation for smooth rotations.</br>
+                            This node corresponds to the <span style="font-weight: 500">GAME_ROTATION_VECTOR</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetDeviceOrientation.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Accelerometer</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces an FVector with the acceleration force along the corresponding axis (including gravity) measured in m/s<sup>2</sup>.</br>
+                            This node corresponds to the <span style="font-weight: 500">ACCELEROMETER</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetAccelerometer.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Accelerometer Uncalibrated</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces two FVector instances: the first representing raw acceleration forces, and the second incorporating estimated bias compensation for each axis, including gravity, measured in m/s<sup>2</sup></br>
+                            This is represented by the <a href="supporting_structs.html">FAccelerometerUncalibrated</a> struct. </br>
+                            This node corresponds to the <span style="font-weight: 500">ACCELEROMETER_UNCALIBRATED</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetAccelerometerUncalibrated.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Gravity</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces an FVector representing the force of gravity along the corresponding axis, measured in m/s<sup>2</sup>.</br>
+                            This node corresponds to the <span style="font-weight: 500">GRAVITY</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetGravity.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Gyroscope</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces an FVector representing the rate of rotation around the corresponding axis, measured in rad/s.</br>
+                            This node corresponds to the <span style="font-weight: 500">GYROSCOPE</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetGyroscope.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Gyroscope Uncalibrated</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces two FVector instances: the first representing the rate of rotation without drift compensation, and the second representing the estimated drift, around the corresponding axis, measured in rad/s.</br>
+                            This is represented by the <a href="supporting_structs.html">FGyroscopeUncalibrated</a> struct. </br>
+                            This node corresponds to the <span style="font-weight: 500">GYROSCOPE_UNCALIBRATED</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetGyroscopeUncalibrated.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Linear Acceleration</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces an FVector representing the acceleration force along the corresponding axis (excluding gravity), measured in m/s<sup>2</sup>.</br>
+                            This node corresponds to the <span style="font-weight: 500">LINEAR_ACCELERATION</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetLinearAcceleration.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Rotation Vector</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces an FVector with the rotation around the corresponding axis (sin(θ/2)) as well as an optional scalar component of the vector (cos(θ/2)).</br>
+                            This is represented by the <a href="supporting_structs.html">FSensorRotationVector</a> struct. </br>
+                            This node corresponds to the <span style="font-weight: 500">ROTATION_VECTOR</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetRotationVector.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Step Count</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces a float representing the number of steps taken by the user since the last reboot while the sensor was activated, measured in steps.</br>
+                            This node corresponds to the <span style="font-weight: 500">STEP_COUNTER</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetStepCount.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Geomagnetic Rotation</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces an FVector with the geomagentic rotation around the corresponding axis (sin(θ/2)).</br>
+                            This node corresponds to the <span style="font-weight: 500">GEOMAGNETIC_ROTATION_VECTOR</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetGeomagneticRotation.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Magnetic Field</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces an FVector with the geomagentic field strength along the corresponding axis, measured in μT</br>
+                            This node corresponds to the <span style="font-weight: 500">MAGNETIC_FIELD</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetMagneticField.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Magnetic Field Uncalibrated</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces two FVector instances: the first representing the gemoagnetic field strength without hard iron calibration, and the second representing iron bias estimation, along the corresponding axis, measured in μT.</br>
+                            This is represented by the <a href="supporting_structs.html">FMagneticFieldUncalibrated</a> struct. </br>
+                            This node corresponds to the <span style="font-weight: 500">MAGNETIC_FIELD_UNCALIBRATED</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetMagneticFieldUncalibrated.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Proxmity</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Produces a float representing the distance from and object, measured in cm. Some proxmity sensors provide only binary values representing near and far.</br>
+                            This node corresponds to the <span style="font-weight: 500">PROXIMITY</span> sensor.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetProximity.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 300px">
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2023
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

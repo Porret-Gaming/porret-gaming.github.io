@@ -321,6 +321,10 @@ hr {
     background-color: rgb(221, 255, 244);
 }
 
+.lavender {
+    background-color: rgb(251, 236, 255);
+}
+
 .card-body-custom {
     /* background-color: #ffffff; */
     padding: 0.5rem;

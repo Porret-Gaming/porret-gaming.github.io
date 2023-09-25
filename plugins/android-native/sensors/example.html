@@ -14,13 +14,12 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-0PNJQ6P759');
+  gtag('config', 'G-0PNJQ6P759');
 </script>
-
 <body class="documentation-body">
     <!-- Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -88,8 +87,8 @@
                         <li>
                             <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
                                 <div class="dropdown-item-content">
-                                    <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png"
-                                        alt="Google Play Billing" class="dropdown-item-image">
+                                    <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
+                                        class="dropdown-item-image">
                                     <div class="dropdown-item-text">
                                         Play: Billing
                                         <span class="dropdown-item-subtext">Android Plugin</span>
@@ -154,7 +153,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="sensor_listener.html">
+                            <a class="nav-link inactive" href="sensor_listener.html">
                                 Setup Sensor Event Listener
                             </a>
                         </li>
@@ -164,7 +163,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="example.html">
+                            <a class="nav-link active" href="example.html">
                                 Example Setup
                             </a>
                         </li>
@@ -208,54 +207,70 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="container border-bottom"
-                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Setup Sensor Event Listener</h1>
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Example Setups</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content">
-                            This function sets up the delegates for when registered sensors are triggered or their state is changed.
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            The function takes two delegate parameters, "On Sensor Accuracy Changed" and "On Sensor Value Changed". </br>
-                            This blueprint node can be executed in multiple places across your project and all delegates will be triggered.
-                        </p>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Check Sensor Availability
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                Check to see if the Sensor you wish to use is available my making use of the <a href="sensor_availability.html">Has Sensor Type</a> blueprint node.
+                            </p>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                In the event that you do have the Sensor available, you can continue onto the next step. </br>
+                                Be sure to handle the cases in which the device does not have the Sensor in question available.
+                            </p>
+                            <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img style="max-width: 70%" src="../../../images/AndroidSensors/Example_One.png">
+                                </div>
+                            </div>
+                            <li class="list-group-item">
+                                Register the Sensor
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                Once you have confirmed that the Sensor is available, you can use the <a href="register_sensor.html">Register Sensor</a> blueprint node to switch it on.
+                            </p>
+                            <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img style="max-width: 90%" src="../../../images/AndroidSensors/Example_Two.png">
+                                </div>
+                            </div>
+                            <li class="list-group-item">
+                                Setup the Sensor Event Listeners
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                Finally, now that you have switched the Sensor on, you need to setup the listener to handle receiving and acting upon the Sensor Events.
+                            </p>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                You can do this by making use of the <a href="sensor_listener.html">Setup Sensor Event Listener</a> blueprint node. </br>
+                                Here you can listen for values returned by the Sensor and act upon them appropriately.
+                            </p>
+                            <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img style="max-width: 100%" src="../../../images/AndroidSensors/Example_Three.png">
+                                </div>
+                            </div>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                In the event you are making use of a one-shot sensor, the sensor will automatically get de-registered. </br>
+                                When this happens you will need to re-register the sensor after it has been trigger if that is your desired behaviour.
+                            </p>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                The below example makes use of the Significant motion sensor. </br>
+                                In order to identify when you need to this, you can find information about the sensors <a href="enumerations.html">here</a>.
+                            </p>
+                            <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img style="max-width: 100%" src="../../../images/AndroidSensors/Example_Four.png">
+                                </div>
+                            </div>
+                        </ol>
                     </div>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_SetupEventListener.png" style="max-width: 70%;">
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">1</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Sensor Accuracy Changed</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate called when a sensor's accuracy has changed, normally due to a change in state (eg. pausing and resuming).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Sensor Value Changed</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate called when a sensor reports a change in value.</br>
-                                The <a href="enumerations.html">Sensor Delay</a> used when <a href="register_sensor.html">Registering a Sensor</a> determines how often the "On Sensor Value Changed" delegate will be called.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-bottom: 500px">
+                <div style="margin-bottom: 450px">
                 </div>
             </main>
         </div>

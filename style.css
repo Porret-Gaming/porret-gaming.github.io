@@ -325,6 +325,10 @@ hr {
     background-color: rgb(251, 236, 255);
 }
 
+.sunflower {
+    background-color: rgb(254, 255, 239);
+}
+
 .card-body-custom {
     /* background-color: #ffffff; */
     padding: 0.5rem;

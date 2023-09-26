@@ -128,7 +128,7 @@
                             <a class="nav-link disabled">Developer Guidelines</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="overview.html">
+                            <a class="nav-link inactive" href="overview.html">
                                 Overview
                             </a>
                         </li>
@@ -158,7 +158,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="query_purchases.html">
+                            <a class="nav-link active" href="query_purchases.html">
                                 Query Purchases
                             </a>
                         </li>
@@ -212,57 +212,76 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="container border-bottom"
-                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Billing Overview</h1>
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Query Purchases</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            <b>The Google Play Service: Billing</b>
+                            This is an asynchronous function which returns currently owned items bought by the player, only including active subscriptions and non-consumed one-time purchases.
+                            You can use this to check if a subscription is still active.
                         </p>
                         <p class="content">
-                            The Google Play Billing Library is a powerful tool provided by Google Play Services that enables developers to implement in-app purchases and subscription services in their Android games. With this library, developers can monetize their games, offer premium content, and provide a seamless purchasing experience for players.
-                        </p>
-                        <ul>
-                            <li class="blue-diamond">Fetch All Product Information</li>
-                            <li class="blue-diamond">Launch the Billing Flow for your Products</li>
-                            <li class="blue-diamond">Fetch Purchase History Information</li>
-                            <li class="blue-diamond">Retrieve All Currently Owned Purchases</li>
-                            <li class="blue-diamond">Check if a Feature is Supported</li>
-                            <li class="blue-diamond">Handle Pending Purchases/Transactions</li>
-                            <li class="blue-diamond">Show In-App Messages (Price Change Confirmations)</li>
-                            <li class="blue-diamond">Acknowledge/Consume Purchases Automatically in Google Play</li>
-                            <li class="blue-diamond">Indicate Personalised Prices</li>
-                        </ul>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            By leveraging the capabilities of the Google Play Billing Library, developers can unlock new revenue streams, engage their player base, and create a sustainable business model for their Android games.
-                        </p>
-                    </div>
-                    <div class="info" style="margin-top: 20px">
-                        <p class="content">
-                            <b>The Unreal Engine Plugin</b>
+                            Note: This method uses a cache of Google Play Store app without initiating a network request. When testing subscriptions using a test subscription, this cache does not update regularly.
                         </p>
                         <p class="content">
-                            Introducing the Unreal Engine plugin for the Billing service, a powerful tool that brings the features of <span style="font-weight: 500">Google Play Billing Version 6</span> directly to your Unreal Engine projects.
-                            This plugin is designed to expose the Billing service's functionality to blueprint scripting, simplifying the integration process for game developers.
-                        </p>
-                        <p class="content">
-                            With an intuitive and user-friendly interface seamlessly integrated into the Unreal Engine editor, connecting to the service becomes a breeze.
-                            Whether you're a seasoned Unreal Engine developer or new to the platform, our plugin empowers you to easily perform all the features provided by the Google Play Billing Library, enhancing the capabilities of your game.
+                            The parameters include the Product Type to query for owned purchases.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            Action has been taken to update Unreal Engines existing integration with the older billing library to adhere to any of the breaking changes from the library update.
-                            <span style="font-weight: 500">Billing functionality implemented in your project must therefore only interact with this plugin's billing functionality and not Unreal Engine provided Google Play billing services.</span>
+                            Once the asynchronous operation has completed, one of two delegates will be called to handle
+                            the success and failure situations.
                         </p>
                     </div>
-                    <!-- <div class="info" style="margin-top: 20px"> -->
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/Billing/Billing_Plugin_AllNodes.png" style="width: 80%">
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Billing/Billing_Plugin_QueryPurchases.png" style="max-width: 70%;">
                     </div>
-                    <!-- </div> -->
-                    <div style="margin-bottom: 400px">
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Product Type</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                <a href="enumerations.html">Product Type</a> can either be Subscription or InApp products.
+                            </p>
+                        </div>
                     </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A delegate that will be called once all owned purchases have been retrieved.
+                                The delegate will produce a list of <a href="purchase.html">Purchases</a> for you to use.</br>
+                                You can simply click and drag this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A delegate that will be called if there is an error attempting to look up recent purchases.
+                                The delegate will produce a <a href="enumerations.html">Billing Response Code</a> and debug message for the developer to handle appropriately.
+                                You can simply click and drag this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 300px">
                 </div>
             </main>
         </div>

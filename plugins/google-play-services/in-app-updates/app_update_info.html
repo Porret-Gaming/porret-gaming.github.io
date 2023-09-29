@@ -238,15 +238,16 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            The ReviewError struct is designed to simplify handling any errors encountered when attempting to launch an in-app review.
+                            The AppUpdateInfo struct is designed to mimic the object defined within the Google Play Core library almost exactly.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The struct contains a general error code that the google play library categories the issue as and a message describing what may have happened.
+                            The struct contains information about the avilability and progress of an app update.
+                            This object is produced when using the <a href="get_app_update_info.html">Get App Update Info</a> and <a href="resumed_listener.html">Set App Update Resumed Listener</a> blueprint functions.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">FReviewError</h1>
+                    <h1 class="h3 text-white-shadow">FAppUpdateInfo</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
                     <table class="table table-striped table-bordered table-documentation"
@@ -260,18 +261,52 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Code</td>
+                                <td>PackageName</td>
+                                <td>FString</td>
+                                <td>Returns the package name for the app to be updated.</td>
+                            </tr>
+                            <tr>
+                                <td>AvailableVersionCode</td>
+                                <td>int32</td>
+                                <td>If an update is available or in progress, this returns the version code of the update.</td>
+                            </tr>
+                            <tr>
+                                <td>UpdateAvailability</td>
                                 <td>
-                                    <a href="enumerations.html">EReviewErrorCode</a>
+                                    <a href="enumerations.html">EUpdateAvailability</a>
                                 </td>
                                 <td style="min-width: 300px">
-                                    The type of error encountered.
+                                    Returns whether an update is available for the app.
                                 </td>
                             </tr>
                             <tr>
-                                <td>Message</td>
-                                <td>FString</td>
-                                <td>A message further describing what the issue might be.</td>
+                                <td>InstallStatus</td>
+                                <td>
+                                    <a href="enumerations.html">EInstallStatus</a>
+                                </td>
+                                <td style="min-width: 300px">
+                                    Returns the progress status of the update.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ClientVersionStalenessDays</td>
+                                <td>int32</td>
+                                <td>If an update is available or in progress, this returns the number of days since the Google Play Store app on the user's device has learnt about an available update.</td>
+                            </tr>
+                            <tr>
+                                <td>UpdatePriority</td>
+                                <td>int32</td>
+                                <td>Returns the in-app update priority for this update, as defined by the developer in the Google Play Developer API.</td>
+                            </tr>
+                            <tr>
+                                <td>BytesDownloaded</td>
+                                <td>int64</td>
+                                <td>Returns the number of bytes downloaded so far.</td>
+                            </tr>
+                            <tr>
+                                <td>TotalBytesToDownload</td>
+                                <td>int64</td>
+                                <td>Returns the total number of bytes to be downloaded for this update.</td>
                             </tr>
                         </tbody>
                     </table>

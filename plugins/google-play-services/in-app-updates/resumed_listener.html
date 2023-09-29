@@ -237,15 +237,14 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which launches the in-app review flow.
-                            You must wait until the user has completed the in-app review process before your app continues its normal flow.
+                            This is an function which sets up a listener to retrieve Update Information in the event your application was paused and then resumed.
+                            The purpose of this function is to handle situations where an update was being downloaded and for some reason the download was paused halfway through or completed while your application was closed.
                         </p>
                         <p class="content">
-                            Once the asynchronous operation has completed, one of two delegates will be called to handle
-                            the success and failure situations.
+                            You should always set this listener up to check if the <a href="enumerations.html">Update Availability</a> was in a status of <span style="font-weight: 500">DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS</span> to prompt the user to continue the update by <a href="launch_update_request.html">Launching a Play Update Request</a>.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            <span style="font-weight: 500">Note:</span> Google's policy requires that no matter the result, success or failure, you must continue your normal app flow.
+                            You should also check if there is an already downloaded update ready to be installed in order to prompt the user to <a href="install_update.html">Install the Update</a>.
                         </p>
                     </div>
                 </div>
@@ -259,11 +258,11 @@
                         <span class="badge badge-primary">1</span>
                         <div class="info">
                             <p class="content">
-                                <b>On Success</b>
+                                <b>On App Update Resumed</b>
                             </p>
                             <p class="content">
-                                A delegate that will be called once the user has completed the review process.
-                                The library does not indicate whether the user reviewed or not, or even whether the review dialog was shown.
+                                A delegate that will be called once the application resumes from a paused state. </br>
+                                This delegate will be called with the <a href="app_update_info.html">Object</a> for you to determine whether to prompt the user to <a href="launch_update_request.html">Continue the Installation</a> or <a href="install_update.html">Install the Fully Downloaded Update</a>.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 You can simply click and drag this pin to create a custom event.
@@ -271,21 +270,21 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Failure</b>
-                            </p>
-                            <p class="content">
-                                A delegate that will be called if there is an error attempting to launch the review flow.
-                                The delegate will produce an <a href="review_error.html">Review Error</a> for the developer to handle appropriately.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
+                <div style="margin-top: 50px">
+                    <h1 class="h3">Example</h1>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; position: relative; margin-top: 15px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            In the below example, we are setting the resumed listener to check for updates in progress in order to prompt the user to continue the download/installation as well as checking if there is an already downloaded update ready to be installed.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/InAppUpdates/UpdateResumedListener_Example.png" style="max-width: 100%;">
                     </div>
                 </div>
                 <div style="margin-bottom: 300px">

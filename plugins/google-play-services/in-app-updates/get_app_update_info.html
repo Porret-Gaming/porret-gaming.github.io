@@ -237,15 +237,12 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which launches the in-app review flow.
-                            You must wait until the user has completed the in-app review process before your app continues its normal flow.
-                        </p>
-                        <p class="content">
-                            Once the asynchronous operation has completed, one of two delegates will be called to handle
-                            the success and failure situations.
+                            This is an asynchronous function which retrieves information about the latest update for your application.
+                            Internally, this information is cached upon retrieval for a short period of time for use when requesting an update.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            <span style="font-weight: 500">Note:</span> Google's policy requires that no matter the result, success or failure, you must continue your normal app flow.
+                            Once the asynchronous operation has completed, one of two delegates will be called to handle
+                            the success and failure situations.
                         </p>
                     </div>
                 </div>
@@ -259,11 +256,11 @@
                         <span class="badge badge-primary">1</span>
                         <div class="info">
                             <p class="content">
-                                <b>On Success</b>
+                                <b>On Update Info Retrieved</b>
                             </p>
                             <p class="content">
-                                A delegate that will be called once the user has completed the review process.
-                                The library does not indicate whether the user reviewed or not, or even whether the review dialog was shown.
+                                A delegate that will be called once the operation has completed successfully.
+                                The delegate will produce an <a href="app_update_info.html">App Update Info</a> object for the developer to query for information about the latest update.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 You can simply click and drag this pin to create a custom event.
@@ -279,8 +276,8 @@
                                 <b>On Failure</b>
                             </p>
                             <p class="content">
-                                A delegate that will be called if there is an error attempting to launch the review flow.
-                                The delegate will produce an <a href="review_error.html">Review Error</a> for the developer to handle appropriately.
+                                A delegate that will be called if there is an error attempting to retrieve information about the latest update.
+                                The delegate will produce an <a href="install_error.html">Install Error</a> for the developer to handle appropriately.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 You can simply click and drag this pin to create a custom event.

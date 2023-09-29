@@ -237,15 +237,14 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which launches the in-app review flow.
-                            You must wait until the user has completed the in-app review process before your app continues its normal flow.
+                            This is an asynchronous function which launches the In-App Google Play Update Request flow, which should follow after confirming that you can perform a specific style of update with the <a href="is_update_type_allowed.html">Is Update Type Allowed</a> function.
                         </p>
                         <p class="content">
-                            Once the asynchronous operation has completed, one of two delegates will be called to handle
-                            the success and failure situations.
+                            This will create a Google generated user interface for the user to see the update and decide if they would like to update or not.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            <span style="font-weight: 500">Note:</span> Google's policy requires that no matter the result, success or failure, you must continue your normal app flow.
+                            Once the asynchronous operation has completed, one of two delegates will be called to handle
+                            the success and failure situations.
                         </p>
                     </div>
                 </div>
@@ -259,11 +258,13 @@
                         <span class="badge badge-primary">1</span>
                         <div class="info">
                             <p class="content">
-                                <b>On Success</b>
+                                <b>On Update Request Launched</b>
                             </p>
                             <p class="content">
-                                A delegate that will be called once the user has completed the review process.
-                                The library does not indicate whether the user reviewed or not, or even whether the review dialog was shown.
+                                A delegate that will be called once the user successfuly interacted with the Update Request.
+                            </p>
+                            <p class="content">
+                                Accepting or denying the update will trigger this delegate and produce an <a href="enumerations.html">Update Result</a> for you to see if the update was accepted or denied.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 You can simply click and drag this pin to create a custom event.
@@ -279,8 +280,8 @@
                                 <b>On Failure</b>
                             </p>
                             <p class="content">
-                                A delegate that will be called if there is an error attempting to launch the review flow.
-                                The delegate will produce an <a href="review_error.html">Review Error</a> for the developer to handle appropriately.
+                                A delegate that will be called if there is an error attempting to prompt the user about the latest update.
+                                The delegate will produce an <a href="install_error.html">Install Error</a> for the developer to handle appropriately.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 You can simply click and drag this pin to create a custom event.

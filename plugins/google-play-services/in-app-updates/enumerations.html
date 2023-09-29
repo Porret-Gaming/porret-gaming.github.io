@@ -238,13 +238,41 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content" style="margin-bottom: 0rem;">
-                            Here is a list of enumerations you will find throughout the plugin. At this stage there is only one. </br>
+                            Here is a list of enumerations you will find throughout the plugin.</br>
                             These enumerations are named after the same enumerations/constants found in the play services core library.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">EReviewErrorCode</h1>
+                    <h1 class="h3 text-white-shadow">EAppUpdateType</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UPDATE_TYPE_FLEXIBLE</td>
+                                <td style="min-width: 300px">
+                                    A type of application update which downloads in the background enabling your application to continue during the download.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UPDATE_TYPE_IMMEDIATE</td>
+                                <td>
+                                    A type of update which is required in order to continue, use of your application is halted untill the update is complete.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EInstallErrorCode</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
                     <table class="table table-striped table-bordered table-documentation"
@@ -259,25 +287,211 @@
                             <tr>
                                 <td>NO_ERROR</td>
                                 <td style="min-width: 300px">
-                                    When no error occurs (this is a default value and should not occur).
+                                    No error occurred.
                                 </td>
                             </tr>
                             <tr>
-                                <td>PLAY_STORE_NOT_FOUND</td>
+                                <td>NO_ERROR_PARTIALLY_ALLOWED</td>
                                 <td>
-                                    No Play Store app is found on device or an unofficial version is installed.
+                                    This is the same as NO_ERROR and is currently deprecated.
                                 </td>
                             </tr>
                             <tr>
-                                <td>INVALID_REQUEST</td>
+                                <td>ERROR_UNKNOWN</td>
                                 <td>
-                                    The request made to the google API is invalid.
+                                    An unknown error occurred.
                                 </td>
                             </tr>
                             <tr>
-                                <td>INTERNAL_ERROR</td>
+                                <td>ERROR_API_NOT_AVAILABLE</td>
                                 <td>
-                                    An unknown internal error.
+                                    The functionality is not available on this device.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ERROR_INVALID_REQUEST</td>
+                                <td>
+                                    The request that was sent by the app is malformed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ERROR_INSTALL_UNAVAILABLE</td>
+                                <td>
+                                    The install is unavailable to this user or device.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ERROR_INSTALL_NOT_ALLOWED</td>
+                                <td>
+                                    The download/install is not allowed, due to the current device state (e.g. low battery, low disk space, ...).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ERROR_DOWNLOAD_NOT_PRESENT</td>
+                                <td>
+                                    The install/update has not been (fully) downloaded yet.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ERROR_PLAY_STORE_NOT_FOUND</td>
+                                <td>
+                                    The Play Store app is either not installed or not the official version.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ERROR_APP_NOT_OWNED</td>
+                                <td>
+                                    The app is not owned by any user on this device. An app is "owned" if it has been acquired from Play.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ERROR_INTERNAL_ERROR</td>
+                                <td>
+                                    An internal error happened in the Play Store.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EInstallStatus</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UNKNOWN</td>
+                                <td style="min-width: 300px">
+                                    The Install Status is in an unrecognisable state.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>REQUIRES_UI_INTENT</td>
+                                <td>
+                                    A Play Store user interface flow needs to be started.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PENDING</td>
+                                <td>
+                                    The installation is waiting to be installed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DOWNLOADING</td>
+                                <td>
+                                    The update is currently being download.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DOWNLOADED</td>
+                                <td>
+                                    The update is fully downloaded.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INSTALLING</td>
+                                <td>
+                                    The update is currently being installed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INSTALLED</td>
+                                <td>
+                                    The update is installed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FAILED</td>
+                                <td>
+                                    The installation failed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CANCELED</td>
+                                <td>
+                                    The installation was cancelled.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EUpdateAvailability</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UNKNOWN</td>
+                                <td style="min-width: 300px">
+                                    It is unknown if there is an update available or not.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UPDATE_NOT_AVAILABLE</td>
+                                <td>
+                                    There is no update available to download and install.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UPDATE_AVAILABLE</td>
+                                <td>
+                                    There is an update available to be downloaded and installed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS</td>
+                                <td>
+                                    An update has been triggered by the developer (you) and is in progress.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EUpdateResult</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UPDATE_RESULT_OK</td>
+                                <td style="min-width: 300px">
+                                    The user accepted the application update request.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UPDATE_RESULT_CANCELLED</td>
+                                <td>
+                                    The user rejected the application update request.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UPDATE_RESULT_FAILED</td>
+                                <td>
+                                    There was an error understanding the users action.
                                 </td>
                             </tr>
                         </tbody>

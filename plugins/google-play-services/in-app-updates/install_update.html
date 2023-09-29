@@ -237,15 +237,14 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            This is an asynchronous function which launches the in-app review flow.
-                            You must wait until the user has completed the in-app review process before your app continues its normal flow.
+                            This is technically an asynchronous function which triggers the application to update when you make use of the Flexible Update Type.
+                            During this process Google will overlay your application UI with their own showing the installation progress. Once complete, your application will restart.
                         </p>
                         <p class="content">
-                            Once the asynchronous operation has completed, one of two delegates will be called to handle
-                            the success and failure situations.
+                            You should only make this functionality available within your application once you have confirmed your Flexible Update has finished downloading by setting up the <a href="flexible_listener.html">Flexible Install Listener</a>.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            <span style="font-weight: 500">Note:</span> Google's policy requires that no matter the result, success or failure, you must continue your normal app flow.
+                            <span style="font-weight: 500">NOTE:</span> There is no success delegate, because on a successfull installation, your application will restart.
                         </p>
                     </div>
                 </div>
@@ -259,28 +258,11 @@
                         <span class="badge badge-primary">1</span>
                         <div class="info">
                             <p class="content">
-                                <b>On Success</b>
-                            </p>
-                            <p class="content">
-                                A delegate that will be called once the user has completed the review process.
-                                The library does not indicate whether the user reviewed or not, or even whether the review dialog was shown.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
-                            <p class="content">
                                 <b>On Failure</b>
                             </p>
                             <p class="content">
-                                A delegate that will be called if there is an error attempting to launch the review flow.
-                                The delegate will produce an <a href="review_error.html">Review Error</a> for the developer to handle appropriately.
+                                A delegate that will be called if there is an error attempting to Install the Update. </br>
+                                The delegate will produce an <a href="install_error.html">Install Error</a> for the developer to handle appropriately.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 You can simply click and drag this pin to create a custom event.
@@ -288,7 +270,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin-bottom: 300px">
+                <div style="margin-bottom: 500px">
                 </div>
             </main>
         </div>

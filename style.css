@@ -144,6 +144,108 @@ hr {
     border: 0px;
 }
 
+.news-group-item {
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0.082));
+    background-color: rgba(255, 255, 255, 0);
+    padding: 3px;
+    padding-right: 20px;
+    border-bottom: 2px solid rgb(255, 148, 25);
+}
+
+.news-card {
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.news-container {
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-right: 1px solid rgb(255, 148, 25);
+    box-shadow: -3px 3px 8px 0px rgba(156, 156, 156, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.news-badge {
+    max-width: 100%;
+    max-height: 46.5px;
+}
+
+.news-sub-title {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.349);
+}
+
+.news-info {
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 10px;
+    transition: max-height 0.1s linear;
+}
+
+.btn-learn-more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(255, 200, 137), rgb(226, 121, 0));
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: rgb(255, 239, 222);
+}
+
+.btn-learn-more:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.news-card.expanded .news-info {
+    max-height: 280px;
+}
+
+.news-info-title {
+    padding: 10px;
+    font-weight: 500;
+}
+
+.news-info-details {
+
+}
+
+.news-info-details ul {
+    list-style: none; /* Remove default list styles */
+    padding-left: 5px; /* Add some left padding for bullet points */
+}
+.news-info-details li {
+    line-height: normal; /* Set line-height to normal */
+}
+.news-info-details li::before {
+    content: "\2022"; /* Unicode character for a bullet point (•) */
+    color: orange; /* Set the color to orange */
+    display: inline-block;
+    width: 1em;
+    font-size: 1.5em;
+}
+
+.page-title {
+    color: #9ca3a6 !important;
+    margin: 0;
+    font-size: 22px;
+}
+
 .modal-dialog.modal-dialog-centered {
     display: flex;
     justify-content: center;

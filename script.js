@@ -142,3 +142,149 @@ if (mobileButton) {
   });
 }
 
+// Update any news feeds
+const news = document.getElementById('news');
+if (news) {
+  news.innerHTML =`
+  <div class="news-card expanded">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">New Unreal Engine Plugin</div>
+                  <div class="news-sub-title">2023-10-02</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="row">
+              <div class="col-4">
+                  <img style="max-height: 156px; padding-top: 10px; padding-bottom: 10px" src="../../../images/general/InAppUpdates_Thumbnail.png">
+              </div>
+              <div class="col-8" style="display:flex; align-items: center; margin: 0">
+                  <div class="news-info-details" style="font-weight: 500">
+                      <ul>
+                          <li>Track Available Updates</li>
+                          <li>Immediate Required Updates</li>
+                          <li>Background Flexible Updates</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/in-app-updates/overview.html">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/InAppReviews/GooglePlay_Reviews_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">New Unreal Engine Plugin</div>
+                  <div class="news-sub-title">2023-09-28</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="row">
+              <div class="col-4">
+                  <img style="max-height: 156px; padding-top: 10px; padding-bottom: 10px" src="../../../images/general/InAppReviews_Thumbnail.png">
+              </div>
+              <div class="col-8" style="display:flex; align-items: center; margin: 0">
+                  <div class="news-info-details" style="font-weight: 500">
+                      <ul>
+                          <li>Request Google Play Reviews</li>
+                          <li>All Within Your Application</li>
+                          <li>Strategically Time Requests</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/in-app-reviews/overview.html">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">New Unreal Engine Plugin</div>
+                  <div class="news-sub-title">2023-09-28</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="row">
+              <div class="col-4">
+                  <img style="max-height: 156px; padding-top: 10px; padding-bottom: 10px;" src="../../../images/general/Mobile_Sensors_Thumbnail.png">
+              </div>
+              <div class="col-8" style="display:flex; align-items: center; margin: 0">
+                  <div class="news-info-details" style="font-weight: 500">
+                      <ul>
+                          <li>Native Sensor Control</li>
+                          <li>Power Consumption Control</li>
+                          <li>Auto Pause Functionality</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/android-native/sensors/overview.html">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2023-09-26</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Billing Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Fixed "bIsAcknowledged" not updating to true</li>
+                  <li>New Blueprint Node "Query Purchases"</li>
+                  <li>Unreal Engine 5.3 Support</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html">Learn more</a>
+      </div>
+  </div>
+</div>
+  `;
+}
+
+ // Get all news cards
+ const newsCards = document.querySelectorAll('.news-card');
+
+ // Add hover event listeners to each news card
+ newsCards.forEach((card) => {
+
+  card.addEventListener('click', () => {
+      console.log("mouse enter!");   
+      card.classList.toggle('expanded');
+     });
+ })

@@ -146,7 +146,36 @@ if (mobileButton) {
 const news = document.getElementById('news');
 if (news) {
   news.innerHTML =`
-  <div class="news-card expanded">
+<div class="news-card expanded">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2023-11-30</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Billing Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Limit the number of retry attempts</li>
+                  <li>Prevent continuous reconnection attempts</li>
+                  <li>Automatically restart retry loop</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
   <div class="news-container">
       <div class="news-group-item">
           <div class="row">

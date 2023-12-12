@@ -653,6 +653,61 @@ hr {
     margin-right: 0.5em;
 }
 
+.tab-content {
+    padding: 20px;
+    border-top: 3px solid rgb(56, 63, 69);
+    border-bottom: 1px solid rgb(56, 63, 69);
+    position: relative;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.tab-link:focus, .tab-link:hover {
+    text-decoration: none;
+}
+
+.tab-item {
+    margin-bottom: 2px;
+}
+
+.tab-link {
+    background-color: white;
+    border: 1px solid rgb(56, 63, 69);
+    border-bottom: 0px;
+    color: rgb(0, 0, 0);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.tab-link.active {
+    background-color: rgb(56, 63, 69);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.tab-link:hover {
+    background-color: rgb(235, 235, 235);
+    color: rgb(0, 0, 0);
+    
+}
+.tab-link.active:hover {
+    background-color: rgb(56, 63, 69);
+    color: rgb(255, 255, 255);
+}
+
+
 .show-sidebar::-webkit-scrollbar {
     width: 0;  /* Hide the scrollbar */
 }
@@ -681,3 +736,4 @@ hr {
 ::-webkit-scrollbar-thumb:hover {
     background: #444;
 }
+

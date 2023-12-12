@@ -162,12 +162,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="privacy_settings.html">
+                            <a class="nav-link inactive" href="privacy_settings.html">
                                 Privacy Settings
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="banner_ads.html">
+                            <a class="nav-link active" href="banner_ads.html">
                                 Banner Ads
                             </a>
                         </li>
@@ -227,84 +227,134 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Privacy Settings</h1>
+                    <h1 class="h2 text-white-shadow">Advanced Banner Ads</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            The Advanced Ads plugin complies fully with <span style="font-weight: 500">GDPR</span> and <span style="font-weight: 500">COPPA</span> requirements, in addition to this, it passes all consent to mediation partners appropriately.
-                            In order to gain consent from your users, we use Google's UMP SDK to fetch the popup you have created in Admob in order to acquire the users consent.
+                            The Advanced Banner Ads feature allows you to display multiple banner ads of different sizes and locations within your application.
+                            There are six different types of banner ads available along with nine different locations to display them.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            In order to show ads in your Android mobile application, there is a minimum consent required, otherwise extremely limited (if any) ads will be shown.
-                            With this in mind, when a user does not provide consent appropriately, you should handle this as if you are not able to show ads.
+                            It is recommended that you load your ads in advance so that you can display them immediatly when you are ready to do so.
+                            You can load as many as you require in advance and it will keep them in memory, ready to be displayed.
                         </p>
                     </div>
                 </div>
                 <div class="container"
                     style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
-                    <h1 class="list-group-item">Creating your Admob GDPR Consent Form</h1>
+                    <h1 class="list-group-item">Banner Ad Types</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            The most up-to-date and detailed way to create your GDPR Consent message will always live in <a href="https://support.google.com/admob/answer/10113207" target="_blank">Google's documentation</a>.
+                            When loading a banner ad, you can choose from six different types, each ultimately corresponding to different sizes.
+                            You can tab through the different examples below to get a feel for what size/type you are looking to implement.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            But to summarise, the first step will be to "<span style="font-weight: 500">Login to your Admob Account</span>" -> "<span style="font-weight: 500">Privacy & messaging</span>" and under "<span style="font-weight: 500">European regulations</span>" click "<span style="font-weight: 500">Create message</span>".
+                            <span style="font-weight: 500">Note:</span> The Leaderboard banner size can only fit on/be used on tablets.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
+                        <li class="tab-item">
+                            <a class="tab-link active" id="tab" data-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="false">
+                                Banner
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">
+                                Large Banner
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content3" role="tab" aria-controls="content3" aria-selected="false">
+                                Medium Rectangle
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content4" role="tab" aria-controls="content4" aria-selected="false">
+                                Full Banner
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content5" role="tab" aria-controls="content5" aria-selected="false">
+                                Leaderboard
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content6" role="tab" aria-controls="content6" aria-selected="false">
+                                Adapative
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/Admob/Admob_BannerAdSize_Banner.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/Admob/Admob_BannerAdSize_LargeBanner.png" alt="Image 2" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/Admob/Admob_BannerAdSize_MediumRectangle.png" alt="Image 3" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content4" role="tabpanel" aria-labelledby="tab4">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/Admob/Admob_BannerAdSize_FullBanner.png" alt="Image 4" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content5" role="tabpanel" aria-labelledby="tab5">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/Admob/Admob_BannerAdSize_Leaderboard.png" alt="Image 5" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content6" role="tabpanel" aria-labelledby="tab6">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/Admob/Admob_BannerAdSize_Adaptive.png" alt="Image 6" style="max-width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-bottom-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            It is recommended that you keep your banner ads organised so that they are consistantly called with the same size, to this end, once a banner ad is loaded, you cannot reload it with a new size.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Banner Ad Gravity</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            When displaying a banner ad, you can choose where on the screen the banner ad will be displayed.
+                            Here is an example visual representation of where each <a href="enumerations.html">GRAVITY</a> value will place your banner ad.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Create_GDPR_Consent_Form_1.png" style="max-width: 90%;">
+                        <img src="../../../images/Admob/Admob_Banner_Gravity.png" style="max-width: 90%;">
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style=" border-bottom-left-radius: 20px;">
                         <p class="content" style="margin-bottom: 0rem;">
-                            From here, select your app, language and design/configure your message as per your requirements.
-                            Once complete, ensure you have published the message.
+                            Once you ad is loaded, you can display that ad multiple times without having to reload it.
+                            If you attempt to display an ad which is already displayed along with a different GRAVITY value, it will move the banner ad to the new location.
                         </p>
                     </div>
                 </div>
-                <div class="container"
-                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
-                    <h1 class="list-group-item">Privacy Configuration Options</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info">
-                        <p class="content">
-                            You have the ability to configure a few settings for your privacy settings within the plugins configuration.
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            With this, you can control when the application asks for consent, some default privacy settings and a testing option.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Privacy_Settings_Configuration.png" style="max-width: 90%;">
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-bottom-left-radius: 20px;">
-                        <p class="content">
-                            <span style="font-weight: 500">Request Consent and Initialize on Launch</span> indicates whether or not to automatically request consent and initialise on application launch.
-                        </p>
-                        <p class="content">
-                            <span style="font-weight: 500">Child directed treatment</span> indicates whether you would like your app to be treated as child-directed for purposes of the Children’s Online Privacy Protection Act (COPPA).
-                        </p>
-                        <p class="content">
-                            <span style="font-weight: 500">Under age of Consent</span> indicates where you would like your app to be marked to receive treatment for users in the European Economic Area (EEA) under the age of consent. </br>
-                            <span style="font-weight: 500">Note:</span> If you have marked your user as under the age of consent, they will <span style="font-weight: 500">NOT</span> receive the consent pop-up.
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            <span style="font-weight: 500">Reset Consent on Launch</span> indicates whether or not to automatically reset consent allowing you to trigger the Consent Message again for testing purposes.</br>
-                            <span style="font-weight: 500">NB: This option is for testing purposes only and must be disabled before go live.</span>
-                        </p>
-                    </div>
-                </div>
+                
                 <div class="container"
                     style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
                     <h1 class="list-group-item">Available Blueprint Nodes</h1>
@@ -312,21 +362,20 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content" style="margin-bottom: 0rem;">
-                            Along with all the automatic features you can control with the Privacy Settings Configuration above, you can also manually interact with the UMP SDK.
-                            We have exposed functionality to enable you to manually request consent and initialise the Admob library, retrieve the consent values obtained, allow users to update their consent and check if you are obliged to offer this feature or not.
+                            XXX
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Request Consent and Initialise</h1>
+                    <h1 class="h3 text-white-shadow">Load Advanced Banner Ad</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content">
-                            In the event you do not want to request consent on Lanch by using the Privacy Settings Configuration above, you can manually request this with your parameters of choice.
+                            XXX
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            This is useful when you have unique user information at your disposal, such as their age to handle COPPA more accurately indicating if they are under the age of consent and/or if they require child directed treatment.
+                            XXX
                         </p>
                     </div>
                 </div>
@@ -363,13 +412,12 @@
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Get Consent Preferences</h1>
+                    <h1 class="h3 text-white-shadow">Display Advanced Banner Ad</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content" style="margin-bottom: 0rem;">
-                            Once you have retrieved consent, you can access their choices from local storage following the <a href="https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md#in-app-details" target="_blank">TCF v2 spec</a>.</br>
-                            This information will allow you to make informed decisions on how to proceed within your app with regards to displaying ads.
+                            XXX
                         </p>
                     </div>
                 </div>
@@ -380,26 +428,22 @@
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-bottom-left-radius: 20px;">
-                        <p class="content">
-                            To learn more about IABTCF Strings, you can read their <a href="https://iabeurope.eu/iab-europe-transparency-consent-framework-policies" target="_blank">documentation</a>.
-                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            <span style="font-weight: 500">Note:</span> This will only return accurate values once consent has actually been retrieved.
+                            XXX
                         </p>
                     </div>
                 </div>
                 
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Privacy Options Form</h1>
+                    <h1 class="h3 text-white-shadow">Hide Advanced Banner Ad</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content">
-                            GDPR may require consent revocation in order to allow users to withdraw/update their consent choices at any time.
-                            We have exposed the UMP SDK's ability to do this.
+                            XXX
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            There are two blueprint nodes which tell you if the feature should be required and one to actually show the form.
+                            XXX
                         </p>
                     </div>
                 </div>

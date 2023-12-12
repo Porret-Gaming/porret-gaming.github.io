@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Admob</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../../Squiggle.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Squiggle/Squiggle_Logo.png" alt="Squiggle"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Squiggle
+                                        <span class="dropdown-item-subtext">Android Mobile Game</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UE Plugins
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
+                                        alt="Google Play Saved Games" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Saved Games
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/events/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
+                                        alt="Google Play Events" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Events
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Billing
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/in-app-reviews/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/InAppReviews/GooglePlay_Reviews_Plugin_Logo.png" alt="Google Play Reviews"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Reviews
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/in-app-updates/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png" alt="Google Play Updates"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Updates
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../android-native/sensors/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Android Sensors
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="privacy_settings.html">
+                                Privacy Settings
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="banner_ads.html">
+                                Banner Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="app_open_ads.html">
+                                App Open Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="interstitial_ads.html">
+                                Interstitial Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="rewarded_interstitial_ads.html">
+                                Rewarded Interstitial Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="rewarded_video_ads.html">
+                                Rewarded Video Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="mediation.html">
+                                Mediation
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="product_details.html">
+                                Consent Preferences
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Privacy Settings</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            The Advanced Ads plugin complies fully with <span style="font-weight: 500">GDPR</span> and <span style="font-weight: 500">COPPA</span> requirements, in addition to this, it passes all consent to mediation partners appropriately.
+                            In order to gain consent from your users, we use Google's UMP SDK to fetch the popup you have created in Admob in order to acquire the users consent.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            In order to show ads in your Android mobile application, there is a minimum consent required, otherwise extremely limited (if any) ads will be shown.
+                            With this in mind, when a user does not provide consent appropriately, you should handle this as if you are not able to show ads.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Creating your Admob GDPR Consent Form</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            The most up-to-date and detailed way to create your GDPR Consent message will always live in <a href="https://support.google.com/admob/answer/10113207" target="_blank">Google's documentation</a>.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            But to summarise, the first step will be to "<span style="font-weight: 500">Login to your Admob Account</span>" -> "<span style="font-weight: 500">Privacy & messaging</span>" and under "<span style="font-weight: 500">European regulations</span>" click "<span style="font-weight: 500">Create message</span>".
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Create_GDPR_Consent_Form_1.png" style="max-width: 90%;">
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style=" border-bottom-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            From here, select your app, language and design/configure your message as per your requirements.
+                            Once complete, ensure you have published the message.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Privacy Configuration Options</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            You have the ability to configure a few settings for your privacy settings within the plugins configuration.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            With this, you can control when the application asks for consent, some default privacy settings and a testing option.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Privacy_Settings_Configuration.png" style="max-width: 90%;">
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-bottom-left-radius: 20px;">
+                        <p class="content">
+                            <span style="font-weight: 500">Request Consent and Initialize on Launch</span> indicates whether or not to automatically request consent and initialise on application launch.
+                        </p>
+                        <p class="content">
+                            <span style="font-weight: 500">Child directed treatment</span> indicates whether you would like your app to be treated as child-directed for purposes of the Children’s Online Privacy Protection Act (COPPA).
+                        </p>
+                        <p class="content">
+                            <span style="font-weight: 500">Under age of Consent</span> indicates where you would like your app to be marked to receive treatment for users in the European Economic Area (EEA) under the age of consent. </br>
+                            <span style="font-weight: 500">Note:</span> If you have marked your user as under the age of consent, they will <span style="font-weight: 500">NOT</span> receive the consent pop-up.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            <span style="font-weight: 500">Reset Consent on Launch</span> indicates whether or not to automatically reset consent allowing you to trigger the Consent Message again for testing purposes.</br>
+                            <span style="font-weight: 500">NB: This option is for testing purposes only and must be disabled before go live.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Available Blueprint Nodes</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Along with all the automatic features you can control with the Privacy Settings Configuration above, you can also manually interact with the UMP SDK.
+                            We have exposed functionality to enable you to manually request consent and initialise the Admob library, retrieve the consent values obtained, allow users to update their consent and check if you are obliged to offer this feature or not.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Request Consent and Initialise</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            In the event you do not want to request consent on Lanch by using the Privacy Settings Configuration above, you can manually request this with your parameters of choice.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This is useful when you have unique user information at your disposal, such as their age to handle COPPA more accurately indicating if they are under the age of consent and/or if they require child directed treatment.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Admob_BP_RequestConsentAndInitialise.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Child Directed Treatment</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Whether you would like your app to be treated as child-directed for purposes of the Children’s Online Privacy Protection Act (COPPA).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Under Age of Consent</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Whether you would like your app to be marked to receive treatment for users in the European Economic Area (EEA) under the age of consent.</br>
+                                <span style="font-weight: 500">Note:</span> If you have marked your user as under the age of consent, they will <span style="font-weight: 500">NOT</span> receive the consent pop-up.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Consent Preferences</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Once you have retrieved consent, you can access their choices from local storage following the <a href="https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md#in-app-details" target="_blank">TCF v2 spec</a>.</br>
+                            This information will allow you to make informed decisions on how to proceed within your app with regards to displaying ads.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Admob_BP_GetConsentPreferences.png">
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-bottom-left-radius: 20px;">
+                        <p class="content">
+                            To learn more about IABTCF Strings, you can read their <a href="https://iabeurope.eu/iab-europe-transparency-consent-framework-policies" target="_blank">documentation</a>.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            <span style="font-weight: 500">Note:</span> This will only return accurate values once consent has actually been retrieved.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Privacy Options Form</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            GDPR may require consent revocation in order to allow users to withdraw/update their consent choices at any time.
+                            We have exposed the UMP SDK's ability to do this.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            There are two blueprint nodes which tell you if the feature should be required and one to actually show the form.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Admob_BP_PrivacyOptionsForm.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Is Privacy Options Required</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                This will return a boolean indicating whether or not you are expected to allow users to update their consent choices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Show Privacy Options Form</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                This will re-open the Consent Choices form for users to update thir consent details.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 500px">
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2023
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

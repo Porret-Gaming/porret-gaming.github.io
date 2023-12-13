@@ -362,7 +362,8 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content" style="margin-bottom: 0rem;">
-                            XXX
+                            We have designed the blueprints to be as simple as possible, seperating out the loading, displaying and hiding of banner ads into their own seperate functions.
+                            You can load as many banner ads as you like in advance and it will keep them in memory ready to be displayed without delay.
                         </p>
                     </div>
                 </div>
@@ -372,16 +373,16 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content">
-                            XXX
+                            This blueprint loads a banner ad of any type into memory for a given Ad Unit ID you have setup in Admob.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            XXX
+                            You should load your banner ads in advance before you intend to display them so that they are ready to be displayed immediatly.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Admob_BP_RequestConsentAndInitialise.png">
+                        <img src="../../../images/Admob/Admob_BP_LoadBannerAd.png">
                     </div>
                 </div>
                 <div>
@@ -389,10 +390,10 @@
                         <span class="badge badge-primary">1</span>
                         <div class="info">
                             <p class="content">
-                                <b>Child Directed Treatment</b>
+                                <b>Ad Unit Id</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                Whether you would like your app to be treated as child-directed for purposes of the Children’s Online Privacy Protection Act (COPPA).
+                                The Ad Unit ID of the banner ad you have created in AdMob.
                             </p>
                         </div>
                     </div>
@@ -400,13 +401,45 @@
                 <div style="padding-top: 20px">
                     <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
                         <span class="badge badge-primary">2</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
+                        <div class="info">
                             <p class="content">
-                                <b>Under Age of Consent</b>
+                                <b>Banner Size</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                Whether you would like your app to be marked to receive treatment for users in the European Economic Area (EEA) under the age of consent.</br>
-                                <span style="font-weight: 500">Note:</span> If you have marked your user as under the age of consent, they will <span style="font-weight: 500">NOT</span> receive the consent pop-up.
+                                The <a href="enumerations.html">Banner Type</a> you would like to load the ad into, as discussed above.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Event</b>
+                            </p>
+                            <p class="content">
+                                <a href="enumerations.html">Banner Events</a> that occur during the lifecycle of the banner ad, including when it has succesfully been loaded. </br>
+                                In addition to the type of Event, you will have access to the Ad Unit ID corresponding to that event.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                An <a href="enumerations.html">Ad Error Code</a> along with a message and which Ad Unit ID has failed to load.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
                             </p>
                         </div>
                     </div>
@@ -416,21 +449,59 @@
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint displays a banner ad you have previously loaded using the Load Advanced Banner Ad blueprint node above.
+                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            XXX
+                            You can call this blueprint node multiple times in a row to <span style="font-weight: 500">change its gravity location on the screen</span>, or <span style="font-weight: 500">display multiple banner ads at once</span>.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Admob_BP_GetConsentPreferences.png">
+                        <img src="../../../images/Admob/Admob_BP_DisplayBannerAd.png">
                     </div>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-bottom-left-radius: 20px;">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            XXX
-                        </p>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Ad Unit Id</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Ad Unit ID of the banner ad you have created in AdMob and previously loaded.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Gravity</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The <a href="enumerations.html">Gravity</a> location you would like to display the ad in.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                An <a href="enumerations.html">Ad Error Code</a> along with a message and which Ad Unit ID has failed to load.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
@@ -440,40 +511,28 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content">
-                            XXX
+                            This blueprint hides an already displayed banner ad from the screen after using the Dispay Advanced Banner Ad blueprint.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            XXX
+                            This does not delete the banner ad from memory, you can simply redisplay it after hiding it.</br>
+                            <span style="font-weight: 500">Note:</span> You do not have to reload the banner ad after hiding it.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Admob_BP_PrivacyOptionsForm.png">
+                        <img src="../../../images/Admob/Admob_BP_HideBannerAd.png">
                     </div>
                 </div>
                 <div>
                     <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
                         <span class="badge badge-primary">1</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Is Privacy Options Required</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                This will return a boolean indicating whether or not you are expected to allow users to update their consent choices.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
                         <div class="info" style="border-bottom-left-radius: 20px;">
                             <p class="content">
-                                <b>Show Privacy Options Form</b>
+                                <b>Ad Unit Id</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                This will re-open the Consent Choices form for users to update their consent details.
+                                The Ad Unit ID of the banner ad you have created in AdMob and previously loaded.
                             </p>
                         </div>
                     </div>

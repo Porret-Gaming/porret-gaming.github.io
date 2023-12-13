@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Admob</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../../Squiggle.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Squiggle/Squiggle_Logo.png" alt="Squiggle"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Squiggle
+                                        <span class="dropdown-item-subtext">Android Mobile Game</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UE Plugins
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
+                                        alt="Google Play Saved Games" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Saved Games
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/events/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
+                                        alt="Google Play Events" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Events
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Billing
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/in-app-reviews/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/InAppReviews/GooglePlay_Reviews_Plugin_Logo.png" alt="Google Play Reviews"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Reviews
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/in-app-updates/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png" alt="Google Play Updates"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Updates
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../android-native/sensors/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Android Sensors
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="privacy_settings.html">
+                                Privacy Settings
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="banner_ads.html">
+                                Banner Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="app_open_ads.html">
+                                App Open Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="interstitial_ads.html">
+                                Interstitial Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="rewarded_interstitial_ads.html">
+                                Rewarded Interstitial Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="rewarded_video_ads.html">
+                                Rewarded Video Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="mediation.html">
+                                Mediation
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="product_details.html">
+                                Consent Preferences
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Advanced App Open Ads</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            The App Open Ads feature enables the presentation of a distinctive full-screen ad within your mobile applications.
+                            There are two integration methods available: manual display and automatic presentation upon users returning to your application, a scenario referred to as context switching.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            It is recommeded that you load your ads in advance so that you can display them immediatly when you are ready to do so.
+                            This type of ad requires you to be specific about its orientation when loading it.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Immersive Behaviour</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            When displaying your app open ads, you can choose whether or not the ad will be displayed in immersive mode.
+                            The difference is simply displaying the operating systems menu bar or not when the ad is displayed.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The following examples showcase how the ad appears in both immersive mode and non-immersive mode
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
+                        <li class="tab-item">
+                            <a class="tab-link active" id="tab" data-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="false">
+                                Non-Immersive
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">
+                                Immersive
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/Admob/Admob_AppOpenAd_NonImmersive.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/Admob/Admob_AppOpenAd_Immersive.png" alt="Image 2" style="max-width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-bottom-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            You can always change your decision to use immersive mode or not when displaying the ad. The immersive mode is not available for context switching app open ads.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Context Switching App Open Ads</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            The Context Switching App Open Ads is a feature where we will automatically display an app open ad when switching back to your application in non-immersive mode.
+                            This does not trigger when you first open your application.
+                        </p>
+                        <p class="content">
+                            In order to set this up, there are some configuration properties to setup and one blueprint node to call to enable context switching.
+                            It is recommended to only enable context switching app open ads after the user has used the app a few times.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The first step is to provide the Ad Unit ID for the app open ad you would like to use for context switching and its default orientation (you can change this orientation during runtime at a later point).
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Context_Switch_AppOpenAd_Configuration.png" style="max-width: 90%;">
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            Once we have this information, the App Open Ad will be loaded during application startup ready to be enabled and displayed immediately once you have enabled it.
+                        </p>
+                        <p class="content">
+                            We have two blueprint nodes to control the behaviour of the Context Switching App Open Ads, namely, switching this feature on and off, updating its orientation and identifying if this feature is on or off.
+                            <span style="font-weight: 500;">The feature is disabled by default</span>.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Keep in mind, when you change the orientation, it will force a reload of the ad.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Admob_BP_ConfigureContextSwitchingAppOpenAds.png" style="max-width: 90%;">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Is Enabled</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Toggle the Context Switching App Open Ads feature on and off.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Orientation</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The <a href="enumerations.html">Orientation</a> you would like to load the ad into, as discussed above.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Is Context Switching On</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A static function returning whether or not Context Switching App Open Ads is on or not.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Manual Blueprint Nodes</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            We have designed the blueprints to be as simple as possible, seperating out the loading and displaying of App Open Ads manually if so desired.
+                            You can load as many App Open Ads as you like in advance and it will keep them in memory ready to be displayed without delay.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            In addition to loading and displaying, in the rare event you need to change an already loaded ad's orientation, you can update its orientation forcing a reload.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Load Advanced App Open Ad</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint loads an App Open Ad into memory for a given Ad Unit ID you have setup in Admob.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            You should load your App Open Ads in advance before you intend to display them so that they are ready to be displayed immediatly.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Admob_BP_LoadAppOpenAd.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Ad Unit Id</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Ad Unit ID of the App Open Ad you have created in AdMob.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Orientation</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The <a href="enumerations.html">Orientation</a> you would like to load the ad into, as discussed above.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Event</b>
+                            </p>
+                            <p class="content">
+                                <a href="enumerations.html">Full Screen Events</a> that occur during the lifecycle of the App Open Ad, including when it has succesfully been loaded. </br>
+                                In addition to the type of Event, you will have access to the Ad Unit ID corresponding to that event.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                An <a href="enumerations.html">Ad Error Code</a> along with a message and which Ad Unit ID has failed to load.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Display Advanced App Open Ad</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint node displays and App Open Ad you have previously loaded using the Load ADvanced App Open Ad blueprint node above.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Once you have displayed this ad and it gets closed, it is discarded.
+                            With this in mind, we have exposed a parameter to autoreload with the same Orientation which it was originally requested to be loaded in.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Admob_BP_DisplayAppOpenAd.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Ad Unit Id</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Ad Unit ID of the App Open Ad you have created in AdMob and previously loaded.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Auto Reload</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A boolean indicating whether or not you would like this App Open Ad to be reloaded after it has been displayed with the same Orientation originally requested to be load in.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Is Immersive</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A boolean indicating whether or not to display the App Open Ad in Immersive mode.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                An <a href="enumerations.html">Ad Error Code</a> along with a message and which Ad Unit ID has failed to load.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Update Advanced App Open Ad Orientation</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint node will update an already loaded App Open Ad Unit's orientation (if it is different) triggering a reload.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The use of this blueprint node should be very rare and only used in cases where the application changes its orientation.
+                            Once the reload has finished, it will triger the same "<span style="font-weight: 500;">On Event</span>" delegate you have setup in the "<span style="font-weight: 500;">Load Advanced App Open Ad</span>" blueprint above.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Admob_BP_UpdateAppOpenAdOrientation.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Ad Unit Id</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Ad Unit ID of the banner ad you have created in AdMob and previously loaded.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Orientation</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The <a href="enumerations.html">Orientation</a> you would like to load the ad into, as discussed above.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 500px">
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2023
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

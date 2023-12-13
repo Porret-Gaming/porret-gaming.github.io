@@ -182,12 +182,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="rewarded_interstitial_ads.html">
+                            <a class="nav-link inactive" href="rewarded_interstitial_ads.html">
                                 Rewarded Interstitial Ads
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="rewarded_video_ads.html">
+                            <a class="nav-link active" href="rewarded_video_ads.html">
                                 Rewarded Video Ads
                             </a>
                         </li>
@@ -227,17 +227,14 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Advanced Rewarded Interstitial Ads</h1>
+                    <h1 class="h2 text-white-shadow">Advanced Rewarded Video Ads</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            The Rewarded Interstitial Ads feature enables the presentation of a rewarded, completely full-screen ads within your mobile applications.
-                            These are very simmilar to the standard Interstitial ads, except you can configure a reward for viewing the ad for a certain duration.
-                            The main benifit of using Rewarded Interstitial Ads over Rewarded Video ads is that you do not need to prompt the user to engage with the ad before displaying it.</br>
-                        </p>
-                        <p class="content">
-                            <span style="font-weight: 500;">NOTE: </span>Google has placed this type of ad in beta (more can be seen on the Admob Website).
+                            The Rewarded Video Ads feature enables the presentation of a rewarded, completely full-screen ads within your mobile applications.
+                            These are very simmilar to the rewarded Interstitial ads, except you are required to prompt the user and require them to accept engagement with the video ad.
+                            For example, watch this ad for an extra life.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
                             It is recommeded that you load your ads in advance so that you can display them immediatly when you are ready to do so.
@@ -251,7 +248,7 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            When displaying your Rewarded Interstitial Ads, you can choose whether or not the ad will be displayed in immersive mode.
+                            When displaying your Rewarded Video Ads, you can choose whether or not the ad will be displayed in immersive mode.
                             The difference is simply displaying the operating systems menu bar or not when the ad is displayed.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
@@ -299,27 +296,27 @@
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content" style="margin-bottom: 0rem;">
-                            We have designed the blueprints to be as simple as possible, seperating out the loading and displaying of Rewarded Interstitial Ads.
-                            You can load as many Rewarded Interstitial Ads as you like in advance and it will keep them in memory, ready to be displayed without delay.
+                            We have designed the blueprints to be as simple as possible, seperating out the loading and displaying of Rewarded Video Ads.
+                            You can load as many Rewarded Video Ads as you like in advance and it will keep them in memory, ready to be displayed without delay.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Load Advanced Rewarded Interstitial Ad</h1>
+                    <h1 class="h3 text-white-shadow">Load Advanced Rewarded Video Ad</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content">
-                            This blueprint loads a Rewarded Interstitial Ad into memory for a given Ad Unit ID you have setup in Admob.
+                            This blueprint loads a Rewarded Video Ad into memory for a given Ad Unit ID you have setup in Admob.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            You should load your Rewarded Interstitial Ads in advance before you intend to display them so that they are ready to be displayed immediatly.
+                            You should load your Rewarded Video Ads in advance before you intend to display them so that they are ready to be displayed immediatly.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Admob_BP_LoadRewardedInterstitialAd.png">
+                        <img src="../../../images/Admob/Admob_BP_LoadRewardedVideoAd.png">
                     </div>
                 </div>
                 <div>
@@ -330,7 +327,7 @@
                                 <b>Ad Unit Id</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                The Ad Unit ID of the Rewarded Interstitial Ad you have created in AdMob.
+                                The Ad Unit ID of the Rewarded Video Ad you have created in AdMob.
                             </p>
                         </div>
                     </div>
@@ -343,7 +340,7 @@
                                 <b>On Event</b>
                             </p>
                             <p class="content">
-                                <a href="enumerations.html">Full Screen Events</a> that occur during the lifecycle of the Rewarded Interstitial Ad, including when it has succesfully been loaded. </br>
+                                <a href="enumerations.html">Full Screen Events</a> that occur during the lifecycle of the Rewarded Video Ad, including when it has succesfully been loaded. </br>
                                 In addition to the type of Event, you will have access to the Ad Unit ID corresponding to that event.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
@@ -369,12 +366,12 @@
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Show Advanced Rewarded Interstitial Ad</h1>
+                    <h1 class="h3 text-white-shadow">Show Advanced Rewarded Video Ad</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content">
-                            This blueprint node displays the Rewarded Interstitial Ad you have previously loaded using the Load Advanced Rewarded Interstitial Ad blueprint node above.
+                            This blueprint node displays the Rewarded Video Ad you have previously loaded using the Load Advanced Rewarded Video Ad blueprint node above.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
                             Once you have displayed this ad and it gets closed, it is discarded.
@@ -384,7 +381,7 @@
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Admob_BP_ShowRewardedInterstitialAd.png">
+                        <img src="../../../images/Admob/Admob_BP_ShowRewardedVideoAd.png">
                     </div>
                 </div>
                 <div>
@@ -395,7 +392,7 @@
                                 <b>Ad Unit Id</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                The Ad Unit ID of the Rewarded Interstitial Ad you have created in AdMob and previously loaded.
+                                The Ad Unit ID of the Rewarded Video Ad you have created in AdMob and previously loaded.
                             </p>
                         </div>
                     </div>
@@ -408,7 +405,7 @@
                                 <b>Auto Reload</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A boolean indicating whether or not you would like this Rewarded Interstitial Ad to be reloaded after it has been displayed.
+                                A boolean indicating whether or not you would like this Rewarded Video Ad to be reloaded after it has been displayed.
                             </p>
                         </div>
                     </div>
@@ -421,7 +418,7 @@
                                 <b>Is Immersive</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A boolean indicating whether or not to display the Rewarded Interstitial Ad in immersive mode.
+                                A boolean indicating whether or not to display the Rewarded Video Ad in immersive mode.
                             </p>
                         </div>
                     </div>
@@ -435,7 +432,7 @@
                             </p>
                             <p class="content">
                                 When the user watches the ad for long enough and triggers a reward, this delegate will fire. </br>
-                                The parameters of this delegate include the <span style="font-weight: 500;">Ad Unit ID</span> of the Rewarded Interstitial Ad, the <span style="font-weight: 500;">integer amount</span> and <span style="font-weight: 500;">reward type</span> setup in Admob when creating your Rewarded Interstitial Ad.
+                                The parameters of this delegate include the <span style="font-weight: 500;">Ad Unit ID</span> of the Rewarded Video Ad, the <span style="font-weight: 500;">integer amount</span> and <span style="font-weight: 500;">reward type</span> setup in Admob when creating your Rewarded Video Ad.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
                                 You can simply click and drag off this pin to create a custom event.

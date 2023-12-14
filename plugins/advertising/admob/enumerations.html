@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Admob</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../../Squiggle.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Squiggle/Squiggle_Logo.png" alt="Squiggle"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Squiggle
+                                        <span class="dropdown-item-subtext">Android Mobile Game</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UE Plugins
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
+                                        alt="Google Play Saved Games" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Saved Games
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/events/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
+                                        alt="Google Play Events" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Events
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Billing
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/in-app-reviews/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/InAppReviews/GooglePlay_Reviews_Plugin_Logo.png" alt="Google Play Reviews"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Reviews
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/in-app-updates/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png" alt="Google Play Updates"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Updates
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../android-native/sensors/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Android Sensors
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="privacy_settings.html">
+                                Privacy Settings
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="banner_ads.html">
+                                Banner Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="app_open_ads.html">
+                                App Open Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="interstitial_ads.html">
+                                Interstitial Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="rewarded_interstitial_ads.html">
+                                Rewarded Interstitial Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="rewarded_video_ads.html">
+                                Rewarded Video Ads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="mediation.html">
+                                Mediation
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="consent_preferences.html">
+                                Consent Preferences
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Enumerations</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            Here is a list of enumerations you will find throughout the plugin.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            These enumerations attempt to replicate the same found within the admob library with a few additional ones for extra functionality provided only by this plugin.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">EAdErrorCode</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 5px; padding-left: 0px; overflow-x: auto; border-bottom-left-radius: 20px;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INTERNAL_ERROR</td>
+                                <td>
+                                    Something happened internally; for instance, an invalid response was received from the ad server.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INVALID_REQUEST</td>
+                                <td>
+                                    The ad request was invalid; for instance, the ad unit ID was incorrect.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NETWORK_ERROR</td>
+                                <td>
+                                    The ad request was unsuccessful due to network connectivity.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NO_FILL</td>
+                                <td>
+                                    The ad request was successful, but no ad was returned due to lack of ad inventory.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>APP_ID_MISSING</td>
+                                <td>
+                                    The ad request was not made due to a missing app ID.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MEDIATION_NO_FILL</td>
+                                <td>
+                                    The mediation adapter did not fill the ad request.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>REQUEST_ID_MISMATCH</td>
+                                <td>
+                                    The request ID in the ad string is not found.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INVALID_AD_STRING</td>
+                                <td>
+                                    The ad string is invalid.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ALREADY_LOADED</td>
+                                <td>
+                                    The request ID has already loaded an Ad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NO_SPACE</td>
+                                <td>
+                                    There is already an Ad being displayed.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">EAppOpenAdOrientation</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 5px; padding-left: 0px; overflow-x: auto; border-bottom-left-radius: 20px;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ORIENTATION_LANDSCAPE</td>
+                                <td>
+                                    Landscape orientation.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORIENTATION_PORTRAIT</td>
+                                <td>
+                                    Portrait orientation.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">EBannerAdEventType</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 5px; padding-left: 0px; overflow-x: auto; border-bottom-left-radius: 20px;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AD_CLICKED</td>
+                                <td>
+                                    When a click is recorded for an ad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AD_CLOSED</td>
+                                <td>
+                                    When the user is about to return to the application after clicking on an ad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AD_IMPRESSION</td>
+                                <td>
+                                    When an impression is recorded for an ad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BANNER_AD_LOADED</td>
+                                <td>
+                                    When an ad is loaded.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AD_OPEN</td>
+                                <td>
+                                    When an ad opens an overlay that covers the screen.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">EBannerAdSize</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 5px; padding-left: 0px; overflow-x: auto; border-bottom-left-radius: 20px;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BANNER</td>
+                                <td>
+                                    Banner ad size (320x50 density-independent pixels)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>LARGE_BANNER</td>
+                                <td>
+                                    Large banner ad size (320x100 density-independent pixels).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MEDIUM_RECTANGLE</td>
+                                <td>
+                                    Medium rectangle ad size (300x250 density-independent pixels).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FULL_BANNER</td>
+                                <td>
+                                    Full banner ad size (468x60 density-independent pixels).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>LEADERBOARD</td>
+                                <td>
+                                    Leaderboard ad size (728x90 density-independent pixels).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ANCHORED_ADAPTIVE</td>
+                                <td>
+                                    Adaptive ad size (screen widthx32|50|90 density-independent pixels).
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">EBannerGravity</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 5px; padding-left: 0px; overflow-x: auto; border-bottom-left-radius: 20px;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GRAVITY_TOP_LEFT</td>
+                                <td>
+                                    Top left of screen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY_TOP_CENTER</td>
+                                <td>
+                                    Top center of screen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY_TOP_RIGHT</td>
+                                <td>
+                                    Top right of screen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY_MIDDLE_LEFT</td>
+                                <td>
+                                    Middle left of screen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY_MIDDLE_CENTER</td>
+                                <td>
+                                    Center of screen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY_MIDDLE_RIGHT</td>
+                                <td>
+                                    Middle right of screen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY_BOTTOM_LEFT</td>
+                                <td>
+                                    Bottom left of screen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY_BOTTOM_CENTER</td>
+                                <td>
+                                    Bottom center of screen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GRAVITY_BOTTOM_RIGHT</td>
+                                <td>
+                                    Bottom right of screen.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">EFullScreenAdEventType</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 5px; padding-left: 0px; overflow-x: auto; border-bottom-left-radius: 20px;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AD_LOADED</td>
+                                <td>
+                                    When an ad is loaded.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AD_CLICKED</td>
+                                <td>
+                                    When a click is recorded for an ad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AD_DISMISSED</td>
+                                <td>
+                                    When the user is about to return to the application after clicking on an ad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AD_IMPRESSION</td>
+                                <td>
+                                    When an impression is recorded for an ad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AD_DISPLAYED</td>
+                                <td>
+                                    When an ad opens an overlay that covers the screen.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="margin-bottom: 500px">
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2023
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

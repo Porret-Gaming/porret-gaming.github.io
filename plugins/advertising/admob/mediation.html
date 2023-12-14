@@ -177,7 +177,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="interstitial_ads.html">
+                            <a class="nav-link inactive" href="interstitial_ads.html">
                                 Interstitial Ads
                             </a>
                         </li>
@@ -192,7 +192,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="mediation.html">
+                            <a class="nav-link active" href="mediation.html">
                                 Mediation
                             </a>
                         </li>
@@ -227,217 +227,172 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Advanced Interstitial Ads</h1>
+                    <h1 class="h2 text-white-shadow">Advanced Ads Mediation</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            The Interstitial Ads feature enables the presentation of a distinctive completely full-screen ad within your mobile applications.
+                            AdMob mediation enables you to deliver ads to your applications from various sources, such as the AdMob Network, third-party ad networks, and AdMob campaigns.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            It is recommeded that you load your ads in advance so that you can display them immediatly when you are ready to do so.
-                            Interstitial Ads are designed to be placed inbetween phases within your application, for example after completing a level in your game.
+                            This feature optimizes your fill rate and enhances monetization by directing ad requests to multiple networks, ensuring the selection of the most effective network for serving ads.
                         </p>
                     </div>
                 </div>
+                
                 <div class="container"
                     style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
-                    <h1 class="list-group-item">Immersive Behaviour</h1>
+                    <h1 class="list-group-item">Mediation Settings</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content">
-                            When displaying your interstitial ads, you can choose whether or not the ad will be displayed in immersive mode.
-                            The difference is simply displaying the operating systems menu bar or not when the ad is displayed.
-                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The following examples showcase how the ad appears in both immersive mode and non-immersive mode
+                            We currently offer integration to a variety of partner networks which can be enabled and disabled in the project settings as can be seen below.
                         </p>
                     </div>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
-                    <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
-                        <li class="tab-item">
-                            <a class="tab-link active" id="tab" data-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="false">
-                                Non-Immersive
-                            </a>
-                        </li>
-                        <li class="tab-item">
-                            <a class="tab-link" id="tab" data-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">
-                                Immersive
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
-                            <div style="display: flex; justify-content: center; align-items: center;">
-                                <img src="../../../images/Admob/Admob_Interstitial_NonImmersive.png" alt="Image 1" style="max-width: 90%;">
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
-                            <div style="display: flex; justify-content: center; align-items: center;">
-                                <img src="../../../images/Admob/Admob_Interstitial_Immersive.png" alt="Image 2" style="max-width: 90%;">
-                            </div>
-                        </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/Admob/Mediation_Configuration.png">
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-bottom-left-radius: 20px;">
+                        <p class="content">
+                            Simply enable any third party partner networks your using and the plugin will automatically pull in their mediation library, set it up and pass on any required privacy settings to it appropriately.
+                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            You can always change your decision to use immersive mode or not when displaying the ad.
+                            <span style="font-weight: 500">NOTE: </span>MobFox requires no code integration, once you have set it up in AdMob, ads will automatically pull through, hence there is no need to enable it in the settings.
                         </p>
                     </div>
                 </div>
+
                 <div class="container"
                     style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
-                    <h1 class="list-group-item">Available Blueprint Nodes</h1>
+                    <h1 class="list-group-item">New Mediation Partners</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            We have designed the blueprints to be as simple as possible, seperating out the loading and displaying of Interstitial Ads.
-                            You can load as many Interstitial Ads as you like in advance and it will keep them in memory, ready to be displayed without delay.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Load Advanced Interstitial Ad</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content">
-                            This blueprint loads an Interstitial Ad into memory for a given Ad Unit ID you have setup in Admob.
+                            In order to partake in mediation, you are required to have an account setup with them and link it to your Admob account in order to pull in their ads.
+                            To do so, you will have to follow the appropriate documentation to get everything working, <span style="font-weight: 500">excluding any code changes (as that is handled by this plugin)</span>.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            You should load your Interstitial Ads in advance before you intend to display them so that they are ready to be displayed immediatly.
+                            The below table shows you where you can find this documentation and which steps you can ignore in order to get up and running!
                         </p>
                     </div>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Admob_BP_LoadInterstitialAd.png">
-                    </div>
+
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto; border-bottom-left-radius: 20px;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Third Party Network</th>
+                                <th>Setup Documentation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AdColony</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/adcolony" target="_blank">https://developers.google.com/admob/android/mediation/adcolony</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AppLovin</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/applovin" target="_blank">https://developers.google.com/admob/android/mediation/applovin</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ChartBoost</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/chartboost" target="_blank">https://developers.google.com/admob/android/mediation/chartboost</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTExchange (Fyber)</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/dt-exchange" target="_blank">https://developers.google.com/admob/android/mediation/dt-exchange</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IMobile</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/imobile" target="_blank">https://developers.google.com/admob/android/mediation/imobile</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>InMobi</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/inmobi" target="_blank">https://developers.google.com/admob/android/mediation/inmobi</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IronSource</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/ironsource" target="_blank">https://developers.google.com/admob/android/mediation/ironsource</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>LiftOffMonetize (Vungle)</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/liftoff-monetize" target="_blank">https://developers.google.com/admob/android/mediation/liftoff-monetize</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maio</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/maio" target="_blank">https://developers.google.com/admob/android/mediation/maio</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Meta (Facebook)</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/meta" target="_blank">https://developers.google.com/admob/android/mediation/meta</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MyTarget</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/mytarget" target="_blank">https://developers.google.com/admob/android/mediation/mytarget</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nend</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/nend" target="_blank">https://developers.google.com/admob/android/mediation/nend</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tapjoy</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/tapjoy" target="_blank">https://developers.google.com/admob/android/mediation/tapjoy</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UnityAds</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/unity" target="_blank">https://developers.google.com/admob/android/mediation/unity</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Yahoo (Verizon Media)</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/yahoo" target="_blank">https://developers.google.com/admob/android/mediation/yahoo</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MobFox</td>
+                                <td>
+                                    <a href="https://developers.google.com/admob/android/mediation/mobfox" target="_blank">https://developers.google.com/admob/android/mediation/mobfox</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div>
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">1</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Ad Unit Id</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The Ad Unit ID of the Interstitial Ad you have created in AdMob.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Event</b>
-                            </p>
-                            <p class="content">
-                                <a href="enumerations.html">Full Screen Events</a> that occur during the lifecycle of the Interstitial Ad, including when it has succesfully been loaded. </br>
-                                In addition to the type of Event, you will have access to the Ad Unit ID corresponding to that event.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag off this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">3</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
-                            <p class="content">
-                                <b>On Failure</b>
-                            </p>
-                            <p class="content">
-                                An <a href="enumerations.html">Ad Error Code</a> along with a message and which Ad Unit ID has failed to load.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag off this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Show Advanced Interstitial Ad</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-top-left-radius: 20px;">
-                        <p class="content">
-                            This blueprint node displays the Interstitial Ad you have previously loaded using the Load Advanced Interstitial Ad blueprint node above.
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            Once you have displayed this ad and it gets closed, it is discarded.
-                            With this in mind, we have exposed a parameter to autoreload the ad when it is closed so you dont have to reload it manually.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Admob/Admob_BP_ShowInterstitialAd.png">
-                    </div>
-                </div>
-                <div>
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">1</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Ad Unit Id</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The Ad Unit ID of the Interstitial Ad you have created in AdMob and previously loaded.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Auto Reload</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A boolean indicating whether or not you would like this Interstitial Ad to be reloaded after it has been displayed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">3</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Is Immersive</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A boolean indicating whether or not to display the Interstitial Ad in immersive mode.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">4</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
-                            <p class="content">
-                                <b>On Failure</b>
-                            </p>
-                            <p class="content">
-                                An <a href="enumerations.html">Ad Error Code</a> along with a message and which Ad Unit ID has failed to load.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag off this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                
                 
                 <div style="margin-bottom: 500px">
                 </div>

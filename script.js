@@ -151,6 +151,35 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">New Unreal Engine Plugin</div>
+                  <div class="news-sub-title">2024-01-03</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="news-info-title">
+              Admob Plugin Docs Early Access
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Review our Advertising Plugin</li>
+                  <li>Provide any feedback before release</li>
+                  <li>Suggestions may be included!</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -271,35 +300,6 @@ if (news) {
               </div>
           </div>
           <a class="btn-learn-more" href="../../../plugins/android-native/sensors/overview.html">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2023-09-26</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="news-info-title">
-              Play Services: Billing Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Fixed "bIsAcknowledged" not updating to true</li>
-                  <li>New Blueprint Node "Query Purchases"</li>
-                  <li>Unreal Engine 5.3 Support</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html">Learn more</a>
       </div>
   </div>
 </div>

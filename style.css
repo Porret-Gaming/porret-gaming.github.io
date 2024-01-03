@@ -435,6 +435,31 @@ hr {
     background-color: rgb(254, 255, 239);
 }
 
+.discord-color {
+    background-color: rgba(114, 137, 218, 0.74);
+    transition: background-color 0.2s ease;
+}
+
+.discord-color:hover {
+    background-color: rgba(114, 137, 218);
+}
+
+.gmail-color {
+    background-color: rgba(255, 78, 78, 0.74);
+    transition: background-color 0.2s ease;
+}
+.gmail-color:hover {
+    background-color: rgba(255, 78, 78);
+}
+
+.twitter-color {
+    background-color: rgba(46, 46, 46, 0.74);
+    transition: background-color 0.2s ease;
+}
+.twitter-color:hover {
+    background-color: rgba(46, 46, 46);
+}
+
 .card-body-custom {
     /* background-color: #ffffff; */
     padding: 0.5rem;

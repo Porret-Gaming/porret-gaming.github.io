@@ -179,7 +179,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="launch_billing_flow.html">
+                            <a class="nav-link inactive" href="launch_billing_flow.html">
                                 Launch Billing Flow
                             </a>
                         </li>
@@ -204,7 +204,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="configure_purchase_handling.html">
+                            <a class="nav-link active" href="configure_purchase_handling.html">
                                 Purchase Handling
                             </a>
                         </li>
@@ -254,25 +254,42 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Launch Billing Flow</h1>
+                    <h1 class="h2 text-white-shadow">Configure Purchase Handling</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content">
-                            This is an asynchronous function which enables you to Launch a Google Play Billing window (powered by Google) for a purchase.
-                        </p>
-                        <p class="content">
-                            The parameters include the Product ID (from the Google Play Console), Product Type, whether or not it is a personalised offer and optionally an Offer Token.</br>
-                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            Once the asynchronous operation has completed, one of two delegates will be called to handle
-                            the success and failure situations.
+                            <span style="font-weight: 500;">NOTE: </span>This blueprint node is not live yet.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="margin-top: 20px">
+                        <p class="content">
+                            This is a synchronous function which allows you to control how purchases are handled when a successful transaction comes through.
+                        </p>
+                        <p class="content">
+                            The only parameter is a function which allows you to communicate with the plugin to provide information about how you would like to handle purchases.
+                            At this point in time, the only influence you have is whether or not to consume an in-app purchase, ultimately defining products as consumables or non-consumables.
+                            Non-consumables products cannot be purchased again on the same Google account used to make the purchase.
+                        </p>
+                        <p class="content">
+                            This function will be called for every successfully completed transaction, including when pending transactions complete.
+                            Be sure to set this function up at the begining of your application before using <a href="check_for_purchases.html">Check for Purchases</a> or <a href="launch_billing_flow.html">Launch Billing Flow</a> blueprint nodes.
+                        </p>
+                        <p class="content">
+                            If this blueprint node is not used, all in-app purchases will default as consumables.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            <span style="font-weight: 500;">NOTE: </span> </br>
+                            Do not use this blueprint node as a way of determining succesfully completed transactions as there can still be issues when acknowledging transactions.
+                            You should use the <a href="check_for_purchases.html">Check for Purchases</a> or <a href="launch_billing_flow.html">Launch Billing Flow</a> blueprint nodes' success/failure delegates to determine when to grant your users rights to their purchase.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 10px;">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Billing/Billing_Plugin_LaunchBillingFlow.png" style="max-width: 70%;">
+                        <img src="../../../images/Billing/Billing_Plugin_ConfigurePurchaseHandling.png" style="max-width: 70%;">
                     </div>
                 </div>
                 <div style="padding-top: 30px">
@@ -280,126 +297,53 @@
                         <span class="badge badge-primary">1</span>
                         <div class="info">
                             <p class="content">
-                                <b>Product Id</b>
+                                <b>Purchase Handler</b>
                             </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The Product ID of the product to purchase. This ID can be sourced from the Google Play Console.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
                             <p class="content">
-                                <b>Product Type</b>
+                                This is a delegate which has one <a href="purchase.html">Purchase</a> object as an input and requires one boolean return value indicating whether or not to consume the purchase.
+                                The Purchase object parameter is the Purchase which has successfully gone through and is about to be acknowledged.
+                                The boolean return value indicates whether to consume the purchase or not, ultimately defining it as a consumable or non-consumable item.
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                <a href="enumerations.html">Product Type</a> can either be Subscription or InApp products.
+                                <span style="font-weight: 500;">NOTE: </span></br>
+                                When dragging off this pin to create a function, you need to use the <span style="font-weight: 500;">Event Dispatchers</span> dropdown and then select the <span style="font-weight: 500;">Create Event</span> option.
+                                Once this option is selected, it will create a blueprint node to create an event, you can then use its dropdown 
+                                to <span style="font-weight: 500;">[Create a matching function]</span> with the matching function signature.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">3</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Is Offer Personalised</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                Indicate whether or not the offer is personalised. </br>
-                                You must consult Art. 6 (1) (ea) CRD of the Consumer Rights Directive (<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02011L0083-20220528" target="_blank">2011/83/EU</a>) to determine if the price you are offering to users is personalized.
-                            </p>
-                        </div>
-                    </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Example</h1>
                 </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">4</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Offer Token</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A Token retrieved when <a href="query_product_details.html">Querying Product Details</a> which would indicate a specific offer on a Subscription's base plan. </br>
-                                This is not required for consumable/non-consumable in app purchases. </br>
-                                You can use the <a href="supporting_nodes.html">Get Subscription Offer Token</a> blueprint node to extract the desired offer token.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">5</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Success</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called when the player has successfully purchased the product.
-                                The delegate will produce a <a href="purchase.html">Purchase</a> object for you to use. </br>
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">6</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Failure</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called if there is an error launcching the billing flow.
-                                The delegate will produce a <a href="enumerations.html">Billing Response Code</a> and debug message for the developer to handle appropriately.
-                                You can simply click and drag this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-top: 50px">
-                    <h1 class="h3">Examples</h1>
-                </div>
-                <div class="container"
-                    style="margin-left: 0px; padding-left: 0px; position: relative; margin-top: 15px;">
-                    <div class="info">
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="margin-top: 20px">
                         <p class="content">
-                            In the below example, we are initiating a purchase of an INAPP product given the product ID retrieved from the Google Play Console.</br>
-                            Depending on your use case, you can create your own function to handle the purchase of the in app product and reward the player appropriately. Similarly you can create your own method to handle errors.
+                            The most common use-case for a non-consumable is an option to purchase the ability to remove all ads from your application.
+                            In this example, we have multiple consumable products along with one non-consumable product to remove ads from your application.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            For INAPP product purchases, there are no offer tokens required, so you can simply leave this field blank.
+                            Once you have created your Purchase Handler function, we will wire it up so that it checks if there exists a product-id of "remove_ads" which would be setup in the Google Play Console.
                         </p>
                     </div>
                 </div>
                 <div class="container"
                     style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Billing/LaunchBillingFlow_INAPP_Example.png" style="max-width: 80%;">
+                        <img src="../../../images/Billing/ConfigurePurchaseHandling_Example.png"
+                            style="max-width: 90%;" data-toggle="modal" data-target="#Modal1">
                     </div>
                 </div>
-                <div class="container"
-                    style="margin-left: 0px; padding-left: 0px; position: relative; margin-top: 15px;">
-                    <div class="info">
-                        <p class="content">
-                            In the below example, we are initiating a purchase of a Subscription product given the product ID retrieved from the Google Play Console.</br>
-                            Depending on your use case, you can create your own function to handle the purchase of the subscription product and reward the player appropriately. Similarly you can create your own method to handle errors.
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            The only difference here is the use of the provided <a href="supporting_nodes.html">Get Subscription Offer Token</a> quality of life blueprint node.</br>
-                            In the event when you have multiple base plans and/or offers on these base plans, you may want to choose which one to use.
-                            In this case, you would want to have saved the <b>Subscription Product Details</b> when <a href="query_product_details.html">Querying Subscription Product Details</a> to a variable to be used here.</br>
-                            In the event you do not have multiple offers/base plans on a subscription, you can simply leave the offer token blank and it will take the first (and only) offer seen.
-                        </p>
-                    </div>
-                </div>
-                <div class="container"
-                    style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/Billing/LaunchBillingFlow_SUBS_Example.png" style="max-width: 80%;">
+                <!-- Modal -->
+                <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div id="modalBody1">
+                            <div class="modal-body">
+                                <img id="modal1-image"
+                                    src="../../../images/Billing/ConfigurePurchaseHandling_Example.png"
+                                    alt="Your Image">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div style="margin-bottom: 300px">

@@ -151,6 +151,35 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-01-09</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Billing Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>New blueprint node</li>
+                  <li>Handle non-consumables</li>
+                  <li>Default to consumables</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/configure_purchase_handling.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -171,7 +200,7 @@ if (news) {
                   <li>Suggestions may be included!</li>
               </ul>
           </div>
-          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html">Learn more</a>
+          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>
@@ -200,7 +229,7 @@ if (news) {
                   <li>Automatically restart retry loop</li>
               </ul>
           </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html">Learn more</a>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>
@@ -233,7 +262,7 @@ if (news) {
                   </div>
               </div>
           </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/in-app-updates/overview.html">Learn more</a>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/in-app-updates/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>
@@ -266,40 +295,7 @@ if (news) {
                   </div>
               </div>
           </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/in-app-reviews/overview.html">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">New Unreal Engine Plugin</div>
-                  <div class="news-sub-title">2023-09-28</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="row">
-              <div class="col-4">
-                  <img style="max-height: 156px; padding-top: 10px; padding-bottom: 10px;" src="../../../images/general/Mobile_Sensors_Thumbnail.png">
-              </div>
-              <div class="col-8" style="display:flex; align-items: center; margin: 0">
-                  <div class="news-info-details" style="font-weight: 500">
-                      <ul>
-                          <li>Native Sensor Control</li>
-                          <li>Power Consumption Control</li>
-                          <li>Auto Pause Functionality</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/android-native/sensors/overview.html">Learn more</a>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/in-app-reviews/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

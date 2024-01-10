@@ -258,20 +258,13 @@
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            <span style="font-weight: 500;">NOTE: </span>This blueprint node is not live yet.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="margin-top: 20px">
                         <p class="content">
                             This is a synchronous function which allows you to control how purchases are handled when a successful transaction comes through.
                         </p>
                         <p class="content">
                             The only parameter is a function which allows you to communicate with the plugin to provide information about how you would like to handle purchases.
                             At this point in time, the only influence you have is whether or not to consume an in-app purchase, ultimately defining products as consumables or non-consumables.
-                            Non-consumables products cannot be purchased again on the same Google account used to make the purchase.
+                            Non-consumable products cannot be purchased again on the same Google account used to make the purchase.
                         </p>
                         <p class="content">
                             This function will be called for every successfully completed transaction, including when pending transactions complete.
@@ -282,7 +275,7 @@
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
                             <span style="font-weight: 500;">NOTE: </span> </br>
-                            Do not use this blueprint node as a way of determining succesfully completed transactions as there can still be issues when acknowledging transactions.
+                            Do not use this blueprint node as a way of determining successfully completed transactions as there can still be issues when acknowledging transactions.
                             You should use the <a href="check_for_purchases.html">Check for Purchases</a> or <a href="launch_billing_flow.html">Launch Billing Flow</a> blueprint nodes' success/failure delegates to determine when to grant your users rights to their purchase.
                         </p>
                     </div>

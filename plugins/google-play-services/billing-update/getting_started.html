@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
-    <title>UE Plugin | Saved Games</title>
+    <title>UE Plugin | Billing Update</title>
     <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../style.css">
@@ -61,7 +61,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
                         aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="overview.html">
+                            <a class="dropdown-item" href="../saved-games/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
                                         alt="Google Play Saved Games" class="dropdown-item-image">
@@ -85,7 +85,7 @@
                             </a>
                         </li>
                         <li class="dropdown-toggle dropdown-submenu">
-                            <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                            <a class="dropdown-item" href="../billing/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
                                         class="dropdown-item-image">
@@ -98,7 +98,7 @@
                             <div class="submenu-overlay"></div>
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li>
-                                    <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                                    <a class="dropdown-item" href="../billing/overview.html">
                                         <div class="dropdown-item-content">
                                             <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
                                                 class="dropdown-item-image">
@@ -110,7 +110,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../google-play-services/billing-update/overview.html">
+                                    <a class="dropdown-item" href="../billing-update/overview.html">
                                         <div class="dropdown-item-content">
                                             <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
                                                 class="dropdown-item-image">
@@ -179,12 +179,12 @@
             </ul>
         </div>
     </nav>
-    <!-- Side Navigation Bar -->
+
     <div class="container-fluid">
         <div class="row" style="margin-left: 7px">
             <button class="mobile-button"></button>
             <!-- Side Navigation Bar -->
-            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom" style="height: 400px">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -196,62 +196,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="getting_started.html">
+                            <a class="nav-link active" href="getting_started.html">
                                 Getting Started
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="saving_game.html">
-                                Saving a Game
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="loading_game.html">
-                                Loading a Game
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="deleting_game.html">
-                                Deleting a Game
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="external-ui.html">
-                                External Selection UI
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="fetch_games.html">
-                                Fetch Games
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="conflict_resolution.html">
-                                Conflict Resolution
-                            </a>
-                        </li>
-                        <hr />
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Object Definitions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="snapshot_metadata.html">
-                                Snapshot Metadata
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="snapshot.html">
-                                Snapshot
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="resolution_policy.html">
-                                Resolution Policy
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link inactive" href="snapshot_error.html">
-                                Snapshot Error
                             </a>
                         </li>
                         <hr />
@@ -264,66 +210,63 @@
                             </a>
                         </li>
                     </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
                 </div>
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Fetch Games</h1>
+                    <h1 class="h2 text-white-shadow">Getting Started</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content">
-                            This is an asynchronous function which allows you fetch <a
-                                href="snapshot_metadata.html">SnapshotMetadata</a> about all the Snapshots on the
-                            server.
-                            You can make use of this data to generate your own UI instead of using Google's provided <a
-                                href="external-ui.html">External Selection UI</a> or anything else you might want to do.
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            Once the asynchronous operation has completed, one of two delegates will be called to handle
-                            the success and failure situations.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/SavedGames/SavedGames_Plugin_FetchGames.png" style="max-width: 70%;">
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                    <span class="badge badge-primary">1</span>
-                    <div class="info">
-                        <p class="content">
-                            <b>On Saved Games Retrieved</b>
-                        </p>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            A delegate that will be called once all the snapshots metadata on the server have been
-                            succesfully fetched.
-                            The delegate has a list of <a href="snapshot_metadata.html">Snapshot Metadata</a> as a
-                            parameter for you to use.
-                            You can simply click and drag this pin to create a custom event.
-                        </p>
-                    </div>
-                </div>
-                <div style="padding-top: 30px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Failure</b>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Purchase the Plugin
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                Purchase the plugin on the <a href="#" target="_blank">Official Unreal Engine Marketplace</a> (Enabled once live).
                             </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                A delegate that will be called if there is an error fetching all the saved games
-                                operation.
-                                The delegate will produce an <a href="snapshot_error.html">Snapshot Error</a> type for
-                                the developer to handle appropriately.
-                                You can simply click and drag this pin to create a custom event.
+                            <li class="list-group-item">
+                                [Optional] Older Engine Versions
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                If you require Unreal Engine 4.27 or Unreal Engine 5.0 compatible versions, please email your Epic Games Receipt of Purchase to us and we will provide you with the older plugin binaries and installation instructions. </br> </br>
+                                You do not need to follow the rest of these steps.
                             </p>
-                        </div>
+                            <li class="list-group-item">
+                                Install the Plugin
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                In the Epic Games Launcher, the plugin will appear in your Library.</br>
+                                Go to the Library tab and find the plugin and add it to the engine.
+                            </p>
+                            <li class="list-group-item">
+                                Enable Play Services Billing Library Update Plugin
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                In Unreal Engine, the plugin will be available in the plugins section.</br>
+                                Go to <span style="font-weight: 500">Settings</span> -> <span
+                                    style="font-weight: 500">Plugins</span> -> Search for "<span
+                                    style="font-weight: 500">Play Services Billing Library Update</span>" and ensure it is enabled.
+                            </p>
+                            <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img style="max-width: 80%" src="../../../images/BillingUpdate/Plugin_Enabled.png">
+                                </div>
+                            </div>
+                            <li class="list-group-item">
+                                Disable Any Other Billing Plugins
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                Other plugins or software upgrading the Billing Library for you can cause issues or even override this plugins update.</br>
+                                Go to <span style="font-weight: 500">Settings</span> -> <span style="font-weight: 500">Plugins</span> and disable any other custom Billing plugins you may have purchased off the Marketplace.</br>
+                            </p>
+                        </ol>
                     </div>
                 </div>
-                <div style="margin-bottom: 300px">
+                <div style="margin-bottom: 150px">
                 </div>
             </main>
             <div class="col-md-3 d-none d-md-block">

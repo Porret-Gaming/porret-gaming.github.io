@@ -3,76 +3,76 @@ function isMobileDevice() {
 }
 
 // Get the dropdown toggle elements by their unique IDs
-var dropdownToggle1 = document.getElementById("navbarDropdown1");
-var dropdownToggle2 = document.getElementById("navbarDropdown2");
+// var dropdownToggle1 = document.getElementById("navbarDropdown1");
+// var dropdownToggle2 = document.getElementById("navbarDropdown2");
 
 // Get the dropdown menu elements by their unique IDs
-var dropdownMenu1 = document.getElementById("dropdownMenu1");
-var dropdownMenu2 = document.getElementById("dropdownMenu2");
+// var dropdownMenu1 = document.getElementById("dropdownMenu1");
+// var dropdownMenu2 = document.getElementById("dropdownMenu2");
 
 // Dropdown menu 1
-var isMenuOpen1 = false;
-dropdownToggle1.addEventListener("mouseover", function () {
-  if (!isMenuOpen1) {
-    isMenuOpen1 = true;
-    this.click();
-  }
-});
-dropdownToggle1.addEventListener("click", function (event) {
-  if (event.isTrusted) {
-    isMenuOpen1 = !isMenuOpen1;
-  }
-});
-dropdownToggle1.addEventListener("mouseleave", function (event) {
-  var mouseY = event.clientY;
-  var elementRect = dropdownToggle1.getBoundingClientRect();
-  var elementBottom = elementRect.top + elementRect.height;
+// var isMenuOpen1 = false;
+// dropdownToggle1.addEventListener("mouseover", function () {
+//   if (!isMenuOpen1) {
+//     isMenuOpen1 = true;
+//     this.click();
+//   }
+// });
+// dropdownToggle1.addEventListener("click", function (event) {
+//   if (event.isTrusted) {
+//     isMenuOpen1 = !isMenuOpen1;
+//   }
+// });
+// dropdownToggle1.addEventListener("mouseleave", function (event) {
+//   var mouseY = event.clientY;
+//   var elementRect = dropdownToggle1.getBoundingClientRect();
+//   var elementBottom = elementRect.top + elementRect.height;
 
-  if (mouseY < elementBottom && isMenuOpen1) {
-    isMenuOpen1 = false;
-    dropdownToggle1.click();
-  }
-});
-dropdownMenu1.addEventListener("mouseleave", function (event) {
-  var mouseY = event.clientY;
-  var elementRect = dropdownMenu1.getBoundingClientRect();
-  if (mouseY > elementRect.top && isMenuOpen1) {
-    isMenuOpen1 = false
-    dropdownToggle1.click();
-  }
-});
+//   if (mouseY < elementBottom && isMenuOpen1) {
+//     isMenuOpen1 = false;
+//     dropdownToggle1.click();
+//   }
+// });
+// dropdownMenu1.addEventListener("mouseleave", function (event) {
+//   var mouseY = event.clientY;
+//   var elementRect = dropdownMenu1.getBoundingClientRect();
+//   if (mouseY > elementRect.top && isMenuOpen1) {
+//     isMenuOpen1 = false
+//     dropdownToggle1.click();
+//   }
+// });
 
 // Dropdown menu 2
-var isMenuOpen2 = false;
-dropdownToggle2.addEventListener("mouseover", function () {
-  if (!isMenuOpen2) {
-    isMenuOpen2 = true;
-    this.click();
-  }
-});
-dropdownToggle2.addEventListener("click", function (event) {
-  if (event.isTrusted) {
-    isMenuOpen2 = !isMenuOpen2;
-  }
-});
-dropdownToggle2.addEventListener("mouseleave", function (event) {
-  var mouseY = event.clientY;
-  var elementRect = dropdownToggle2.getBoundingClientRect();
-  var elementBottom = elementRect.top + elementRect.height;
+// var isMenuOpen2 = false;
+// dropdownToggle2.addEventListener("mouseover", function () {
+//   if (!isMenuOpen2) {
+//     isMenuOpen2 = true;
+//     this.click();
+//   }
+// });
+// dropdownToggle2.addEventListener("click", function (event) {
+//   if (event.isTrusted) {
+//     isMenuOpen2 = !isMenuOpen2;
+//   }
+// });
+// dropdownToggle2.addEventListener("mouseleave", function (event) {
+//   var mouseY = event.clientY;
+//   var elementRect = dropdownToggle2.getBoundingClientRect();
+//   var elementBottom = elementRect.top + elementRect.height;
 
-  if (mouseY < elementBottom && isMenuOpen2) {
-    isMenuOpen2 = false;
-    dropdownToggle2.click();
-  }
-});
-dropdownMenu2.addEventListener("mouseleave", function (event) {
-  var mouseY = event.clientY;
-  var elementRect = dropdownMenu2.getBoundingClientRect();
-  if (mouseY > elementRect.top && isMenuOpen2) {
-    isMenuOpen2 = false
-    dropdownToggle2.click();
-  }
-});
+//   if (mouseY < elementBottom && isMenuOpen2) {
+//     isMenuOpen2 = false;
+//     dropdownToggle2.click();
+//   }
+// });
+// dropdownMenu2.addEventListener("mouseleave", function (event) {
+//   var mouseY = event.clientY;
+//   var elementRect = dropdownMenu2.getBoundingClientRect();
+//   if (mouseY > elementRect.top && isMenuOpen2) {
+//     isMenuOpen2 = false
+//     dropdownToggle2.click();
+//   }
+// });
 
 /* Documentation Sidebar  */
 document.addEventListener("DOMContentLoaded", function () {
@@ -313,3 +313,34 @@ if (news) {
       card.classList.toggle('expanded');
      });
  })
+
+
+ function showSubmenu() {
+    console.log("showing ul");
+    const ul = $(this).children('ul');
+    ul.show();
+}
+
+function hideSubmenu() {
+    console.log("hiding ul");
+    const ul = $(this).children('ul');
+    ul.hide();
+}
+
+const submenus = document.querySelectorAll('.dropdown-submenu');
+submenus.forEach((submenu) => {
+    submenu.addEventListener('mouseenter', showSubmenu);
+    submenu.addEventListener('mouseleave', hideSubmenu);
+});
+
+//  $(document).ready(function () {
+//     // Attach the function to both click and mouseover events
+//     $('.dropdown-submenu a.dropdown-item').on({
+//         click: function (e) {
+//             toggleSubmenu.call(this); // Ensure 'this' refers to the clicked element
+//             e.stopPropagation();
+//             e.preventDefault();
+//         },
+//         mouseover: toggleSubmenu
+//     });
+// });

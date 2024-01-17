@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Play Base Services</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu1"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../../Squiggle.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Squiggle/Squiggle_Logo.png" alt="Squiggle"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Squiggle
+                                        <span class="dropdown-item-subtext">Android Mobile Game</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UE Plugins
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
+                        aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
+                                        alt="Google Play Saved Games" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Saved Games
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/events/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
+                                        alt="Google Play Events" class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Events
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-toggle dropdown-submenu">
+                            <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Billing
+                                        <span class="dropdown-item-subtext">Android Plugins</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="submenu-overlay"></div>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li>
+                                    <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
+                                        <div class="dropdown-item-content">
+                                            <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
+                                                class="dropdown-item-image">
+                                            <div class="dropdown-item-text">
+                                                Play: Billing
+                                                <span class="dropdown-item-subtext">Android Plugin</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../../google-play-services/billing-update/overview.html">
+                                        <div class="dropdown-item-content">
+                                            <img src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing"
+                                                class="dropdown-item-image">
+                                            <div class="dropdown-item-text">
+                                                Billing Library Update
+                                                <span class="dropdown-item-subtext">Android Plugin</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/in-app-reviews/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/InAppReviews/GooglePlay_Reviews_Plugin_Logo.png" alt="Google Play Reviews"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Reviews
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../google-play-services/in-app-updates/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png" alt="Google Play Updates"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Play: Updates
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../android-native/sensors/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Android Sensors
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="../../advertising/admob/overview.html">
+                                <div class="dropdown-item-content">
+                                    <img src="../../../images/Admob/Admob_Plugin_Logo.png" alt="Advertising"
+                                        class="dropdown-item-image">
+                                    <div class="dropdown-item-text">
+                                        Admob Ads
+                                        <span class="dropdown-item-subtext">Android Plugin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="google_sign_in.html">
+                                Google Sign-In
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="games_sign_in.html">
+                                Games Sign-In
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="achievements.html">
+                                Achievements
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="leaderboards.html">
+                                Leaderboards
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link gradient-container" target="_blank" href="../saved-games/overview.html">
+                                Saved Games
+                            </a>
+                            <div class="arrow"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link gradient-container" target="_blank" href="../events/overview.html">
+                                Events
+                            </a>
+                            <div class="arrow"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link gradient-container" target="_blank" href="../../advertising/admob/overview.html">
+                                Admob Advertising
+                            </a>
+                            <div class="arrow"></div>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Google Sign-In</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            The Google Sign-In feature is a way to interact with the users general Google account.
+                        </p>
+                        <p class="content">
+                            The main purpose of accessing a users account is to gain permissions to use Google services on their behalf.
+                            For Google Play Games features, an example would be to use their Google Drive for the Saved Games feature in order to store saved game data.
+                        </p>
+                        <p class="content">
+                            If you do not require any permissions or authentication tokens, this part of the plugin does not neccesarily need to be used.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This part of the plugin allows you to manage, request and revoke permissions your application has requested of the user.
+                            In addition to this, you can manage signing in for known users, new users and signing them out.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Server Side API Access</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            In order to gain a server side api access token, you need to have set up your OAuth 2.0 web application client ID.
+                            This client ID will be different from your app's client ID.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            You can find or create your client ID for your server in the <a href="https://console.cloud.google.com/apis/credentials">Google API Console</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
+                        <li class="tab-item">
+                            <a class="tab-link active" id="tab" data-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="false">
+                                Step 1
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">
+                                Step 2
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content3" role="tab" aria-controls="content3" aria-selected="false">
+                                Step 3
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content4" role="tab" aria-controls="content4" aria-selected="false">
+                                Step 4
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content5" role="tab" aria-controls="content5" aria-selected="false">
+                                Step 5
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content6" role="tab" aria-controls="content6" aria-selected="false">
+                                Step 6
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    In the <a href="https://console.cloud.google.com/apis/credentials">Google API Console</a>, ensure you have <span style="font-weight: 500;">selected your project</span>.
+                                    Then under the <span style="font-weight: 500;">Credentials</span> tab on the left, click on <span style="font-weight: 500;">CREATE CREDENTIALS</span> and finally select <span style="font-weight: 500;">OAuth Client ID</span>.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/PlayBaseServices/AccessTokenSetup/PlayBaseServices_AccessToken_CreateCredentials.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    You should be taken to a page titled <span style="font-weight: 500;">Create OAuth client ID</span>.
+                                    Under the <span style="font-weight: 500;">Application type</span> dropdown, you must select <span style="font-weight: 500;">Web application</span>. Fill in the rest and scroll down and click <span style="font-weight: 500;">CREATE</span>.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/PlayBaseServices/AccessTokenSetup/PlayBaseServices_AccessToken_SelectWebApplication.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    Once created, you should get a pop-up which contains information about your OAuth client.
+                                    Here you will find your <span style="font-weight: 500;">Client ID</span> which you will need.
+                                    Copy this Client ID for later.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/PlayBaseServices/AccessTokenSetup/PlayBaseServices_AccessToken_CreatedPopUp.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content4" role="tabpanel" aria-labelledby="tab4">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    If you did not get the pop-up, select <span style="font-weight: 500;">Credentials</span> on the left side menu.
+                                    Then under <span style="font-weight: 500;">OAuth 2.0 Client IDs</span>, select your newly created Web Application Client ID's name.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/PlayBaseServices/AccessTokenSetup/PlayBaseServices_AccessToken_YourOAuthClient.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content5" role="tabpanel" aria-labelledby="tab5">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    This page gives you the same information the pop-up would have given you.
+                                    Here you can scroll around to find the <span style="font-weight: 500;">Additional information</span> section.
+                                    This is where you will find your <span style="font-weight: 500;">Client ID</span>.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/PlayBaseServices/AccessTokenSetup/PlayBaseServices_AccessToken_AdditionalInformation.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content6" role="tabpanel" aria-labelledby="tab6">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    In Unrael Engine, go to <span style="font-weight: 500;">Project Settings</span> -> <span style="font-weight: 500;">Plugins</span> on the left menu and <span style="font-weight: 500;">Google Play Base V2</span>.
+                                    Input your <span style="font-weight: 500;">Client ID</span> in <span style="font-weight: 500;">Google Cloud OAuth Web Client ID</span>.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="../../../images/PlayBaseServices/AccessTokenSetup/PlayBaseServices_AccessToken_UEConfig.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style=" border-bottom-left-radius: 20px;">
+                        <p class="content">
+                            On your applications backend server you can exchange the auth code for access and refresh tokens.
+                            This will enable you to call Google APIs on behalf of the user from your backend server.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This plugin does not support your backend server code, it only caters for client side functionality.
+                            For more information on setting up your backend, you can read <a href="https://developers.google.com/identity/sign-in/android/backend-auth">Googles Documentation</a>.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Available Blueprint Nodes</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            We have designed the blueprints to be as simple as possible, seperating out the different ways to manage a users sign-in and permissions.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Launch Google Sign In</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint starts the Google Sign in Flow, which, if the user is not signed in, will bring up Google's user interface asking the user to sign in.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleLaunchSignIn.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Request Email</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Requests the email of the user.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Request Id Token</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Requests an identification token to send to your web server to identify the user.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Request Server Auth Code</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Requests a one-time server authentication code to send to your web server.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing the <a href="enumerations.html">Google Sign In Account</a> for the user on a successful login
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">5</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a <a href="enumerations.html">Google Sign In Status Code </a> along with a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Silent Sign In</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint node attempts to sign the user in without displaying a user interface. This can also be used to retrieve the <a href="enumerations.html">Google Sign In Account</a> silently.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            If access has been revoked, it will fail and you will need to use the "Launch Google Sign In" blueprint node.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleSilentSignIn.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Request Email</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Requests the email of the user.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Request Id Token</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Requests an identification token to send to your web server to identify the user.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Request Server Auth Code</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Requests a one-time server authentication code to send to your web server.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing the <a href="enumerations.html">Google Sign In Account</a> for the user on a successful login
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">5</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a <a href="enumerations.html">Google Sign In Status Code </a> along with a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Is Signed In</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            A blueprint node indicating if the user is currently signed in to Google or not.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleIsSignedIn.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Return Value</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A boolean indicating if the user is currently signed in with a Google account or not.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Sign Out</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint node signs out the current signed-in user if any.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            It also clears the account previously selected by the user and a future sign in attempt will require the user pick an account again.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleSignOut.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing no parameters once sign out is successful.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a <a href="enumerations.html">Google Sign In Status Code </a> along with a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Request Permission</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint allows you to request certain permissions allowing you to access specific Google features on their behalf.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            A list of pre-defined permissions/scopes can be found <a href="enumerations.html">here</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleRequestPermission.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Permission Scopes</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A list of permissions to be requested.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing no parameters once permissions have successfuly been granted.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a <a href="enumerations.html">Google Sign In Status Code </a> along with a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Request Permission Advanced</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint allows you to request any permissions allowing you to access specific Google features on their behalf.
+                            You can get a full list of permissions/scopes to use <a href="https://developers.google.com/identity/protocols/oauth2/scopes" target="_blank">here</a>.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This does not delete the banner ad from memory, you can simply redisplay it after hiding it.</br>
+                            <span style="font-weight: 500">Note:</span> You do not have to reload the banner ad after hiding it.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleRequestPermissionAdvanced.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Permission Scopes</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A list of permissions to be requested.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing no parameters once permissions have successfuly been granted.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a <a href="enumerations.html">Google Sign In Status Code </a> along with a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Has Permission</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node checks to see if the currently signed in user as granted you permission to access a specific scope from the provided list of <a href="enumerations.html">Permissions</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleHasPermission.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Google Permission Scope</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The predefined scope to check if permission has been granted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Has Permission Advanced</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node checks to see if the currently signed in user as granted you permission to access any scope.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleHasPermissionAdvanced.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Google Permission Scope</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The scope to check if permission has been granted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Revoke Access</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint node revokes access given to the current application.
+                            Future sign-in attempts will require the user to re-consent to all requested scopes. 
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Applications are required to provide users that are signed in with Google the ability to disconnect their Google account from the app.
+                            If the user deletes their account, you must delete the information that your app obtained from the Google APIs.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GoogleRevokeAccess.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing no parameters when access has successfuly been revoked.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a <a href="enumerations.html">Google Sign In Status Code </a> along with a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 500px">
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2023
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

@@ -818,3 +818,44 @@ hr {
     border-width: 0 10px 10px 10px;
     border-color: transparent transparent rgb(31, 35, 39) transparent;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: -50% 50%;
+    }
+
+    100% {
+        background-position: 150% 50%;
+    }
+}
+
+.gradient-container {
+    width: 100%;
+    background: linear-gradient(90deg, #b9e2f5, #ffffff, #b9e2f5);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s linear infinite;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #b9e2f5;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+}
+
+.gradient-container:hover {
+    color: rgb(0, 0, 0);
+    border-color: #84cdee;
+}
+
+.arrow {
+    content: "";
+    border-top: 0.5em solid #62cced;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0;
+    border-left: 0.4em solid transparent;
+    position: absolute;
+    right: 1.8em;
+    transform: translateY(-360%) rotate(-90deg);
+}

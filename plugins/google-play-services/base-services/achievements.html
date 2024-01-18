@@ -61,7 +61,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
                         aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="../saved-games/overview.html">
+                            <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
                                         alt="Google Play Saved Games" class="dropdown-item-image">
@@ -73,7 +73,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../events/overview.html">
+                            <a class="dropdown-item" href="../../google-play-services/events/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
                                         alt="Google Play Events" class="dropdown-item-image">
@@ -124,7 +124,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../in-app-reviews/overview.html">
+                            <a class="dropdown-item" href="../../google-play-services/in-app-reviews/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/InAppReviews/GooglePlay_Reviews_Plugin_Logo.png" alt="Google Play Reviews"
                                         class="dropdown-item-image">
@@ -136,7 +136,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../in-app-updates/overview.html">
+                            <a class="dropdown-item" href="../../google-play-services/in-app-updates/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png" alt="Google Play Updates"
                                         class="dropdown-item-image">
@@ -196,7 +196,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="getting_started.html">
+                            <a class="nav-link inactive" href="getting_started.html">
                                 Getting Started
                             </a>
                         </li>
@@ -211,7 +211,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="achievements.html">
+                            <a class="nav-link active" href="achievements.html">
                                 Achievements
                             </a>
                         </li>
@@ -279,58 +279,248 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Getting Started</h1>
+                    <h1 class="h2 text-white-shadow">Google Play Achievements</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                Purchase the Plugin
-                            </li>
-                            <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                Purchase the plugin on the <a href="" target="_blank">Official Unreal Engine Marketplace</a> (Enabled on Release).
-                            </p>
-                            <li class="list-group-item">
-                                Install the Plugin
-                            </li>
-                            <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                In the Epic Games Launcher, the plugin will appear in your Library.</br>
-                                Go to the Library tab and find the plugin and add it to the engine.
-                            </p>
-                            <li class="list-group-item">
-                                Enable Play Base Services Plugin
-                            </li>
-                            <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                In Unreal Engine, the plugin will be available in the plugins section.</br>
-                                Go to <span style="font-weight: 500">Settings</span> -> <span
-                                    style="font-weight: 500">Plugins</span> -> Search for "<span
-                                    style="font-weight: 500">Play Base Services</span>" and ensure it is enabled.
-                            </p>
-                            <div class="container" style="margin-left: 0px; padding-left: 0px; padding-bottom: 10px;">
-                                <div style="display: flex; justify-content: center; align-items: center;">
-                                    <img style="max-width: 80%" src="../../../images/PlayBaseServices/PlayBaseServices_Plugin_Enabled.png">
-                                </div>
-                            </div>
-                            <li class="list-group-item">
-                                Enable Version 2
-                            </li>
-                            <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                Go to the Plugins Configuration in <span style="font-weight: 500">Project Settings</span> ->
-                                <span style="font-weight: 500">Plugins</span> -> <span style="font-weight: 500">Google Play Base V2</span> and tick
-                                <span style="font-weight: 500">Enable Google Play Services V2</span>.
-                            </p>
-                            <div class="container" style="margin-left: 0px; padding-left: 0px; padding-bottom: 10px;">
-                                <div style="display: flex; justify-content: center; align-items: center;">
-                                    <img style="max-width: 90%" src="../../../images/PlayBaseServices/PlayBaseServices_PluginConfig_Enabled.png">
-                                </div>
-                            </div>
-                            <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                This toggle allows this plugin as well as our other plugins (Saved Games and Events) to detect the upgrade and adapt appropriately.
-                            </p>
-                        </ol>
+                        <p class="content">
+                            The Google Play Achievments is a service which allows you to create multiple different types of achievements for users of your application to achieve.
+                            This provides the player with a sense of progression.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            You setup your achievements in the Google Play Console.
+                        </p>
                     </div>
                 </div>
-                <div style="margin-bottom: 150px">
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Available Blueprint Nodes</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The below blueprint nodes allow you to display the Google generated external user interface (UI) to represent achievements, get the data to generate your own UI and manage the unlocking, revealing and incrementing achievements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Play Launch Achievement Display</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node launches a Google generated user interface representing the currently signed in players achievement progress.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayLaunchAchievementDisplay.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate which produces no paramaters and is called once the external UI has been displayed.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Play Unlock Achievement</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node unlocks an achievement for the currently signed in player.
+                            If the achievement is hidden this will reveal it to the player.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayUnlockAchievement.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Achievement ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Achievement ID from the Google Play Console for the achievmeent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Play Reveal Achievement</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node reveals a hidden achievement to the currently signed-in player.
+                            If the achievement has already been unlocked, this will have no effect.
+                            Once revealed, the achievement will be visible in the google generated user interface produced when using the "Google Play Launch Achievement Display" blueprint node.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayRevealAchievement.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Achievement ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Achievement ID from the Google Play Console for the hidden achievmeent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Play Increment Achievement</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node increments an achievement by the given number of steps.
+                            The achievement must be an incremental achievement.
+                            Once an achievement reaches at least the maximum number of steps, it will be unlocked automatically.
+                            Any further increments will be ignored.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayIncrementAchievement.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Achievement ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Achievement ID from the Google Play Console for the incremental achievmeent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Increment Amount</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                An integer representing the number of steps to increment the achievement by.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Play Load Achievements</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node fetches an array of <a href="GooglePlayAchievement">FGooglePlayAchievement</a> that represents the achievement data for the currently signed-in player.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayLoadAchievements.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Clear Cache</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                a boolean indicating whether or not to clear locally cached data and attempt to fetch the latest data from the server.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing an array of <a href="GooglePlayAchievement">FGooglePlayAchievement</a> data for the currently signed in user.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 200px">
                 </div>
             </main>
             <div class="col-md-3 d-none d-md-block">

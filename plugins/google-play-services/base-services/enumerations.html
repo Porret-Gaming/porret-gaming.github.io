@@ -61,7 +61,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
                         aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+                            <a class="dropdown-item" href="../saved-games/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
                                         alt="Google Play Saved Games" class="dropdown-item-image">
@@ -73,7 +73,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../../google-play-services/events/overview.html">
+                            <a class="dropdown-item" href="../events/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
                                         alt="Google Play Events" class="dropdown-item-image">
@@ -124,7 +124,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../../google-play-services/in-app-reviews/overview.html">
+                            <a class="dropdown-item" href="../in-app-reviews/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/InAppReviews/GooglePlay_Reviews_Plugin_Logo.png" alt="Google Play Reviews"
                                         class="dropdown-item-image">
@@ -136,7 +136,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../../google-play-services/in-app-updates/overview.html">
+                            <a class="dropdown-item" href="../in-app-updates/overview.html">
                                 <div class="dropdown-item-content">
                                     <img src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png" alt="Google Play Updates"
                                         class="dropdown-item-image">
@@ -211,7 +211,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="achievements.html">
+                            <a class="nav-link inactive" href="achievements.html">
                                 Achievements
                             </a>
                         </li>
@@ -258,7 +258,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="enumerations.html">
+                            <a class="nav-link active" href="enumerations.html">
                                 Enumerations
                             </a>
                         </li>
@@ -278,249 +278,331 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
-                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Google Play Achievements</h1>
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom;">
+                    <h1 class="h2 text-white-shadow">Enumerations</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content">
-                            The Google Play Achievements is a service which allows you to create multiple different types of achievements for users of your application to achieve.
-                            This provides the player with a sense of progression.
-                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            You setup your achievements in the Google Play Console.
+                            Here is a list of enumerations you will find throughout the plugin.
+                            These enumerations are named after the same enumerations/constants found in the Google Play Games library.
                         </p>
                     </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EGooglePermissionScope</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GAMES_LITE</td>
+                                <td>
+                                    Permission to use basic Google Play Games features (Such as achievements leaderboards)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DRIVE_APP_DATA</td>
+                                <td>
+                                    Permission to use users Google Drive (Often requested for Saved Games feature)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>YOUTUBE</td>
+                                <td>
+                                    Permission to manage users YouTube account
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EGooglePlayAchievementState</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ACHIEVEMENT_STATE_UNLOCKED</td>
+                                <td>
+                                    An achievement which has been unlocked by the user.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ACHIEVEMENT_STATE_REVEALED</td>
+                                <td>
+                                    An achievement which is revealed to the user.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ACHIEVEMENT_STATE_HIDDEN</td>
+                                <td>
+                                    An achievement which is hidden from the user.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EGooglePlayAchievementType</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ACHIEVEMENT_TYPE_STANDARD</td>
+                                <td>
+                                    Achievement type indicating a standard achievement.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ACHIEVEMENT_TYPE_INCREMENTAL</td>
+                                <td>
+                                    Achievement type indicating an incremental achievement.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EGooglePlayLeaderboardCollection</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>COLLECTION_DEFAULT</td>
+                                <td>
+                                    The default collection, defaulting to PUBLIC.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>COLLECTION_PUBLIC</td>
+                                <td>
+                                    Public leaderboards contain the scores of players who are sharing their gameplay activity publicly.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>COLLECTION_FRIENDS</td>
+                                <td>
+                                    Friends leaderboards contain the scores of players in the viewing player's friends list.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EGooglePlayLeaderboardPageDirection</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PAGE_DIRECTION_NONE</td>
+                                <td>
+                                    There will be no pagination.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PAGE_DIRECTION_NEXT</td>
+                                <td>
+                                    Direction advancing toward the end of the data set.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PAGE_DIRECTION_PREV</td>
+                                <td>
+                                    Direction advancing toward the beginning of the data set.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EGooglePlayLeaderboardScoreOrder</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LARGER_IS_BETTER</td>
+                                <td>
+                                    When scores are sorted in descending order.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SMALLER_IS_BETTER</td>
+                                <td>
+                                    When scores are sorted in ascending order.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EGooglePlayLeaderboardTimeSpan</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TIME_SPAN_DEFAULT</td>
+                                <td>
+                                    The default time span, defaulting to ALL_TIME.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TIME_SPAN_DAILY</td>
+                                <td>
+                                    Scores are reset every day. The reset occurs at 11:59PM PST.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TIME_SPAN_WEEKLY</td>
+                                <td>
+                                    Scores are reset once per week. The reset occurs at 11:59PM PST on Sunday.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TIME_SPAN_ALL_TIME</td>
+                                <td>
+                                    Scores are never reset.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EGoogleSignInStatusCode</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UNKNOWN_ERROR</td>
+                                <td>
+                                    An unkown error occurred. Retrying may resolve the problem.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SIGN_IN_REQUIRED</td>
+                                <td>
+                                    The user attempted to connect to the service but the user is not signed in.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INVALID_ACCOUNT</td>
+                                <td>
+                                    The user attempted to connect to the service with an invalid account name specified.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NETWORK_ERROR</td>
+                                <td>
+                                    A network error occurred. Retrying should resolve the problem.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INTERNAL_ERROR</td>
+                                <td>
+                                    An internal error occurred. Retrying should resolve the problem.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SIGN_IN_FAILED</td>
+                                <td>
+                                    The sign in was cancelled by the user.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SIGN_IN_CANCELLED</td>
+                                <td>
+                                    The sign in was cancelled by the user.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SIGN_IN_CURRENTLY_IN_PROGRESS</td>
+                                <td>
+                                    A sign in process is currently in progress and the current one cannot continue.
+                                    For example, the user clicks the SignInButton multiple times and more than one sign in intent was launched.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>USER_CANCELLED</td>
+                                <td>
+                                    The user cancelled or dismissed the workflow.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 
-                <div class="container"
-                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
-                    <h1 class="list-group-item">Available Blueprint Nodes</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            The below blueprint nodes allow you to display the Google generated external user interface (UI) to represent achievements, get the data to generate your own UI and manage the unlocking, revealing and incrementing achievements.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Google Play Launch Achievement Display</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-top-left-radius: 20px;">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node launches a Google generated user interface representing the currently signed in players achievement progress.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayLaunchAchievementDisplay.png">
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">1</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Success</b>
-                            </p>
-                            <p class="content">
-                                A delegate which produces no paramaters and is called once the external UI has been displayed.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag off this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
-                            <p class="content">
-                                <b>On Failure</b>
-                            </p>
-                            <p class="content">
-                                A delegate producing a message describing the failure.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag off this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Google Play Unlock Achievement</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-top-left-radius: 20px;">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node unlocks an achievement for the currently signed in player.
-                            If the achievement is hidden this will reveal it to the player.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayUnlockAchievement.png">
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">1</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
-                            <p class="content">
-                                <b>Achievement ID</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The Achievement ID from the Google Play Console for the achievmeent.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Google Play Reveal Achievement</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-top-left-radius: 20px;">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node reveals a hidden achievement to the currently signed-in player.
-                            If the achievement has already been unlocked, this will have no effect.
-                            Once revealed, the achievement will be visible in the google generated user interface produced when using the "Google Play Launch Achievement Display" blueprint node.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayRevealAchievement.png">
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">1</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
-                            <p class="content">
-                                <b>Achievement ID</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The Achievement ID from the Google Play Console for the hidden achievmeent.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Google Play Increment Achievement</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-top-left-radius: 20px;">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node increments an achievement by the given number of steps.
-                            The achievement must be an incremental achievement.
-                            Once an achievement reaches at least the maximum number of steps, it will be unlocked automatically.
-                            Any further increments will be ignored.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayIncrementAchievement.png">
-                    </div>
-                </div>
-                <div>
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">1</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Achievement ID</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                The Achievement ID from the Google Play Console for the incremental achievmeent.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
-                            <p class="content">
-                                <b>Increment Amount</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                An integer representing the number of steps to increment the achievement by.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Google Play Load Achievements</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-top-left-radius: 20px;">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node fetches an array of <a href="google_play_achievement.html">FGooglePlayAchievement</a> that represents the achievement data for the currently signed-in player.
-                        </p>
-                    </div>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlayLoadAchievements.png">
-                    </div>
-                </div>
-                <div>
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">1</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>Clear Cache</b>
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                a boolean indicating whether or not to clear locally cached data and attempt to fetch the latest data from the server.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">2</span>
-                        <div class="info">
-                            <p class="content">
-                                <b>On Success</b>
-                            </p>
-                            <p class="content">
-                                A delegate producing an array of <a href="google_play_achievement.html">FGooglePlayAchievement</a> data for the currently signed in user.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag off this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-top: 20px">
-                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
-                        <span class="badge badge-primary">3</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
-                            <p class="content">
-                                <b>On Failure</b>
-                            </p>
-                            <p class="content">
-                                A delegate producing a message describing the failure.
-                            </p>
-                            <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag off this pin to create a custom event.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 200px">
+                <div style="margin-bottom: 300px">
                 </div>
             </main>
             <div class="col-md-3 d-none d-md-block">

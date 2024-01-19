@@ -334,29 +334,56 @@ if (docsNavBar) {
         </a>
         <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
             aria-labelledby="navbarDropdown">
-            <li>
-                <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+            <li class="dropdown-toggle dropdown-submenu">
+                <a class="dropdown-item" href="../../google-play-services/base-services/overview.html">
                     <div class="dropdown-item-content">
-                        <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png"
-                            alt="Google Play Saved Games" class="dropdown-item-image">
-                        <div class="dropdown-item-text">
-                            Play: Saved Games
-                            <span class="dropdown-item-subtext">Android Plugin</span>
-                        </div>
+                    <img src="../../../images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png" alt="Google Play Base Services"
+                        class="dropdown-item-image">
+                    <div class="dropdown-item-text">
+                        Play Base Services
+                        <span class="dropdown-item-subtext">Android Plugins</span>
+                    </div>
                     </div>
                 </a>
-            </li>
-            <li>
-                <a class="dropdown-item" href="../../google-play-services/events/overview.html">
-                    <div class="dropdown-item-content">
-                        <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png"
-                            alt="Google Play Events" class="dropdown-item-image">
-                        <div class="dropdown-item-text">
-                            Play: Events
-                            <span class="dropdown-item-subtext">Android Plugin</span>
-                        </div>
-                    </div>
-                </a>
+                <div class="submenu-overlay"></div> 
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a class="dropdown-item" href="../../google-play-services/base-services/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="../../../images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png" alt="Google Play Base Services"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Play: Base Services
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="../../google-play-services/saved-games/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png" alt="Google Play Saved Games"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Play: Saved Games
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="../../google-play-services/events/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png" alt="Google Play Events"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Play: Events
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="dropdown-toggle dropdown-submenu">
                 <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
@@ -485,29 +512,56 @@ if (rootNavBar) {
       </a>
       <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-centered" id="dropdownMenu2"
         aria-labelledby="navbarDropdown">
-        <li>
-          <a class="dropdown-item" href="plugins/google-play-services/saved-games/overview.html">
+        <li class="dropdown-toggle dropdown-submenu">
+          <a class="dropdown-item" href="plugins/google-play-services/base-services/overview.html">
             <div class="dropdown-item-content">
-              <img src="./images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png" alt="Google Play Saved Games"
+              <img src="./images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png" alt="Google Play Base Services"
                 class="dropdown-item-image">
               <div class="dropdown-item-text">
-                Play: Saved Games
-                <span class="dropdown-item-subtext">Android Plugin</span>
+                Play Base Services
+                <span class="dropdown-item-subtext">Android Plugins</span>
               </div>
             </div>
           </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="plugins/google-play-services/events/overview.html">
-            <div class="dropdown-item-content">
-              <img src="./images/Events/GooglePlay_Events_Plugin_Logo.png" alt="Google Play Events"
-                class="dropdown-item-image">
-              <div class="dropdown-item-text">
-                Play: Events
-                <span class="dropdown-item-subtext">Android Plugin</span>
-              </div>
-            </div>
-          </a>
+          <div class="submenu-overlay"></div> 
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li>
+                <a class="dropdown-item" href="plugins/google-play-services/base-services/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="./images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png" alt="Google Play Base Services"
+                            class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Play: Base Services
+                            <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="plugins/google-play-services/saved-games/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="./images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png" alt="Google Play Saved Games"
+                            class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Play: Saved Games
+                            <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="plugins/google-play-services/events/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="./images/Events/GooglePlay_Events_Plugin_Logo.png" alt="Google Play Events"
+                            class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Play: Events
+                            <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+          </ul>
         </li>
         <li class="dropdown-toggle dropdown-submenu">
           <a class="dropdown-item" href="plugins/google-play-services/billing/overview.html">

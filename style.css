@@ -105,6 +105,31 @@ hr {
     backdrop-filter: blur(10px);
 }
 
+.warning {
+    border: 1.5px solid rgba(0, 162, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 162, 255, 0.5);
+    padding: 10px;
+    padding-left: 70px;
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    font-weight: 350;
+    background-color: rgba(185, 229, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.warning::before {
+    content: '\24D8'; /* Unicode character for a bullet point */
+    font-size: 2.3rem;
+    color: rgba(0, 162, 255, 0.7);
+    position: absolute;
+    left: 20px;
+    top: 47%;
+    transform: translateY(-50%);
+}
+
 .badge {
     position: absolute;
     top: -15px;

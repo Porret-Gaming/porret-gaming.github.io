@@ -193,10 +193,21 @@
                             The Context Switching App Open Ads is a feature where we will automatically display an app open ad when switching back to your application in non-immersive mode.
                             This does not trigger when you first open your application.
                         </p>
-                        <p class="content">
+                        <p class="content" style="margin-bottom: 0rem;">
                             In order to set this up, there are some configuration properties to setup and one blueprint node to call to enable context switching.
                             It is recommended to only enable context switching app open ads after the user has used the app a few times.
                         </p>
+                    </div>
+                </div>
+                <div class="container" style="padding-top: 20px; margin-left: 0px; padding-left: 0px;">
+                    <div class="warning">
+                        <p style="margin-bottom: 0rem; font-weight: 500; font-size: 1rem;">
+                            When using external UIs that open a window, it's considered a "Context Switch" triggering an App Open advertisement. Toggle off before displaying these UIs to avoid overwhelming the user.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="padding-top: 20px; margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
                         <p class="content" style="margin-bottom: 0rem;">
                             The first step is to provide the Ad Unit ID for the app open ad you would like to use for context switching and its default orientation (you can change this orientation during runtime at a later point).
                         </p>

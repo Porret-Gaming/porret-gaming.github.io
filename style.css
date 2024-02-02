@@ -252,7 +252,7 @@ hr {
 
 .news-info-details ul {
     list-style: none; /* Remove default list styles */
-    padding-left: 5px; /* Add some left padding for bullet points */
+    padding-left: 18px; /* Add some left padding for bullet points */
 }
 .news-info-details li {
     line-height: normal; /* Set line-height to normal */
@@ -261,7 +261,7 @@ hr {
     content: "\2022"; /* Unicode character for a bullet point (•) */
     color: orange; /* Set the color to orange */
     display: inline-block;
-    width: 1em;
+    width: 0.6em;
     font-size: 1.5em;
 }
 

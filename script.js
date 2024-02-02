@@ -99,7 +99,7 @@ if (news) {
                   <li>Improved Console Logging</li>
               </ul>
           </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/base-services/overview.html?utm_source=News">Learn more</a>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/saved-games/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>
@@ -128,7 +128,7 @@ if (news) {
                 <li>Improved Console Logging</li>
               </ul>
           </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/base-services/overview.html?utm_source=News">Learn more</a>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/events/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

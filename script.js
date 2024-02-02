@@ -79,6 +79,64 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-02-02</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Saved Games Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Detect Play Base Services V2 Plugin</li>
+                  <li>Update Libraries Accordingly</li>
+                  <li>Improved Console Logging</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/base-services/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Events/GooglePlay_Events_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-02-02</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Events Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                <li>Detect Play Base Services V2 Plugin</li>
+                <li>Update Libraries Accordingly</li>
+                <li>Improved Console Logging</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/base-services/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -162,64 +220,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/configure_purchase_handling.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">New Unreal Engine Plugin</div>
-                  <div class="news-sub-title">2024-01-03</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="news-info-title">
-              Admob Plugin Docs Early Access
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Review our Advertising Plugin</li>
-                  <li>Provide any feedback before release</li>
-                  <li>Suggestions may be included!</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2023-11-30</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="news-info-title">
-              Play Services: Billing Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Limit the number of retry attempts</li>
-                  <li>Prevent continuous reconnection attempts</li>
-                  <li>Automatically restart retry loop</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

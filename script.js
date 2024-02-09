@@ -79,6 +79,35 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">YouTube Tutorial Series</div>
+                  <div class="news-sub-title">2024-02-02</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="news-info">
+          <div class="news-info-title">
+            Our First YouTube Tutorial Series
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Billing Plugin YouTube Series</li>
+                  <li>Leave a Like to Help Support Us!</li>
+                  <li>Consider Subscribing</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="https://www.youtube.com/playlist?list=PLA_wfrT3fpg3TrteW2aUddl_zgsJtRt56">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card expanded">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -107,7 +136,7 @@ if (news) {
       </div>
   </div>
 </div>
-<div class="news-card expanded">
+<div class="news-card">
   <div class="news-container">
       <div class="news-group-item">
           <div class="row">

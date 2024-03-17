@@ -364,6 +364,84 @@
                         </tbody>
                     </table>
                 </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">FGooglePlayLeaderboardScoreSubmissionData</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LeaderboardID</td>
+                                <td>FString</td>
+                                <td>
+                                    The ID of the leaderboard the score was submitted to.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PlayerID</td>
+                                <td>FString</td>
+                                <td>
+                                    The ID of the player the score was submitted for.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ScoreResults</td>
+                                <td>TMap&lt;<a href="enumerations.html">EGooglePlayLeaderboardTimeSpan</a>, FGooglePlayLeaderboardScoreSubmissionResult&gt;</td>
+                                <td style="min-width: 400px">
+                                    A Map of Score Submission Result objects by TimeSpan.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">FGooglePlayLeaderboardScoreSubmissionResult</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FormattedScore</td>
+                                <td>FString</td>
+                                <td>
+                                    A formatted string to display for this scores rank. This handles appropriate localization and formatting.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>bNewBest</td>
+                                <td>bool</td>
+                                <td>
+                                    A boolean value indicating if this was a new high score or not.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RawScore</td>
+                                <td>int64</td>
+                                <td style="min-width: 300px">
+                                    The raw score value.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
                 <div style="margin-bottom: 300px">
                 </div>

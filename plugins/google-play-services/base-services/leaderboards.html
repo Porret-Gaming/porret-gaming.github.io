@@ -344,6 +344,81 @@
                 </div>
 
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Play Submit Leaderboard Score Immediate</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            A blueprint node which submits a score to a leaderboard for the currently signed-in player immediatly providing feedback whether it is successful or not.
+                            The score is ignored if it is worse (as defined by the leaderboard configuration) than a previously submitted score for the same player.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_PlaySubmitLeaderboardScoreImmediate.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Leaderboard ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Leaderboard ID from the Google Play Console to submit the score to.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Score</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                An integer representing the raw score value.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>OnSuccess</b>
+                            </p>
+                            <p class="content">
+                                A delegate which produces a <a href="google_play_leaderboard.html">FGooglePlayLeaderboardScoreSubmissionData</a> object representing the submission result.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>OnFailure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
                     <h1 class="h3 text-white-shadow">Google Play Get All Leaderboards</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">

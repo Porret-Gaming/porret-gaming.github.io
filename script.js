@@ -76,6 +76,34 @@ if (news) {
   news.innerHTML =`
   <div class="news-card expanded">
     <div class="news-container">
+        <div class="news-group-item">
+            <div class="row">
+                <div class="col-auto" style="padding-right: 0">
+                    <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
+                </div>
+                <div class="col" style="padding-left: 10px">
+                    <div class="news-title">Release Notes</div>
+                    <div class="news-sub-title">2024-04-25</div>
+                </div>
+            </div>
+        </div>
+        <div class="news-info">
+            <div class="news-info-title">
+                Advanced Ads Pro Release Notes
+            </div>
+            <div class="news-info-details">
+                <ul>
+                    <li>Removed Small Padding Around Banner Ads</li>
+                    <li>Anchored Adapative Banner Size Fix</li>
+                    <li>Full Width Adaptive Banners in Portrait</li>
+                </ul>
+            </div>
+            <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
+        </div>
+    </div>
+</div>
+  <div class="news-card">
+    <div class="news-container">
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
@@ -223,35 +251,6 @@ if (news) {
               </div>
           </div>
           <a class="btn-learn-more" href="../../../plugins/google-play-services/base-services/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-02-02</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="news-info-title">
-              Play Services: Saved Games Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Detect Play Base Services V2 Plugin</li>
-                  <li>Update Libraries Accordingly</li>
-                  <li>Improved Console Logging</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/saved-games/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

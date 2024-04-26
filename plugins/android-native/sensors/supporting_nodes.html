@@ -488,6 +488,71 @@
                             style="max-width: 70%;">
                     </div>
                 </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get True North Device Orientation</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            Produces a FRotator representing the rotation in real world space towards magnetic north.
+                            This node corresponds to the <span style="font-weight: 500">ACCELEROMETER</span> and <span style="font-weight: 500">MAGNETIC_FIELD</span> sensor.
+                        </p>
+                        <p class="content">
+                            Because this node requires two sensor readings, we have provided an example below to assist you in one way you can make use of it.
+                            It is recommended that you first take a look at <a href="example.html">The Example Setup</a> documentation first to get a basic understanding on how to make use of this plugin, otherwise the below example may be overwhelming.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            <span style="font-weight: 500">NOTE: </span>Depending on your applications orientation (portrait or landscape) you may want to swap the pitch and roll values.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_GetTrueNorthDeviceOrientation.png"
+                            style="max-width: 70%;">
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 10px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Example</h1>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; padding-top: 1px; padding-bottom: 1px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidSensors/Example_Android_Sensors_Get_TN_Orientation.PNG"
+                            style="max-width: 95%;" data-toggle="modal" data-target="#Modal1">
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div id="modalBody1">
+                            <div class="modal-body">
+                                <img id="modal1-image"
+                                    src="../../../images/AndroidSensors/Example_Android_Sensors_Get_TN_Orientation.PNG"
+                                    alt="Your Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                You must check the device has and then activate the <span style="font-weight: 500">ACCELEROMETER</span> and <span style="font-weight: 500">MAGNETIC_FIELD</span> sensors.
+                            </p>
+                            <p class="content">
+                                In the above example, you can see we save both the sensor values when they change.
+                                Then, when a value has been updated, we then calculate the latest orientation and save it for use.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Becuase we are making use of a rather noisy sensor (MAGNETIC_FIELD), we need to keep track of when this sensor is no longer accurate and would need recalibration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 
                 <div style="margin-bottom: 300px">
                 </div>

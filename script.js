@@ -79,6 +79,34 @@ if (news) {
         <div class="news-group-item">
             <div class="row">
                 <div class="col-auto" style="padding-right: 0">
+                    <img class="news-badge" src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png">
+                </div>
+                <div class="col" style="padding-left: 10px">
+                    <div class="news-title">Release Notes</div>
+                    <div class="news-sub-title">2024-04-26</div>
+                </div>
+            </div>
+        </div>
+        <div class="news-info">
+            <div class="news-info-title">
+                Android Sensors Release Notes
+            </div>
+            <div class="news-info-details">
+                <ul>
+                    <li>Added New Blueprint Node</li>
+                    <li>Get True North Device Orientation</li>
+                    <li>Uses Two Sensors</li>
+                </ul>
+            </div>
+            <a class="btn-learn-more" href="../../../plugins/android-native/sensors/overview.html?utm_source=News">Learn more</a>
+        </div>
+    </div>
+</div>
+  <div class="news-card expanded">
+    <div class="news-container">
+        <div class="news-group-item">
+            <div class="row">
+                <div class="col-auto" style="padding-right: 0">
                     <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
                 </div>
                 <div class="col" style="padding-left: 10px">
@@ -218,39 +246,6 @@ if (news) {
               </div>
           </div>
           <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">New Unreal Engine Plugin</div>
-                  <div class="news-sub-title">2024-02-02</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="row">
-              <div class="col-4">
-                  <img style="max-height: 156px; padding-top: 10px; padding-bottom: 10px" src="../../../images/general/PlayBaseServices_Thumbnail.png">
-              </div>
-              <div class="col-8" style="display:flex; align-items: center; margin: 0">
-                  <div class="news-info-details" style="font-weight: 500">
-                      <ul>
-                          <li>Update Play library V2</li>
-                          <li>Improved Features</li>
-                          <li>Admob Compatible</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/base-services/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

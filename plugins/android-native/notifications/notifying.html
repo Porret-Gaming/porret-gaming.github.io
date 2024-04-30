@@ -56,7 +56,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="permissions.html">
+                            <a class="nav-link inactive" href="permissions.html">
                                 Permissions
                             </a>
                         </li>
@@ -71,7 +71,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="notifying.html">
+                            <a class="nav-link active" href="notifying.html">
                                 Notifying
                             </a>
                         </li>
@@ -126,18 +126,15 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
                 <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Notification Permission Management</h1>
+                    <h1 class="h2 text-white-shadow">Notification Notifying</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            Android 13 (API level 33) and higher supports runtime permissions for sending non-exempt notifications from an application.
-                        </p>
-                        <p class="content">
-                            These features include, requesting, revoking, checking notification permissions as well as identifying whether or not you should show your rationale for requesting these permissions.
+                            This section goes through the different ways you can use the <a href="builder.html">Notifications Built</a> by you to actually notify the user of your application.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            You can learn more about Notification Permissions on the <a href="https://developer.android.com/develop/ui/views/notifications/notification-permission" target="_blank">Official Android Documentation</a>.
+                            There are currently two main ways to notify, which is immediatly and scheduled.
                         </p>
                     </div>
                 </div>
@@ -146,27 +143,20 @@
                     style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
                     <h1 class="list-group-item">Available Blueprint Nodes</h1>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            The below blueprint nodes are only permission related and ideally only need to be setup once within your application.
-                        </p>
-                    </div>
-                </div>
+
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Request Notification Permission</h1>
+                    <h1 class="h3 text-white-shadow">Notification Notify Immediate</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node requests the <span style="font-weight: 500">android.Manifest.permission.POST_NOTIFICATIONS</span> android notification runtime permission.
-                            The callback will inform you whether or not permission was granted.
+                            This blueprint node sends a notification immediatly.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/AndroidNotifications/BP_RequestNotificationPermission.png">
+                        <img src="../../../images/AndroidNotifications/BP_NotifyImmediate.png">
                     </div>
                 </div>
                 <div style="padding-top: 20px">
@@ -174,87 +164,189 @@
                         <span class="badge badge-primary">1</span>
                         <div class="info" style="border-bottom-left-radius: 20px;">
                             <p class="content">
-                                <b>IsPermissionGranted</b>
-                            </p>
-                            <p class="content">
-                                A delegate producing a boolean indicating whether or not the user granted permission.
+                                <b>Notification ID</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                You can simply click and drag off this pin to create a custom event.
+                                The id of the notification.
                             </p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Revoke Notification Permission</h1>
+                    <h1 class="h3 text-white-shadow">Schedule Notification</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node simply asynchrnously revokes the notification runtime permission.
-                            This will take effect once the users closes your application and you will then need to request the permission again.
+                            This blueprint node schedules a notification to be sent at a specific date.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/AndroidNotifications/BP_RevokeNotificationPermission.png">
-                    </div>
-                </div>                
-                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Should Show Permission Rationale</h1>
-                </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px;">
-                    <div class="info" style="border-top-left-radius: 20px;">
-                        <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node identifies whether you should show a custom UI with your rationale before actually requesting a permission.
-                        </p>
+                        <img src="../../../images/AndroidNotifications/BP_ScheduleNotification.png">
                     </div>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/AndroidNotifications/BP_ShouldShowPermissionRationale.png">
-                    </div>
-                </div>
-                <div>
+                <div style="padding-top: 20px">
                     <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
                         <span class="badge badge-primary">1</span>
-                        <div class="info" style="border-bottom-left-radius: 20px;">
+                        <div class="info">
                             <p class="content">
-                                <b>Return Value</b>
+                                <b>Notification ID</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A boolean indicating whether or not you should show a custom UI describing why you are requesting this notification permission.
+                                The id of the notification.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Year</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The year part of the date.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Month</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The month of the date (from 1 - 12).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">4</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Day</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The day within the month.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">5</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Hour</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The hour of the date (from 0 - 23).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">6</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Minute</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The minute of the date (from 0 - 59).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">7</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Second</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The second of the date (from 0 - 59).
                             </p>
                         </div>
                     </div>
                 </div>
                 
+                
                 <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h3 text-white-shadow">Has Notification Permission</h1>
+                    <h1 class="h3 text-white-shadow">Schedule Notification With Milli Delay</h1>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info" style="border-top-left-radius: 20px;">
                         <p class="content" style="margin-bottom: 0rem;">
-                            This blueprint node returns whether or not the user currently has the notification runtime permission.
+                            This blueprint node schedules a notification to be sent after a certain number of milliseconds have passed.
                         </p>
                     </div>
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="../../../images/AndroidNotifications/BP_HasNotificationPermission.png">
+                        <img src="../../../images/AndroidNotifications/BP_ScheduleNotificationWithDelay.png">
                     </div>
                 </div>
-                <div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Notification ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the notification.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
                     <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
                         <span class="badge badge-primary">1</span>
                         <div class="info" style="border-bottom-left-radius: 20px;">
                             <p class="content">
-                                <b>Return Value</b>
+                                <b>Delay</b>
                             </p>
                             <p class="content" style="margin-bottom: 0rem;">
-                                A boolean indicating whether or not you currently have the permission to post notifications.
+                                The time in milliseconds to delay the notification being sent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Cancel Scheduled Notification</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node cancels an already scheduled notification, preventing it from occuring.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_CancelScheduledNotification.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the notification.
                             </p>
                         </div>
                     </div>

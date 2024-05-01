@@ -74,7 +74,35 @@ if (mobileButton) {
 const news = document.getElementById('news');
 if (news) {
   news.innerHTML =`
-  <div class="news-card expanded">
+<div class="news-card expanded">
+    <div class="news-container">
+        <div class="news-group-item">
+            <div class="row">
+                <div class="col-auto" style="padding-right: 0">
+                    <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
+                </div>
+                <div class="col" style="padding-left: 10px">
+                    <div class="news-title">Pending Release Alert</div>
+                    <div class="news-sub-title">2024-05-01</div>
+                </div>
+            </div>
+        </div>
+        <div class="news-info">
+            <div class="news-info-title">
+                Advanced Ads Pro
+            </div>
+            <div class="news-info-details">
+                <ul>
+                    <li>Google/Admob has Removed Mediation Partners</li>
+                    <li>Yahoo (Verizon Media) to be removed</li>
+                    <li>Tapjoy to be removed</li>
+                </ul>
+            </div>
+            <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
+        </div>
+    </div>
+</div>
+  <div class="news-card">
     <div class="news-container">
         <div class="news-group-item">
             <div class="row">
@@ -102,7 +130,7 @@ if (news) {
         </div>
     </div>
 </div>
-  <div class="news-card expanded">
+  <div class="news-card">
     <div class="news-container">
         <div class="news-group-item">
             <div class="row">
@@ -213,39 +241,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="https://www.youtube.com/playlist?list=PLA_wfrT3fpg3TrteW2aUddl_zgsJtRt56">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">New Unreal Engine Plugin</div>
-                  <div class="news-sub-title">2024-02-02</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="row">
-              <div class="col-4">
-                  <img style="max-height: 156px; padding-top: 10px; padding-bottom: 10px" src="../../../images/general/Admob_Thumbnail.png">
-              </div>
-              <div class="col-8" style="display:flex; align-items: center; margin: 0">
-                  <div class="news-info-details" style="font-weight: 500">
-                      <ul>
-                          <li>Admob Advertisements</li>
-                          <li>GDPR & COPPA</li>
-                          <li>All Advert Types</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

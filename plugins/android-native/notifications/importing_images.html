@@ -132,32 +132,48 @@
                     <div class="info">
                         <ol class="list-group list-group-flush">
                             <li class="list-group-item">
-                                Purchase the Plugin
+                                Create a PNG
                             </li>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                Purchase the plugin on the <a href="">Official Unreal Engine Marketplace</a> (disabled untill go live).
+                                Create your PNG image in whichever way you see fit.
                             </p>
                             <li class="list-group-item">
-                                Install the Plugin
+                                Import PNG into Unreal Engine
                             </li>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                In the Epic Games Launcher, the plugin will appear in your Library.</br>
-                                Go to the Library tab and find the plugin and add it to the engine.
+                                Drag or import your image into the Unreal Engine Editor, ultimately creating a texture object.
                             </p>
                             <li class="list-group-item">
-                                Enable Play Base Services Plugin
+                                Open Texture Settings
                             </li>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                In Unreal Engine, the plugin will be available in the plugins section.</br>
-                                Go to <span style="font-weight: 500">Settings</span> -> <span
-                                    style="font-weight: 500">Plugins</span> -> Search for "<span
-                                    style="font-weight: 500">Advanced Notifications</span>" and ensure it is enabled.
+                                Double click your recently created Unreal Engine texture object to open a new tab showing the textures settings.
                             </p>
+                            <li class="list-group-item">
+                                Update Settings
+                            </li>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                Within the texture settings for this texture object, update the:
+                            </p>
+                            <table class="two-column-table" style="margin-bottom: 10px">
+                                <tr>
+                                    <td class="blue-diamond">Compression Settings to <span style="font-weight: 500">VectorDisplacementmap (RGBA8)</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="blue-diamond">Ensure sRGB is set to <span style="font-weight: 500">false</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="blue-diamond">Mip Gen Settings to <span style="font-weight: 500">NoMipmaps</span></td>
+                                </tr>
+                            </table>
                             <div class="container" style="margin-left: 0px; padding-left: 0px; padding-bottom: 10px;">
                                 <div style="display: flex; justify-content: center; align-items: center;">
-                                    <img style="max-width: 80%" src="../../../images/PlayBaseServices/PlayBaseServices_Plugin_Enabled.png">
+                                    <img style="max-width: 80%" src="../../../images/AndroidNotifications/Texture_Settings.png">
                                 </div>
                             </div>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                You can now use this texture as an input field for our blueprint nodes.
+                            </p>
                         </ol>
                     </div>
                 </div>

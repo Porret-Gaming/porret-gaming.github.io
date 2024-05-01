@@ -75,6 +75,34 @@ const news = document.getElementById('news');
 if (news) {
   news.innerHTML =`
 <div class="news-card expanded">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">New Plugin Early Access</div>
+                  <div class="news-sub-title">2024-05-02</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Advanced Notifications
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Early access to documentation</li>
+                  <li>Let us know what you think!</li>
+                  <li>Suggestions may be included</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/android-native/notifications/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card expanded">
     <div class="news-container">
         <div class="news-group-item">
             <div class="row">
@@ -212,35 +240,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">YouTube Tutorial Series</div>
-                  <div class="news-sub-title">2024-02-02</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="news-info-title">
-            Our First YouTube Tutorial Series
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Billing Plugin YouTube Series</li>
-                  <li>Leave a Like to Help Support Us!</li>
-                  <li>Consider Subscribing</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="https://www.youtube.com/playlist?list=PLA_wfrT3fpg3TrteW2aUddl_zgsJtRt56">Learn more</a>
       </div>
   </div>
 </div>
@@ -400,6 +399,18 @@ if (docsNavBar) {
                             class="dropdown-item-image">
                         <div class="dropdown-item-text">
                             Android Sensors
+                            <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="../../android-native/notifications/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Notifications"
+                            class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Advanced Notifications
                             <span class="dropdown-item-subtext">Android Plugin</span>
                         </div>
                     </div>
@@ -584,6 +595,18 @@ if (rootNavBar) {
                   </div>
               </div>
           </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="plugins/android-native/notifications/overview.html">
+                <div class="dropdown-item-content">
+                    <img src="./images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Notifications"
+                        class="dropdown-item-image">
+                    <div class="dropdown-item-text">
+                        Advanced Notifications
+                        <span class="dropdown-item-subtext">Android Plugin</span>
+                    </div>
+                </div>
+            </a>
         </li>
         <li>
             <a class="dropdown-item" href="plugins/advertising/admob/overview.html">

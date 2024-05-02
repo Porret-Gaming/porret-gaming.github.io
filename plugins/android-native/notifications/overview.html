@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Android Notifications</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="docs-navbar"></div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="permissions.html">
+                                Permissions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="channels.html">
+                                Channels
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="builder.html">
+                                Builder
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="notifying.html">
+                                Notifying
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="example.html">
+                                Example Setup
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="importing_images.html">
+                                Importing Images
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="notification_channel.html">
+                                Notification Channel
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="notification_channel.html">
+                                Notification Channel Group
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="notification_result.html">
+                                Notification Result
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Android Notifications Overview</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            <b>Android Native: Notifications</b>
+                        </p>
+                        <p class="content">
+                            Android notifications are crucial means of communication, appearing outside of your application's UI.
+                            They serve various purposes, from reminding users of important events to enticing them to re-engage with your application. 
+                        </p>
+                        <p class="content">
+                            With this Unreal Engine plugin, you gain the power to craft custom notifications, leveraging features like direct texture integration for images within blueprints.
+                            Once created, these notifications can be promptly displayed or scheduled for future delivery.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Enhance user engagement and retention in your Unreal Engine Android mobile application today by integrating notifications seamlessly.
+                        </p>
+                    </div>
+                    <div class="info" style="margin-top: 20px">
+                        <p class="content">
+                            <b>The Unreal Engine Plugin</b>
+                        </p>
+                        <p class="content">
+                            The Unreal Engine plugin for Android Notifications SDK API is an easy to use tool which makes use of a builder sender style.
+                            The entire plugin is entirely exposed to blueprints allowing you to build your notifications up as much as you want in advance and send them when the time is right.
+                        </p>
+                        <p class="content">
+                            Some key features include:
+                        </p>
+                        <table class="two-column-table" style="margin-bottom: 10px">
+                            <tr>
+                                <td class="blue-diamond">Direct Image Input in Blueprint Nodes</td>
+                            </tr>
+                            <tr>
+                                <td class="blue-diamond">Notification Scheduling</td>
+                            </tr>
+                            <tr>
+                                <td class="blue-diamond">Notification Permission Management</td>
+                            </tr>
+                            <tr>
+                                <td class="blue-diamond">Notification Channel Management</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">Notification Permissions</h1>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center; padding-top: 10px;">
+                        <img src="../../../images/AndroidNotifications/Notification_Permission_All_BP_Nodes.png" style="width: 50%">
+                    </div>
+
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">Notification Channels</h1>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center; padding-top: 10px;">
+                        <img src="../../../images/AndroidNotifications/Notification_Channels_All_BP_Nodes.png" style="width: 65%">
+                    </div>
+
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">Notification Channel Groups</h1>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center; padding-top: 10px;">
+                        <img src="../../../images/AndroidNotifications/Notification_ChannelGroup_All_BP_Nodes.png" style="width: 70%">
+                    </div>
+
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">Notification Building</h1>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center; padding-top: 10px;">
+                        <img src="../../../images/AndroidNotifications/Notification_Building_All_BP_Nodes.png" style="width: 100%">
+                    </div>
+
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">Notifying</h1>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center; padding-top: 10px;">
+                        <img src="../../../images/AndroidNotifications/Notification_Notifying_All_BP_Nodes.png" style="width: 50%">
+                    </div>
+                    
+                    <div style="margin-bottom: 250px">
+                    </div>
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2024
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

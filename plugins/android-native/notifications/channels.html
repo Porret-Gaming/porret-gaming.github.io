@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Android Notifications</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="docs-navbar"></div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="permissions.html">
+                                Permissions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="channels.html">
+                                Channels
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="builder.html">
+                                Builder
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="notifying.html">
+                                Notifying
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="example.html">
+                                Example Setup
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="importing_images.html">
+                                Importing Images
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="notification_channel.html">
+                                Notification Channel
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="notification_channel_group.html">
+                                Notification Channel Group
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="notification_result.html">
+                                Notification Result
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Notification Channel Management</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            Starting in Android 8.0 (API level 26), all notifications must be assigned to a channel.
+                        </p>
+                        <p class="content">
+                            This section describes how you can create and group these channels to be compliant and aid your users to manage your notifications in a desirable way.
+                            For example, you may want to group critical notifications together and more informative notifications in a different own channel.    
+                        </p>
+                        <p class="content">
+                            The way it works is that you <span style="font-weight: 500">build</span> a Channel or Group, use any of the setting nodes to <span style="font-weight: 500">add/update</span> properties and when you are ready, <span style="font-weight: 500">save</span> the channel to be used
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The majority of these blueprint nodes return a <a href="notification_result.html">Notification Result</a> indicating whether or not the operation was successful.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Available Blueprint Nodes</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            The below blueprint nodes are only related to setting up channels and their groups for notifications to be sent on.
+                        </p>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Channel Management</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Build Notification Channel</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint node creates a Notification Channel in the Android OS for your application.
+                            Notifications are required to be sent on a channel you create with this node.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This node is the bare minimum required to build a notification channel and save it using the blueprint below.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_BuildNotificationChannel.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Notification Channel ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel. Must be unique per package. The value may be truncated if it is too long.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Notification Channel Name</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The user visible name of the channel. The recommended maximum length is 40 characters; the value may be truncated if it is too long.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">3</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Importance</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The <a href="enumerations.html">CHANNEL_IMPORTANCE</a> of the channel. This controls how interruptive notifications posted to this channel are.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Save Notification Channel</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node saves a notification channel you have built to be used by your notifications.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_SaveNotificationChannel.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Set Notification Channel Description</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node sets the user visible description of this channel.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_SetNotificationChannelDescription.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Notification Channel ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel Description</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The user visible description for this channel. The recommended maximum length is 300 characters; the value may be truncated if it is too long.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Delete Notification Channel</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node deletes the provided notification channel.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_DeleteNotificationChannel.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Created Notification Channels</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node returns a list of Notification Channels that have been saved and exist on the OS for your package.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_GetCreatedNotificationChannels.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Return Value</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A List of <a href="notification_channel.html">Notification Channels</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Open Notification Channel Settings</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node provides your users easy access to your notification channel settings in the OS.
+                            This will open their devices settings directly to your channels settings.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_OpenNotificationChannelSettings.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Set Notification Channel Group</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node sets which created notification channel group the notification channel belongs to.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_SetNotificationChannelGroup.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Notification Channel ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel Group ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel group.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Channel Group Management</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Build Notification Channel Group</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node creates a Notification Channel Group in the Android OS for your application.
+                            This node is the bare minimum required to build a notification channel group and save it using the blueprint below.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_BuildNotificationChannelGroup.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Notification Channel Group ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel group.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel Group Name</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The user visible name of the group. The recommended maximum length is 40 characters; the value may be truncated if it is too long.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Set Notification Channel Group Description</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node sets the user visible description of this group.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_SetNotificationChannelGroupDescription.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Notification Channel Group ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel group.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel Group Description</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The visible description for this group. The recommended maximum length is 300 characters; the value may be truncated if it is too long.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Save Notification Channel Group</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node saves the notification channel group you have built to be used by your notification channels.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_SaveNotificationChannelGroup.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel Group ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel group.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Delete Notification Channel Group</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node deletes the given notification channel group, and all notification channels that belong to it. 
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_DeleteNotificationChannelGroup.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Notification Channel Group ID</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The id of the channel group.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Created Notification Channel Groups</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node returns a list of Notification Channels Groups that have been saved and exist on the OS for your package.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AndroidNotifications/BP_GetCreatedNotificationChannelsGroup.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Return Value</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                A List of <a href="notification_channel_group.html">Notification Channel Groups</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 200px">
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2024
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

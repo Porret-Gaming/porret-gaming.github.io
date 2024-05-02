@@ -131,9 +131,11 @@
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
+                        <p class="content">
+                            This struct is designed to mimic as closely as possible the class of a Notification Channel within the SDK.
+                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The Sensor struct is designed to mimic the Sensor Event object almost exactly as provided by the Android SDK. </br>
-                            This object is provided when the "On Sensor Value Changed" delegate is called when <a href="sensor_listener.html">Sensor Listener</a> is triggered, containing various information about the the Sensor Event.
+                            This is a representation of settings that apply to a collection of similarly themed notifications.
                         </p>
                     </div>
                 </div>
@@ -155,35 +157,35 @@
                                 <td>ID</td>
                                 <td>FString</td>
                                 <td>
-                                    XXX
+                                    The id of the channel. Must be unique per package. The value may be truncated if it is too long.
                                 </td>
                             </tr>
                             <tr>
                                 <td>Name</td>
                                 <td>FString</td>
                                 <td>
-                                    XXX
+                                    The user visible name of the channel. The recommended maximum length is 40 characters; the value may be truncated if it is too long
                                 </td>
                             </tr>
                             <tr>
                                 <td>ChannelImportance</td>
                                 <td><a href="enumerations.html">EChannelImportance</a></td>
                                 <td>
-                                    XXX
+                                    The importance of the channel. This defines how interruptive notifications posted to this channel are.
                                 </td>
                             </tr>
                             <tr>
                                 <td>Description</td>
                                 <td>FString</td>
                                 <td>
-                                    XXX
+                                    The user visible description of this channel. The recommended maximum length is 300 characters; the value may be truncated if it is too long.
                                 </td>
                             </tr>
                             <tr>
                                 <td>Group</td>
                                 <td>FString</td>
                                 <td>
-                                    XXX
+                                    The notification channel group ID this channel belongs to.
                                 </td>
                             </tr>
                         </tbody>

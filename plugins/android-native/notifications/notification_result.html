@@ -131,9 +131,11 @@
                 </div>
                 <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
+                        <p class="content">
+                            The Notification Result struct is the plugins consistant way of communicating errors back to you.
+                        </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            The Sensor struct is designed to mimic the Sensor Event object almost exactly as provided by the Android SDK. </br>
-                            This object is provided when the "On Sensor Value Changed" delegate is called when <a href="sensor_listener.html">Sensor Listener</a> is triggered, containing various information about the the Sensor Event.
+                            When interacting with the plugin, most nodes perform safety checks and will report any issues back to you in this format.
                         </p>
                     </div>
                 </div>

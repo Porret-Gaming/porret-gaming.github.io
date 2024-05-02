@@ -410,7 +410,7 @@ if (docsNavBar) {
                         <img src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Notifications"
                             class="dropdown-item-image">
                         <div class="dropdown-item-text">
-                            Advanced Notifications
+                            Android Notifications
                             <span class="dropdown-item-subtext">Android Plugin</span>
                         </div>
                     </div>
@@ -602,7 +602,7 @@ if (rootNavBar) {
                     <img src="./images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Notifications"
                         class="dropdown-item-image">
                     <div class="dropdown-item-text">
-                        Advanced Notifications
+                        Android Notifications
                         <span class="dropdown-item-subtext">Android Plugin</span>
                     </div>
                 </div>

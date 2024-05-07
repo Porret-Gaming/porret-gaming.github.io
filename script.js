@@ -79,6 +79,35 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-05-07</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Advanced Ads Pro Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Consent Delegates to run on Game Thread</li>
+                  <li>Yahoo (Verizon Media) + Tapjoy removed</li>
+                  <li>Update InMobi Mediation Libraries</li>
+                  <li>Cleanup Google Dependencies</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card expanded">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -101,34 +130,6 @@ if (news) {
           <a class="btn-learn-more" href="../../../plugins/android-native/notifications/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
-</div>
-<div class="news-card expanded">
-    <div class="news-container">
-        <div class="news-group-item">
-            <div class="row">
-                <div class="col-auto" style="padding-right: 0">
-                    <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
-                </div>
-                <div class="col" style="padding-left: 10px">
-                    <div class="news-title">Pending Release Alert</div>
-                    <div class="news-sub-title">2024-05-01</div>
-                </div>
-            </div>
-        </div>
-        <div class="news-info">
-            <div class="news-info-title">
-                Advanced Ads Pro
-            </div>
-            <div class="news-info-details">
-                <ul>
-                    <li>Google/Admob has Removed Mediation Partners</li>
-                    <li>Yahoo (Verizon Media) to be removed</li>
-                    <li>Tapjoy to be removed</li>
-                </ul>
-            </div>
-            <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-        </div>
-    </div>
 </div>
   <div class="news-card">
     <div class="news-container">

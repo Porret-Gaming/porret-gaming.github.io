@@ -83,6 +83,34 @@ if (news) {
               </div>
               <div class="col" style="padding-left: 10px">
                   <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-05-13</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Advanced Ads Pro Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Refactor Banner Ads</li>
+                  <li>App Open Ad Fixes</li>
+                  <li>Consent Delegate Fixes</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
                   <div class="news-sub-title">2024-05-07</div>
               </div>
           </div>
@@ -214,35 +242,6 @@ if (news) {
           <a class="btn-learn-more" href="../../../plugins/google-play-services/base-services/overview.html?utm_source=News">Learn more</a>
       </div>
     </div>
-</div>
-  <div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-02-23</div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="news-info">
-          <div class="news-info-title">
-            Advanced Ads Pro Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Update Request Consent and Initialise BP</li>
-                  <li>Add On Consent Error Delegate</li>
-                  <li>Add On Initialised Delegate</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
 </div>
   `;
 }

@@ -232,6 +232,22 @@ hr {
     color: rgb(255, 239, 222);
 }
 
+.btn-free {
+    position: absolute;
+    bottom: -5px;
+    right: -6px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(255, 200, 137), rgb(226, 121, 0));
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: rgb(255, 239, 222);
+}
+
 .btn-learn-more:hover {
     text-decoration: none;
     color: rgb(255, 255, 255);

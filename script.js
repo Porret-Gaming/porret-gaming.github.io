@@ -79,6 +79,33 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-06-20</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Advanced Notifications
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Downgrade Permission Library</li>    
+                  <li>Improves Comptability with Older Engine Versions</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/android-native/notifications/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" style="padding: 8px" src="../../../images/PorretGaming_Logo_Cut.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -209,35 +236,6 @@ if (news) {
                   <li>Refactor Banner Ads</li>
                   <li>App Open Ad Fixes</li>
                   <li>Consent Delegate Fixes</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-05-07</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Advanced Ads Pro Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Consent Delegates to run on Game Thread</li>
-                  <li>Yahoo (Verizon Media) + Tapjoy removed</li>
-                  <li>Update InMobi Mediation Libraries</li>
-                  <li>Cleanup Google Dependencies</li>
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>

@@ -79,6 +79,34 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" style="padding: 8px" src="../../../images/PorretGaming_Logo_Cut.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-06-26</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Improve UE5.4 Compatibility
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Play Services: Saved Games - Updated</li>    
+                  <li>Play Services: Events - Updated</li>
+                  <li>Advanced Ads Pro - Updated</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/release/notes/porret_gaming.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -154,7 +182,7 @@ if (news) {
                   <li>Monitor Lifecycle Events</li>
               </ul>
           </div>
-          <a class="btn-learn-more" href="../../../plugins/android-native/notifications/overview.html?utm_source=News">Learn more</a>
+          <a class="btn-learn-more" href="../../../plugins/android-native/utility-pack/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

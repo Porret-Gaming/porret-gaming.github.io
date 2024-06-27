@@ -79,6 +79,34 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-06-27</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Optional Gradle Upgrade</li>    
+                  <li>Updates to Gradle 7.5</li>
+                  <li>Applies to UE4.27 to UE5.2</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/android-native/utility-pack/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" style="padding: 8px" src="../../../images/PorretGaming_Logo_Cut.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -211,34 +239,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/android-native/utility-pack/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">New Plugin Released!</div>
-                  <div class="news-sub-title">2024-05-23</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Advanced Mobile Notifications
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Highly Customizable Notifications</li>
-                  <li>Manage Notification Permissions</li>
-                  <li>Manage Notification Channels</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/android-native/notifications/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

@@ -79,6 +79,34 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-07-03</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Minor Fix for a Packaging Issue</li>
+                  <li>Syntax Issue in Detecting Play Base Services</li>
+                  <li>Syntax Issue in Detecting UE5.4</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -208,34 +236,6 @@ if (news) {
                   <li>Automatic UE Source Code Fixes</li>
                   <li>Monitor Internet Connectivity</li>
                   <li>Monitor Lifecycle Events</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/android-native/utility-pack/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">New Plugin Early Access</div>
-                  <div class="news-sub-title">2024-06-05</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Android Utility Pack
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Early access to documentation</li>
-                  <li>Let us know what you think!</li>
-                  <li>Suggestions may be included</li>
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/android-native/utility-pack/overview.html?utm_source=News">Learn more</a>

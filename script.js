@@ -79,6 +79,34 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-07-15</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Release Notes
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Add an Optional androidx.fragment Update</li>
+                  <li>Add Validation to Building Channel Groups</li>
+                  <li>Add Validation to Building Channels</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/android-native/utility-pack/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -98,7 +126,7 @@ if (news) {
                   <li>Add Validation to Building Channels</li>
               </ul>
           </div>
-          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
+          <a class="btn-learn-more" href="../../../plugins/android-native/notifications/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>
@@ -210,34 +238,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/android-native/notifications/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" style="padding: 8px" src="../../../images/PorretGaming_Logo_Cut.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-06-11</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Update Play Core Library Dependency
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>"Events" & "Saved Games" - Updated</li>    
-                  <li>"In App Updates" - Updated</li>
-                  <li>"In App Reviews" - Updated</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/release/notes/porret_gaming.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

@@ -79,6 +79,34 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">New Plugin Release!</div>
+                  <div class="news-sub-title">2024-08-05</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Play Asset Delivery
+          </div>
+          <div class="news-info-details">
+              <ul>
+                <li>New Google PAD UE Replacement</li>
+                <li>Upload Bundles Larger than 200MB</li>
+                <li>Install Time Asset Pack Delivery</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -102,7 +130,7 @@ if (news) {
       </div>
   </div>
 </div>
-<div class="news-card expanded">
+<div class="news-card">
   <div class="news-container">
       <div class="news-group-item">
           <div class="row">
@@ -211,34 +239,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-06-27</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Optional Gradle Upgrade</li>    
-                  <li>Updates to Gradle 7.5</li>
-                  <li>Applies to UE4.27 to UE5.2</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/android-native/utility-pack/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

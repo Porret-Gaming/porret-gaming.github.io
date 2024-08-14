@@ -82,6 +82,34 @@ if (news) {
                   <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Plugin Early Access</div>
+                  <div class="news-sub-title">2024-08-14</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Asset Delivery Professional
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Replacement for UE's Google PAD plugin</li>
+                  <li>All Asset Pack Types</li>
+                  <li>No Manual Intervention</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery-pro/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+  <div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
                   <div class="news-title">New Plugin Release!</div>
                   <div class="news-sub-title">2024-08-05</div>
               </div>
@@ -214,34 +242,6 @@ if (news) {
       </div>
   </div>
 </div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-07-03</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Minor Fix for a Packaging Issue</li>
-                  <li>Syntax Issue in Detecting Play Base Services</li>
-                  <li>Syntax Issue in Detecting UE5.4</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
   `;
 }
 
@@ -328,6 +328,7 @@ if (docsNavBar) {
                     </li>
                 </ul>
             </li>
+
             <li class="dropdown-toggle dropdown-submenu">
                 <a class="dropdown-item" href="../../google-play-services/billing/overview.html">
                     <div class="dropdown-item-content">
@@ -367,18 +368,47 @@ if (docsNavBar) {
                     </li>
                 </ul>
             </li>
-            <li>
-                <a class="dropdown-item" href="../../google-play-services/asset-delivery/overview.html">
+
+            <li class="dropdown-toggle dropdown-submenu">
+                <a class="dropdown-item" href="../../google-play-services/asset-delivery-pro/overview.html">
                     <div class="dropdown-item-content">
-                        <img src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery"
+                        <img src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery Pro"
                             class="dropdown-item-image">
                         <div class="dropdown-item-text">
                             Play: Asset Delivery
-                            <span class="dropdown-item-subtext">Android Plugin</span>
+                            <span class="dropdown-item-subtext">Android Plugins</span>
                         </div>
                     </div>
                 </a>
+                <div class="submenu-overlay"></div>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a class="dropdown-item" href="../../google-play-services/asset-delivery-pro/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery Pro"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Play: Asset Delivery Pro
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="../../google-play-services/asset-delivery/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Play: Asset Delivery
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </li>
+            
             <li>
                 <a class="dropdown-item" href="../../google-play-services/in-app-reviews/overview.html">
                     <div class="dropdown-item-content">
@@ -584,16 +614,41 @@ if (rootNavBar) {
             </li>
           </ul>
         </li>
-        <li>
-          <a class="dropdown-item" href="plugins/google-play-services/asset-delivery/overview.html">
+        <li class="dropdown-toggle dropdown-submenu">
+          <a class="dropdown-item" href="plugins/google-play-services/asset-delivery-pro/overview.html">
             <div class="dropdown-item-content">
-              <img src="./images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery" class="dropdown-item-image">
+              <img src="./images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery Pro" class="dropdown-item-image">
               <div class="dropdown-item-text">
                 Play: Asset Delivery
-                <span class="dropdown-item-subtext">Android Plugin</span>
+                <span class="dropdown-item-subtext">Android Plugins</span>
               </div>
             </div>
           </a>
+          <div class="submenu-overlay"></div> 
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li>
+                <a class="dropdown-item" href="plugins/google-play-services/asset-delivery-pro/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="./images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery Pro" class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Play: Asset Delivery Pro
+                            <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="plugins/google-play-services/asset-delivery/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="./images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery" class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Play: Asset Delivery
+                            <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+          </ul>
         </li>
         <li>
           <a class="dropdown-item" href="plugins/google-play-services/in-app-reviews/overview.html">

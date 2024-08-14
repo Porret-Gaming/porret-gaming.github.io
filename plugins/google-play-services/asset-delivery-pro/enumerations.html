@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Asset Delivery Pro</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="docs-navbar"></div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="chunking.html">
+                                Chunking
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_asset_pack_state.html">
+                                Get Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="install_asset_pack.html">
+                                Install Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="remove_asset_pack.html">
+                                Remove Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="cancel_asset_pack_installation.html">
+                                Cancel Asset Pack Installation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="show_confirmation_dialog.html">
+                                Show Confirmation Dialog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_packed_asset.html">
+                                Get a Packed Asset
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="asset_pack_state.html">
+                                Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom;">
+                    <h1 class="h2 text-white-shadow">Enumerations</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Here is a list of enumerations you will find throughout the plugin. </br>
+                            These enumerations are named after the same enumerations/constants found within the Asset Delivery SDK.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EAssetPackStatus</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_UNKNOWN</td>
+                                <td>
+                                    The asset pack state is unknown.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_PENDING</td>
+                                <td>
+                                    The asset pack download is pending and will be processed soon.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_DOWNLOADING</td>
+                                <td>
+                                    The asset pack download is in progress.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_TRANSFERRING</td>
+                                <td>
+                                    The asset pack is being decompressed and copied (or patched) to the app's internal storage.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_COMPLETED</td>
+                                <td>
+                                    The asset pack download and transfer is complete; the assets are available to the app provided it has been mounted.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_FAILED</td>
+                                <td>
+                                    The asset pack download or transfer has failed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_CANCELED</td>
+                                <td>
+                                    The asset pack download has been canceled by the user through the Play Store or the download notification.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_WAITING_FOR_WIFI</td>
+                                <td>
+                                    The asset pack download is waiting for Wi-Fi to become available before proceeding.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_NOT_INSTALLED</td>
+                                <td>
+                                    The asset pack is not installed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_STATUS_REQUIRES_USER_CONFIRMATION</td>
+                                <td>
+                                    The asset pack requires user consent to be downloaded.
+                                    This can happen if the current app version was not installed by Play.
+                                    If the asset pack is also waiting for WIFI, this state takes precedence.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EConfirmationStatus</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CONFIRMATION_STATUS_CANCELED</td>
+                                <td>
+                                    The confirmation dialog was denied or dismissed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CONFIRMATION_STATUS_ACCEPTED</td>
+                                <td>
+                                    The confirmation dialog was approved.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CONFIRMATION_STATUS_FAILURE</td>
+                                <td>
+                                    Something went wrong when attempting to retrieve confirmation.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">EAssetPackErrorCode</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_NO_ERROR</td>
+                                <td>
+                                    No Error.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_APP_UNAVAILABLE</td>
+                                <td>
+                                    The requesting app is unavailable. This could be caused by multiple reasons: The app isn't published in the Play Store, The app version code isn't published in the Play Store or The user doesn't have access to the app.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_PACK_UNAVAILABLE</td>
+                                <td>
+                                    The requested asset pack isn't available. This can happen if the asset pack wasn't included in the Android App Bundle that was published to the Play Store.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_INVALID_REQUEST</td>
+                                <td>
+                                    The request is invalid.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_DOWNLOAD_NOT_FOUND</td>
+                                <td>
+                                    The requested download isn't found.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_API_NOT_AVAILABLE</td>
+                                <td>
+                                    The Asset Delivery API isn't available.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_NETWORK_ERROR</td>
+                                <td>
+                                    Network error. Unable to obtain the asset pack details.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_ACCESS_DENIED</td>
+                                <td>
+                                    Download not permitted under the current device circumstances.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_INSUFFICIENT_STORAGE</td>
+                                <td>
+                                    Asset pack download failed due to insufficient storage.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_PLAY_STORE_NOT_FOUND</td>
+                                <td>
+                                    The Play Store app is either not installed or not the official version.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_NETWORK_UNRESTRICTED</td>
+                                <td>
+                                    State when "Show Confirmation Dialog" is called but no asset packs are waiting for WIFI.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_APP_NOT_OWNED</td>
+                                <td>
+                                    The app isn't owned by any user on this device. An app is "owned" if it has been installed via the Play Store.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_CONFIRMATION_NOT_REQUIRED</td>
+                                <td>
+                                    Returned if "Show Confirmation Dialog" is called but no asset packs require user confirmation.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_UNRECOGNIZED_INSTALLATION</td>
+                                <td>
+                                    The installed app version is not recognized by Play. This can happen if the app was not installed by Play.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASSET_PACK_ERROR_INTERNAL_ERROR</td>
+                                <td>
+                                    Unknown error downloading an asset pack.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="margin-bottom: 150px">
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2024
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

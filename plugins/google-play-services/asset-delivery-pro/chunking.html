@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Asset Delivery Pro</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="docs-navbar"></div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="chunking.html">
+                                Chunking
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_asset_pack_state.html">
+                                Get Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="install_asset_pack.html">
+                                Install Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="remove_asset_pack.html">
+                                Remove Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="cancel_asset_pack_installation.html">
+                                Cancel Asset Pack Installation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="show_confirmation_dialog.html">
+                                Show Confirmation Dialog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_packed_asset.html">
+                                Get a Packed Asset
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="asset_pack_state.html">
+                                Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Understanding Chunking</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px">
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">What is chunking?</h1>
+                    </div>
+                    <div class="info">
+                        <p class="content">
+                            Chunking in Unreal Engine refers to the process of dividing your game's assets into smaller, more manageable "chunks" or packages.
+                            These chunks are essentially collections of assets that are grouped together based on certain criteria, such as their usage in specific levels or game modes.
+                            Chunking is especially useful for optimizing game performance and delivery, as it allows you to load and manage assets more efficiently.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            In the context of Google Play Asset Delivery, chunking is crucial because it enables the dynamic delivery of assets, ensuring that players only download the necessary content when they need it, rather than everything at once.
+                            This can significantly reduce initial download sizes, improving the overall user experience as well as enabling you to control which assets are downloaded onto the device, for example, only if they make specific purchases or unlock certain achievements.
+                        </p>
+                    </div>
+
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">How can I specify which assets belong to which chunk?</h1>
+                    </div>
+                    <div class="info"><p class="content">
+                            This plugin uses Unreal Engine's chunking system to Chunk the assets, so all features Unreal Engine offers related to Chunking are automatically available to this plugin.
+                            In Unreal Engine, you can specify which assets belong to which chunk by using asset management tags and settings within the Unreal Editor.
+                        </p>
+                        <p class="content">
+                            You can read more about what chunking features Unreal Engine has by reading through their <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/cooking-content-and-creating-chunks-in-unreal-engine" target="_blank">Official Documentation</a>.
+                            To give a brief overview of what is covered in their documentation, here are some of the methods you can use:
+                        </p>
+                        <p class="content">
+                            <b>Primary Asset Labels</b>
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            You can create a Primary Asset Label per chunk allowing you to manage assets within that Chunk easily from one place.
+                        </p>
+                        <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                            <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
+                                <li class="tab-item">
+                                    <a class="tab-link active" id="tab" data-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="false">
+                                        Step 1
+                                    </a>
+                                </li>
+                                <li class="tab-item">
+                                    <a class="tab-link" id="tab" data-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">
+                                        Step 2
+                                    </a>
+                                </li>
+                                <li class="tab-item">
+                                    <a class="tab-link" id="tab" data-toggle="tab" href="#content3" role="tab" aria-controls="content3" aria-selected="false">
+                                        Step 3
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                                    <div class="info" style="margin-bottom: 20px;">
+                                        <p class="content" style="margin-bottom: 0rem;">
+                                            Simply right click anywhere in your Content Browser to bring up the below menu.</br>
+                                            Select <span style="font-weight: 500">Miscellaneous</span> and <span style="font-weight: 500">Data Asset</span>.
+                                        </p>
+                                    </div>
+                                    <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 135px;">
+                                        <img src="../../../images/AssetDeliveryPRO/Create_Data_Asset_1.png" alt="Image 1" style="max-width: 90%;">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                                    <div class="info" style="margin-bottom: 20px;">
+                                        <p class="content" style="margin-bottom: 0rem;">
+                                            You will then be promted to pick what Data Asset Class to use. </br>
+                                            Select <span style="font-weight: 500">PrimaryAssetLabel</span> and then Click <span style="font-weight: 500">Select</span>.
+                                        </p>
+                                    </div>
+                                    <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 190px;">
+                                        <img src="../../../images/AssetDeliveryPRO/Create_Data_Asset_2.png" alt="Image 1" style="max-width: 90%;">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3">
+                                    <div class="info" style="margin-bottom: 20px;">
+                                        <p class="content">
+                                            Name your DataAsset you have just created and double click it to open it up.
+                                        </p>
+                                        <p class="content" style="margin-bottom: 0rem;">
+                                            Here you can choose which Chunk this will group its assets into and which Assets or Blueprints to include in that Chunk.
+                                            There are some useful features here as well, such as "<span style="font-weight: 500">Label Assets in My Directory</span>" which can automatically add all assets in the same directory as this Data Asset object to the desired Chunk.
+                                        </p>
+                                    </div>
+                                    <div style="display: flex; justify-content: center; align-items: center;">
+                                        <img src="../../../images/AssetDeliveryPRO/Create_Data_Asset_3.png" alt="Image 1" style="max-width: 90%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content">
+                            <b>Individual Asset Labels</b>
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            You can also label assets on an adhoc-basis to specific chunks.
+                        </p>
+                        <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                            <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
+                                <li class="tab-item">
+                                    <a class="tab-link active" id="tab" data-toggle="tab" href="#content4" role="tab" aria-controls="content4" aria-selected="false">
+                                        Step 1
+                                    </a>
+                                </li>
+                                <li class="tab-item">
+                                    <a class="tab-link" id="tab" data-toggle="tab" href="#content5" role="tab" aria-controls="content5" aria-selected="false">
+                                        Step 2
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="content4" role="tabpanel" aria-labelledby="tab4">
+                                    <div class="info" style="margin-bottom: 20px;">
+                                        <p class="content">
+                                            Click "<span style="font-weight: 500">Edit</span>" at the top of the Unreal Engine Editor and open up "<span style="font-weight: 500">Editor Preferences</span>".
+                                        </p>
+                                        <p class="content">
+                                            From here Navigate to "<span style="font-weight: 500">General</span>", "<span style="font-weight: 500">Experimental</span>" and go to the "<span style="font-weight: 500">User Interface</span>" section. </br>
+                                            Enable "<span style="font-weight: 500">Allow ChunkID Assignments</span>".
+                                        </p>
+                                        <p class="content" style="margin-bottom: 0rem;">
+                                            <span style="font-weight: 500">NOTE:</span> Editor preferences are not always saved by default, so if this is your chosen method, be aware you may have to renable this on each project launch.
+                                        </p>
+                                    </div>
+                                    <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 180px;">
+                                        <img src="../../../images/AssetDeliveryPRO/Adhoc_Chunk_Assignments_1.png" alt="Image 1" style="max-width: 90%;">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="content5" role="tabpanel" aria-labelledby="tab5">
+                                    <div class="info" style="margin-bottom: 20px;">
+                                        <p class="content">
+                                            Now you can right click any asset and navigate to "<span style="font-weight: 500">Asset Actions</span>" and you will have the ability to assign and remove this asset from chunks.
+                                        </p>
+                                        <p class="content" style="margin-bottom: 0rem;">
+                                            I would discourage use of this method as its difficult to keep track of what assets belong to which chunks.
+                                        </p>
+                                    </div>
+                                    <div style="display: flex; justify-content: center; align-items: center;">
+                                        <img src="../../../images/AssetDeliveryPRO/Adhoc_Chunk_Assignments_2.png" alt="Image 1" style="max-width: 90%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            There are more methods in how to make use of Chunking in Unreal Engine and I would encourage you to read Unreal Engine's <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/cooking-content-and-creating-chunks-in-unreal-engine" target="_blank">Official Documentation</a> to choose the most appropriate method for you.
+                        </p>
+                    </div>
+
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">What is the end result?</h1>
+                    </div>
+                    <div class="info">
+                        <p class="content">
+                            The end result in terms of Android development, is that all chunks (excluding chunk 0) produce a PAK file each, which is Unreal Engine's chosen storage method for grouping assets together.
+                        </p>
+                        <p class="content">
+                            In the context of Google Play Asset delivery and this plugin, each Chunk will automatically create an appropriate asset pack, all you need to do is remember which chunk relates to which asset-pack you would like to fetch and install at runtime.
+                        </p>
+                        <p class="content">
+                            <ul>
+                                <li class="blue-diamond">Chunk 0 is automatically assigned as an install-time asset pack</li>
+                                <li class="blue-diamond">Chunk 1 is automatically assigned as a fast-follow asset pack</li>
+                                <li class="blue-diamond">Chunk 2 and above are automatically assigned as on-demand asset packs</li>
+                            </ul>
+                        </p>
+                        <p class="content">
+                            <span style="font-weight: 500">NOTE:</span> Chunk 0 / install-time assets are automatically downloaded and available immediately as per normal and you do not need to assign assets to Chunk 0 specifically.
+                        </p>
+                        <p class="content">
+                            This does not impact how you upload your aab file to the Google Play Store, simply upload your aab file as usual and all asset packs will be included.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            When uploaded to the Google Play Store, you can navigate to your App Bundle Explorer for that version and see your asset pack details there.
+                            In the below example, we have three chunks (Chunk 1, Chunk 2 and Chunk 3).
+                        </p>
+                        <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img style="max-width: 80%" src="../../../images/AssetDeliveryPRO/Example_Google_Play_Console_DeliveryTypes.PNG">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                        <h1 class="list-group-item">How does the plugin use my chunks?</h1>
+                    </div>
+                    <div class="info">
+                        <p class="content">
+                            The existing Unreal Engine Google PAD plugin required a lot of manual intervention to work, which included you do the following for every time you want to deploy/test:
+                        </p>
+                        <p class="content">
+                            Package your application, find your PAK files, create each asset pack directory structure, create your gradle files for each asset pack, copy over the PAK files into this directory, package your application a second time.
+                        </p>
+                        <p class="content">
+                            I am very proud to say this plugin automates this entire process for you and also does not require you to package your application twice, saving you valuable time.
+                        </p>
+                        <p class="content">
+                            When packaging your application, you can see what the plugin is doing in the Package Log Output.</br>
+                            The below example is the result of packaging a project with four Chunks defined:
+                        </p>
+                        <div class="container" style="margin-left: 0px; padding-left: 0px; padding-bottom: 20px;">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img style="max-width: 80%" src="../../../images/AssetDeliveryPRO/AssetPackCreation_LogOutput.png">
+                            </div>
+                        </div>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            <span style="font-weight: 500;">NOTE:</span>
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            You can create a total of 50 asset packs per application. You can only have one install-time and one fast-follow asset pack per project, but can use as many on-demand asset packs as you want as long as you do not exceed this limit.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;"></p>
+                    </div>
+                    
+                    <!-- </div> -->
+                    <div style="margin-bottom: 700px">
+                    </div>
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2024
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

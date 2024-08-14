@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Asset Delivery Pro</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="docs-navbar"></div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="chunking.html">
+                                Chunking
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_asset_pack_state.html">
+                                Get Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="install_asset_pack.html">
+                                Install Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="remove_asset_pack.html">
+                                Remove Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="cancel_asset_pack_installation.html">
+                                Cancel Asset Pack Installation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="show_confirmation_dialog.html">
+                                Show Confirmation Dialog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_packed_asset.html">
+                                Get a Packed Asset
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="asset_pack_state.html">
+                                Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Play Asset Delivery Proffesional Overview</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px">
+                    <div class="info">
+                        <p class="content">
+                            <b>Google Play Asset Delivery (PAD)</b> - (In Development)
+                        </p>
+                        <p class="content">
+                            This plugin is designed to replace the existing Google PAD plugin provided by Unreal Engine and significantly improve it.
+                        </p>
+                        <p class="content">
+                            The plugin does not make use of the deprecated core libraries and uses the new updated play asset delivery libraries.
+                            These newer libraries are <span style="font-weight: 500">Android 14+ compliant</span> allowing you to comply with Google Play Store policies and target API-34 and above.
+                        </p>
+                        <p class="content">
+                            By making use of Google Play Asset Delivery, you are able to upload application bundles much larger than the restrictive 200MB limit.
+                        </p>
+                        <p class="content">
+                            The plugin offers many features including, but not limited to:
+                        </p>
+                        <div class="row">
+                            <div class="col-auto" style="display:flex; align-items: center; margin: 0">
+                                    <ul>
+                                        <li class="blue-diamond">Install-Time Asset Delivery</li>
+                                        <li class="blue-diamond">On-Demand Asset Delivery</li>
+                                        <li class="blue-diamond">Automatic Asset Pack Creation</li>
+                                        <li class="white-diamond" style="padding-left: 20px;">No Manual File Copying</li>
+                                        <li class="white-diamond" style="padding-left: 20px;">No Manual Gradle File Creation</li>
+                                        <li class="white-diamond" style="padding-left: 20px;">No Double Packaging</li>
+                                    </ul>
+                            </div>
+                            <div class="col-auto" style="display:flex; align-items: center; margin: 0">
+                                    <ul>
+                                        <li class="blue-diamond">Fast-Follow Asset Delivery</li>
+                                        <li class="blue-diamond">Automatic Asset Retrieval</li>
+                                        <li class="blue-diamond">Smooth In-Editor Detection</li>
+                                        <li class="blue-diamond">Asset Pack Download Tracking</li>
+                                        <li class="blue-diamond">Asset Pack Removals</li>
+                                        <li class="blue-diamond">Automatic PAK File Management</li>
+                                    </ul>
+                            </div>
+                        </div>
+                        
+                        <p class="content">
+                            The existing Google PAD plugin provided by Unreal Engine is not only out of date, but requires a significant amount of manual intervention, not to mention the lack of information around PAK file management.
+                        </p>
+                        <p class="content">
+                            This plugin was designed with these difficulties and complexities in mind with the goal of improving the developers experience, saving them time and enabling you to use Google's Asset Delivery features as simply and quickly as possible.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            I strongly encourage you to read up on Play Asset Delivery, specifically the differences and limitations of each asset pack type, download size limits and have a look at some of the case studies to better understand the benefits.</br>
+                            You can read about it on <a href="https://developer.android.com/guide/playcore/asset-delivery" target="_blank">Googles Official Documentation</a>.
+                        </p>
+                    </div>
+
+                    <div class="info" style="margin-top: 20px;">
+                        <p class="content">
+                            <span style="font-weight: 500;">Google Play Games Services:</span>
+                        </p>
+                        <p class="content">
+                            Using this plugin, if you are using UE5.0 or lower, this plugin may cause Google Play Games Services functionality to no longer work, such as the built-in Leaderboards, Achievements and Games Sign-in functionality.
+                            This is due to the latest libraries dependencies conflicting with Unreal Engine's built-in library dependencies.
+                        </p>
+                        <p class="content">
+                            In this situation, the plugin upgrades the Google Play Games Services libraries to be compatible in order to provide this service.
+                            The implications of doing this upgrade may lead to issues when using those services.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            In the event you make use of these services, we have released a <a style="font-weight: 500;" href="../../google-play-services/base-services/overview.html">Seperate Plugin</a> which upgrades the built-in Google Play Games libraries to be compatible.
+                            This seperate plugin will replace and drastically improve all features of the default Play Games Services provided by Unreal Engine and is highly recommeded.
+                        </p>
+                    </div>
+                    
+                    <div class="container"
+                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
+                        <h1 class="list-group-item">Available Blueprint Nodes</h1>
+                    </div>
+
+                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
+                        <img src="../../../images/AssetDeliveryPRO/BlueprintNodes.png" style="width: 75%">
+                    </div>
+
+                    <div class="container" style="padding-top: 40px; margin-left: 0px; padding-left: 0px;">
+                        <div class="warning">
+                            <p>
+                                Recommeded Plugin: <span style="font-weight: 500">In-App Updates</span>
+                            </p>
+                            <p style="margin-bottom: 0rem; font-size: 1rem;">
+                                This plugin works well with our In-App Updates plugin to detect updates and download them without the user having to check or use the Google Play Store at all!
+                                This plugin is sold seperately and you can learn more about it <a href="../in-app-updates/overview.html?utm_source=Promotion">here</a>.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- </div> -->
+                    <div style="margin-bottom: 200px">
+                    </div>
+                </div>
+            </main>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2024
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

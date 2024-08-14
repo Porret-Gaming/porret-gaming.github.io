@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Asset Delivery Pro</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="docs-navbar"></div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="chunking.html">
+                                Chunking
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_asset_pack_state.html">
+                                Get Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="install_asset_pack.html">
+                                Install Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="remove_asset_pack.html">
+                                Remove Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cancel_asset_pack_installation.html">
+                                Cancel Asset Pack Installation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="show_confirmation_dialog.html">
+                                Show Confirmation Dialog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_packed_asset.html">
+                                Get a Packed Asset
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="asset_pack_state.html">
+                                Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Cancelling an Asset Pack Download</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            In the event you have started a download and would like to stop it from continuing, you can actively cancel the Asset Pack Installation.
+                            You can only cancel actively downloaded asset packs and this is a best effort operation and does not guarentee its cancellation.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Once an asset pack is cancelled, you can resume its installation by <a href="install_asset_pack.html">reinstalling</a> the asset pack.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Blueprint Description</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Lets take a high level look at the blueprint itself and its parameters and then provide a slightly more detailed look into its setup.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Cancel Asset Pack Installation</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node attempts to cancel an Asset Pack which is currently being downloaded.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AssetDeliveryPRO/BP_CancelAssetPackInstallation.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Chunk Id</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The specific Chunk Identifier associated with the Asset Pack.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Return Value</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Returns the <a href="asset_pack_state.html">Asset Pack State</a> struct with details about the Asset Pack after it has attempted to cancel it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Example</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            Here is a real example where we attempt to cancel an ongoing Asset Pack download.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Here is an example where we attempt to cancel the installation of Chunk 3 (which correlates to our second on-demand Asset Pack).
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img style="width: 90%" src="../../../images/AssetDeliveryPRO/Example_CancelAssetPackInstallation.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                After we attempt to cancel the Asset Pack installation we check the Asset Pack State's status to see if its in a <span style="font-weight: 500">CANCELLED</span> status.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                If the status is indeed in a <span style="font-weight: 500">CANCELLED</span> status, we can safely consider it cancelled and would need to reinstall it if we wanted to use its Assets.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 200px">
+                </div>
+            </main>
+
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2024
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

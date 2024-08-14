@@ -162,8 +162,10 @@ hr {
     font-size: 1.25rem;
     font-weight: 500;
     /* border-radius: 20px !important; */
+
     border-bottom-left-radius: 20px;
     background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    box-shadow: -5px 0px 10px -5px rgba(0, 0, 0, 0.1);
     /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
     background-color: rgba(255, 255, 255, 0);
     border: 0px;
@@ -716,6 +718,22 @@ hr {
     content: "";
     display: inline-block;
     background-color: #62cced;
+    width: 0.6em;
+    height: 0.6em;
+    border: 1px solid black;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
+}
+
+.white-diamond {
+    list-style-type: none;
+    position: relative;
+}
+
+.white-diamond:before {
+    content: "";
+    display: inline-block;
+    background-color: #cdf3ff;
     width: 0.6em;
     height: 0.6em;
     border: 1px solid black;

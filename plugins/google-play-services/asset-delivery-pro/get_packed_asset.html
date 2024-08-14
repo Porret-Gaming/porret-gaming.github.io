@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>UE Plugin | Asset Delivery Pro</title>
+    <link rel="icon" type="image/png" href="../../../images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="docs-navbar"></div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Developer Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="overview.html">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="getting_started.html">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="chunking.html">
+                                Chunking
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="get_asset_pack_state.html">
+                                Get Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="install_asset_pack.html">
+                                Install Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="remove_asset_pack.html">
+                                Remove Asset Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="cancel_asset_pack_installation.html">
+                                Cancel Asset Pack Installation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="show_confirmation_dialog.html">
+                                Show Confirmation Dialog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="get_packed_asset.html">
+                                Get a Packed Asset
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Object Definitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="asset_pack_state.html">
+                                Asset Pack State
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="enumerations.html">
+                                Enumerations
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="margin-bottom: 100px">
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Retrieving Assets from Installed Asset Packs</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            Once you have downloaded the Asset Pack, you will need to retrieve the Assets from the pack in order to use them.
+                            I have created a lightweight, intelligent, easy to use blueprint node that can fetch the asset for you from the mounted Asset Pack.
+                        </p>
+                        <p class="content">
+                            There are two primary Asset types that need to be used explicitly and that is Classes and Objects.
+                            Classes can be, but are not limited to blueprints, which can be used for spawning or creating things.
+                            Objects can be, but are definitely not limited to Textures.
+                        </p>
+                        <p class="content">
+                            I have put a great deal of effort to reduce the complexities required to identify which is which and make it as easy to use as possible.
+                            That being said, it is important you understand how this works as there are always cases in which you may need to handle things according to your situation.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This functionality also identifies when its being run in the Unreal Engine editor and will automatically return what was passed in, instead of attempting to retrieve it from a non-existant Asset Pack.
+                            This will allow you to test your functionality as per normal in the Editor.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Blueprint Description</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Lets take a high level look at the blueprint itself and its parameter and then provide a slightly more detailed look into how to use it in some examples.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Get Packed Asset</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content">
+                            This blueprint node retrieves an Asset from any downloaded Asset Pack.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            <span style="font-weight: 500;">NOTE:</span> If the Asset does not exist, it will safely return null pointers along with an error message.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/AssetDeliveryPRO/BP_GetPackedAsset.png">
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>Asset</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                The Asset you would like retrieved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>Return Value</b>
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Returns a <a href="packed_asset.html">Packed Asset</a> struct containing your asset.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 40px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Common Examples</h1>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 20px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Retrieving a Class Asset</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            Class type assets, such as blueprints or user widgets stored in Asset Packs can easily retrieved at runtime, provided your Asset Pack has been downloaded and installed.
+                            Behind the scenes, the Return Value contains an Object pointer and a Class Type pointer. For Class Assets, the Class Type pointer is used.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Below we have a few examples of using the Asset as Class type Asset.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 10px;">
+                    <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
+                        <li class="tab-item">
+                            <a class="tab-link active" id="tab" data-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="false">
+                                Spawning an Actor
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">
+                                Creating a UI Widget
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content3" role="tab" aria-controls="content3" aria-selected="false">
+                                Manual Creation
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    Simply select the BP of the actor you would like fetched from a downloaded Asset Pack as the input. </br>
+                                    Drag the Return Value onto the Class Input field of the Spawn Actor blueprint node and it will automatically cast it for you.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 0px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_SpawnActor.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    Simply select the Widget BP you would like fetched from a downloaded Asset Pack as the input. </br>
+                                    Drag the Return Value onto the Class Input field of the Create User Widget blueprint node and it will automatically cast it for you.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 41px; padding-top: 41px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_CreateUIWidget.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    In the situation where the plugin does not have an automatic cast for you, you can simply cast it yourself as long as the type you are casting to is not within an Asset Pack (more on that below).
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 33px; padding-top: 33px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_ManualCreation.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 5px; margin-right: 20px;">
+                    <h1 class="list-group-item">Using Packed Blueprint Functions</h1>
+                </div>
+                <div style="padding-top: 5px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <div class="info">
+                            <p class="content">
+                                If you have loaded a blueprint from an Asset Pack and want to use its function calls, Unreal Engine will not know how to cast it to that type, as that type is unknown to Unreal Engine.
+                                In the editor, it will allow you to use a <span style="font-weight: 500">"Cast to [ClassType]"</span> blueprint node, however, that node is entirely generated before you have installed the Class.
+                            </p>
+                            <p class="content">
+                                What this means is that if you would like to cast a blueprint to a specific type in order to call its functions, the cast will fail.
+                            </p>
+                            <p class="content">
+                                The way around this is to create a <span style="font-weight: 500">Blueprint Interface</span>, which simply is a place where you define your functions (not the implementation of them).
+                                Then, in the blueprint you want to have these functions, you can add this interface and implement the corresponding functions of the interface in your blueprint.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Ultimately, instead of relying on the blueprint as the type, you rely on the interface as the type.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 10px;">
+                    <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
+                        <li class="tab-item">
+                            <a class="tab-link active" id="tab" data-toggle="tab" href="#content4" role="tab" aria-controls="content4" aria-selected="false">
+                                Create Blueprint Interface
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content5" role="tab" aria-controls="content5" aria-selected="false">
+                                Add Interface to Blueprint
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content6" role="tab" aria-controls="content6" aria-selected="false">
+                                Implement Interface Function
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content7" role="tab" aria-controls="content7" aria-selected="false">
+                                Cast to Interface
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content4" role="tabpanel" aria-labelledby="tab4">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    Simply right click anywhere in your Content Browser to bring up the below menu.</br>
+                                    Select <span style="font-weight: 500">Blueprints</span> and <span style="font-weight: 500">Blueprint Interface</span>.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-top: 68px; padding-bottom: 68px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_BPI_1.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content5" role="tabpanel" aria-labelledby="tab5">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    Name your Blueprint Interface and double click it to open it. </br>
+                                    Here you can create functions and define their input and outputs.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 0px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_BPI_2.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content6" role="tabpanel" aria-labelledby="tab6">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content">
+                                    In your Blueprint, go to <span style="font-weight: 500">Class Setting</span> and in the details panel add your Blueprint Interface.
+                                </p>
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    Your Interface will appear on the right, right click it and click <span style="font-weight: 500">Implement Event</span>. </br>
+                                    Now you can implement what you want your function to do.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 5px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_BPI_3.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content7" role="tabpanel" aria-labelledby="tab7">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    In this example, we are Spawning our Actor, Casting it to our Interface and then calling the interface method <span style="font-weight: 500">Set Material</span> using a Material we also fetched from an Asset Pack.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-top: 67px; padding-bottom: 268px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_BPI_4.png" alt="Image 1" style="max-width: 99%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 10px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content" style="margin-bottom: 0rem;">
+                                Leave the Blueprint Interface out of any chunks so that Unreal Engine always knows about it at compile time.
+                                When you want to call your blueprint's functions, you can cast the Asset to the interface and call the functions as per normal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Retrieving an Object Asset</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            Object type assets, such as a Material or Texture2D which are stored in Asset Packs can easily retrieved at runtime, provided your Asset Pack has been downloaded and installed.
+                            Behind the scenes, the Return Value contains an Object pointer and a Class Type pointer. For Object Assets, the Object pointer is used.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            Below we have a few examples of using the Asset as an Object type Asset.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px;">
+                    <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
+                        <li class="tab-item">
+                            <a class="tab-link active" id="tab" data-toggle="tab" href="#content8" role="tab" aria-controls="content8" aria-selected="false">
+                                Using a Texture2D
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content9" role="tab" aria-controls="content9" aria-selected="false">
+                                Using a Material
+                            </a>
+                        </li>
+                        <li class="tab-item">
+                            <a class="tab-link" id="tab" data-toggle="tab" href="#content10" role="tab" aria-controls="content10" aria-selected="false">
+                                Manual Creation
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content8" role="tabpanel" aria-labelledby="tab8">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content">
+                                    Simply select the Texture you would like fetched from a downloaded Asset Pack as the input.</br>
+                                    The Return Value may automatically cast to a Texture2D for you.
+                                </p>
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    In this example, we are using Textures as Texture2D assets for our Android Notification Plugin's blueprint node.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 0px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_Texture2D.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content9" role="tabpanel" aria-labelledby="tab9">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    Simply seleect the Material you would like fetched from a downloaded Asset Pack as the input. </br>
+                                    Be aware that dragging the Return Value onto the Material Input field may not always cast the type for you automatically.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 17px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_SetMaterial.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="content10" role="tabpanel" aria-labelledby="tab10">
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p class="content">
+                                    In the situation where the plugin does not have a predefined cast for you, or it does not automatically get picked up, you can simply cast it yourself.
+                                </p>
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    Here we are splitting the Return Value struct for further transparency.
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px;">
+                                <img src="../../../images/AssetDeliveryPRO/Example_ManualObjectCreation.png" alt="Image 1" style="max-width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content" style="margin-bottom: 0rem;">
+                                <span style="font-weight: 500">NOTE: </span> Object automatic casting does not always pop up automatically for you when you drag and drop onto another pin. You may need to search for the cast if you do not want to cast it yourself.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">List of Automatic Conversions</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
+                        <p class="content">
+                            I have implemented a bunch of automatic conversions for you so that you can simply drag and drop the result of the blueprint node to where you want to use it.
+                        </p>
+                        <p class="content">
+                            The list is not exhaustive and certainly will never contain your custom types.
+                            However, if you do want some conversions added to this list, please feel free to reach out and I can look into adding them to simplify your blueprint setup.
+                        </p>
+                        <p class="content" style="margin-bottom: 0rem;">
+                            To see the current list, you can simply drag the result of this blueprint node and it will show the full list.
+                        </p>
+                    </div>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img style="width: 80%" src="../../../images/AssetDeliveryPRO/PackedAsset_ConvertionsList.png">
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 200px">
+                </div>
+            </main>
+
+            <div class="col-md-3 d-none d-md-block">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 13px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow text-right">News Feed</h1>
+                </div>
+                <div class="container">
+                    <div id="news"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="../../../images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="../../../index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="../../../privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2024
+                        <a href="../../../index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

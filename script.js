@@ -82,6 +82,62 @@ if (news) {
                   <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-08-16</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Play Asset Delivery
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Reduce Play Services Library Update Impact</li>
+                  <li>Successful Integration with our Plugins</li>
+                  <li>UE5.0 & UE4.27 Impacted Only</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card expanded">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-08-16</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Saved Games
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Improve Compatibility with Google PAD</li>
+                  <li>Prepare Easier V2 Library Migration</li>
+                  <li>Prepare Title Field Deprecation</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/saved-games/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
                   <div class="news-title">Plugin Early Access</div>
                   <div class="news-sub-title">2024-08-14</div>
               </div>
@@ -145,7 +201,7 @@ if (news) {
       </div>
       <div class="news-info">
           <div class="news-info-title">
-              Release Notes
+              Play Services: In App updates
           </div>
           <div class="news-info-details">
               <ul>
@@ -183,62 +239,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-07-15</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Add an Optional androidx.fragment Update</li>
-                  <li>Add Validation to Building Channel Groups</li>
-                  <li>Add Validation to Building Channels</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/android-native/utility-pack/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-07-15</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Release Notes
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Add Proguard Rules to Prevent Code Obfuscation</li>
-                  <li>Add Validation to Building Channel Groups</li>
-                  <li>Add Validation to Building Channels</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/android-native/notifications/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

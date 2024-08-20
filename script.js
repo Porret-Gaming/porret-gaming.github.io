@@ -79,6 +79,34 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-08-20</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Both Billing Plugins
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Upgrade to billing library 7.0.0</li>
+                  <li>Update code to be compatible</li>
+                  <li>Improve Logging</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -102,7 +130,7 @@ if (news) {
       </div>
   </div>
 </div>
-<div class="news-card expanded">
+<div class="news-card">
   <div class="news-container">
       <div class="news-group-item">
           <div class="row">
@@ -211,34 +239,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/google-play-services/in-app-updates/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Plugin Early Access</div>
-                  <div class="news-sub-title">2024-07-24</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Google Play Asset Delivery (PAD)
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Replacement for UE's Google PAD plugin</li>
-                  <li>Android 14 Compliant</li>
-                  <li>Offers install-time Asset Pack</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

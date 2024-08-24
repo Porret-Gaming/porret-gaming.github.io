@@ -79,6 +79,61 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-08-23</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Advanced Ads Pro
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Update Play Game Service Libraries</li>
+                  <li>No longer inhibits Unreal Engine provided</br><span style="padding-left: 15px;">Google Play Game Features<span></li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card expanded">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-08-23</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Saved Games & Events Plugin
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Remove detection of Admob plugin</li>
+                  <li>Only detects Play Base Services V2</li>
+                  <li>Improve Logging</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/saved-games/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -183,62 +238,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery-pro/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-  <div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">New Plugin Release!</div>
-                  <div class="news-sub-title">2024-08-05</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Play Services: Play Asset Delivery
-          </div>
-          <div class="news-info-details">
-              <ul>
-                <li>New Google PAD UE Replacement</li>
-                <li>Upload Bundles Larger than 200MB</li>
-                <li>Install Time Asset Pack Delivery</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-07-26</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Play Services: In App updates
-          </div>
-          <div class="news-info-details">
-              <ul>
-                <li>Prepare for Google PAD Plugin Releases</li>
-                <li>Improved Delegate Error Handling</li>
-                <li>On Resume Download Improved</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/in-app-updates/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

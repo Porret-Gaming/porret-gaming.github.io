@@ -277,27 +277,29 @@
                             </p>
 
                             <li class="list-group-item">
-                                Obb Filters (No Action Required)
+                                Obb Filters
                             </li>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                <span style="font-weight: 500">NOTE: </span>This step has been been automated for your convenience, no action is required on your part. I am only detailing it here to make it transparent.
+                                <span style="font-weight: 500">NOTE:</span> This step is automated for Windows users, so no action is required on your part. The instructions below are only applicable to Linux and macOS users only.
                             </p>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                If you already have custom ObbFilters setup in your "<span style="font-weight: 500">DefaultEngine.ini</span>" file, then the plugin will detect this and not change anything. Your custom setup will remain as is.
+                                In short, if Obb Filters are not set up, the plugin will automatically add them. For Linux and macOS users, however, you will need to do this manually. This process ensures that all Chunks, except Chunk 0, are excluded from your main OBB file (install-time asset pack).
                             </p>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                <span style="font-weight: 400">What does our automation do exactly?</span>
+                                The first tab below shows an example of what the plugin does. For Linux and macOS users, you will need to perform this action manually, but only once. The left side of the tab displays a snippet from your <span style="font-weight: 500">DefaultEngine.ini</span> config file without Obb Filters. On Windows, the plugin will automatically add the necessary filters, as shown on the right.
                             </p>
                             <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                Simply put, if you have not setup ObbFilters, the plugin will automatically add them as seen below such that all Chunks excluding Chunk 0 will be excluded from your main obb file (install-time asset pack).</br>
-                            </p>
-                            <p class="content" style="padding-top: 10px; padding-left: 10px">
-                                In the third tab below, you can see an example of what the plugin does; on the left is a snippet from your config file in a situation where it has no ObbFilters, the plugin will detect that there are no "ObbFilters" configured and proceed to insert the filters in as can be seen on the right in the third panels example image.
+                                Here is the text for you to copy and paste: <span style="font-weight: 500; background-color: rgba(128, 128, 128, 0.4); border-radius: 5px; padding: 2px 5px;">+ObbFilters="-*pakchunk1*"</span> , but add this line 9 times changing the "1" as can be seen in the first tab below.
                             </p>
                             <div class="container" style="margin-left: 0px; padding-left: 30px; padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
                                 <ul class="nav nav-tabs" style="border-bottom: 0; margin: 0" id="myTabs" role="tablist">
                                     <li class="tab-item">
-                                        <a class="tab-link active" id="tab" data-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="false">
+                                        <a class="tab-link active" id="tab" data-toggle="tab" href="#content3" role="tab" aria-controls="content3" aria-selected="false">
+                                            Obb Filter Creation Example
+                                        </a>
+                                    </li>
+                                    <li class="tab-item">
+                                        <a class="tab-link" id="tab" data-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="false">
                                             Obb Filter Detection Log Output
                                         </a>
                                     </li>
@@ -306,14 +308,14 @@
                                             Obb Filter Creation Log Output
                                         </a>
                                     </li>
-                                    <li class="tab-item">
-                                        <a class="tab-link" id="tab" data-toggle="tab" href="#content3" role="tab" aria-controls="content3" aria-selected="false">
-                                            Obb Filter Creation Example
-                                        </a>
-                                    </li>
                                 </ul>
                                 <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                                    <div class="tab-pane fade show active" id="content3" role="tabpanel" aria-labelledby="tab3">
+                                        <div style="display: flex; justify-content: center; align-items: center;">
+                                            <img src="../../../images/AssetDeliveryPRO/ObbFilters_Insertion.png" alt="Image 1" style="max-width: 90%;">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="content1" role="tabpanel" aria-labelledby="tab1">
                                         <div style="display: flex; justify-content: center; align-items: center; padding-top: 51px; padding-bottom: 51px;">
                                             <img src="../../../images/AssetDeliveryPRO/ObbFilterDetection.png" alt="Image 1" style="max-width: 90%;">
                                         </div>
@@ -321,11 +323,6 @@
                                     <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
                                         <div style="display: flex; justify-content: center; align-items: center; padding-top: 51px; padding-bottom: 51px;">
                                             <img src="../../../images/AssetDeliveryPRO/ObbFilterInsertion.png" alt="Image 1" style="max-width: 90%;">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3">
-                                        <div style="display: flex; justify-content: center; align-items: center;">
-                                            <img src="../../../images/AssetDeliveryPRO/ObbFilters_Insertion.png" alt="Image 1" style="max-width: 90%;">
                                         </div>
                                     </div>
                                 </div>

@@ -79,6 +79,33 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2024-09-03</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Services: Billing
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Remove Requirement for Google Play Support</li>
+                  <li>Improved Logging</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/Admob/Admob_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -101,7 +128,7 @@ if (news) {
       </div>
   </div>
 </div>
-<div class="news-card expanded">
+<div class="news-card">
   <div class="news-container">
       <div class="news-group-item">
           <div class="row">
@@ -210,34 +237,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/google-play-services/saved-games/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Plugin Early Access</div>
-                  <div class="news-sub-title">2024-08-14</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Play Asset Delivery Professional
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Replacement for UE's Google PAD plugin</li>
-                  <li>All Asset Pack Types</li>
-                  <li>No Manual Intervention</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery-pro/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

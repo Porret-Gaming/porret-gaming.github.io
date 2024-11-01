@@ -79,6 +79,34 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img class="news-badge" src="../../../images/LoginRewards/LoginRewards_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">New Plugin Early Access</div>
+                  <div class="news-sub-title">2024-11-01</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Login Rewards
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>Track Login Rewards</li>
+                  <li>Review our documentation</li>
+                  <li>Let us know suggestions</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/general/login-rewards/overview.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -209,34 +237,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/AssetDelivery/AssetDelivery_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-08-16</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Play Services: Play Asset Delivery
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Reduce Play Services Library Update Impact</li>
-                  <li>Successful Integration with our Plugins</li>
-                  <li>UE5.0 & UE4.27 Impacted Only</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/asset-delivery/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>
@@ -406,6 +406,58 @@ if (docsNavBar) {
                     </li>
                 </ul>
             </li>
+
+            <li class="dropdown-toggle dropdown-submenu">
+                <a class="dropdown-item" href="../../android-native/utility-pack/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png" alt="AUP"
+                            class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Android Utility Pack
+                            <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="submenu-overlay"></div>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a class="dropdown-item" href="../../android-native/utility-pack/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png" alt="AUP"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Android Utility Pack
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="../../android-native/sensors/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Android Sensors
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="../../android-native/notifications/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Notifications"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Android Notifications
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             
             <li>
                 <a class="dropdown-item" href="../../google-play-services/in-app-reviews/overview.html">
@@ -432,42 +484,6 @@ if (docsNavBar) {
                 </a>
             </li>
             <li>
-                <a class="dropdown-item" href="../../android-native/utility-pack/overview.html">
-                    <div class="dropdown-item-content">
-                        <img src="../../../images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png" alt="AUP"
-                            class="dropdown-item-image">
-                        <div class="dropdown-item-text">
-                            Android Utility Pack
-                            <span class="dropdown-item-subtext">Android Plugin</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="dropdown-item" href="../../android-native/sensors/overview.html">
-                    <div class="dropdown-item-content">
-                        <img src="../../../images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
-                            class="dropdown-item-image">
-                        <div class="dropdown-item-text">
-                            Android Sensors
-                            <span class="dropdown-item-subtext">Android Plugin</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="dropdown-item" href="../../android-native/notifications/overview.html">
-                    <div class="dropdown-item-content">
-                        <img src="../../../images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Notifications"
-                            class="dropdown-item-image">
-                        <div class="dropdown-item-text">
-                            Android Notifications
-                            <span class="dropdown-item-subtext">Android Plugin</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
                 <a class="dropdown-item" href="../../advertising/admob/overview.html">
                     <div class="dropdown-item-content">
                         <img src="../../../images/Admob/Admob_Plugin_Logo.png" alt="Advertising"
@@ -475,6 +491,18 @@ if (docsNavBar) {
                         <div class="dropdown-item-text">
                             Admob Ads
                             <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="../../general/login-rewards/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="../../../images/LoginRewards/LoginRewards_Plugin_Logo.png" alt="Rewards"
+                            class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Login Rewards
+                            <span class="dropdown-item-subtext">General Plugin</span>
                         </div>
                     </div>
                 </a>
@@ -648,6 +676,57 @@ if (rootNavBar) {
             </li>
           </ul>
         </li>
+        <li class="dropdown-toggle dropdown-submenu">
+                <a class="dropdown-item" href="plugins/android-native/utility-pack/overview.html">
+                    <div class="dropdown-item-content">
+                        <img src="./images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png" alt="AUP"
+                            class="dropdown-item-image">
+                        <div class="dropdown-item-text">
+                            Android Utility Pack
+                            <span class="dropdown-item-subtext">Android Plugin</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="submenu-overlay"></div>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a class="dropdown-item" href="plugins/android-native/utility-pack/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="./images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png" alt="AUP"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Android Utility Pack
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="plugins/android-native/sensors/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="./images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Android Sensors
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="plugins/android-native/notifications/overview.html">
+                            <div class="dropdown-item-content">
+                                <img src="./images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Notifications"
+                                    class="dropdown-item-image">
+                                <div class="dropdown-item-text">
+                                    Android Notifications
+                                    <span class="dropdown-item-subtext">Android Plugin</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         <li>
           <a class="dropdown-item" href="plugins/google-play-services/in-app-reviews/overview.html">
               <div class="dropdown-item-content">
@@ -672,42 +751,6 @@ if (rootNavBar) {
           </a>
         </li>
         <li>
-          <a class="dropdown-item" href="plugins/android-native/utility-pack/overview.html">
-              <div class="dropdown-item-content">
-                  <img src="./images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png" alt="AUP"
-                      class="dropdown-item-image">
-                  <div class="dropdown-item-text">
-                      Android Utility Pack
-                      <span class="dropdown-item-subtext">Android Plugin</span>
-                  </div>
-              </div>
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="plugins/android-native/sensors/overview.html">
-              <div class="dropdown-item-content">
-                  <img src="./images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors"
-                      class="dropdown-item-image">
-                  <div class="dropdown-item-text">
-                      Android Sensors
-                      <span class="dropdown-item-subtext">Android Plugin</span>
-                  </div>
-              </div>
-          </a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="plugins/android-native/notifications/overview.html">
-                <div class="dropdown-item-content">
-                    <img src="./images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Notifications"
-                        class="dropdown-item-image">
-                    <div class="dropdown-item-text">
-                        Android Notifications
-                        <span class="dropdown-item-subtext">Android Plugin</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li>
             <a class="dropdown-item" href="plugins/advertising/admob/overview.html">
                 <div class="dropdown-item-content">
                     <img src="./images/Admob/Admob_Plugin_Logo.png" alt="Advertising"
@@ -715,6 +758,18 @@ if (rootNavBar) {
                     <div class="dropdown-item-text">
                         Admob Ads
                         <span class="dropdown-item-subtext">Android Plugin</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="plugins/general/login-rewards/overview.html">
+                <div class="dropdown-item-content">
+                    <img src="./images/LoginRewards/LoginRewards_Plugin_Logo.png" alt="Rewards"
+                        class="dropdown-item-image">
+                    <div class="dropdown-item-text">
+                        Login Rewards
+                        <span class="dropdown-item-subtext">General Plugin</span>
                     </div>
                 </div>
             </a>

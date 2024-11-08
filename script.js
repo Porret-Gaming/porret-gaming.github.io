@@ -510,10 +510,10 @@ if (docsNavBar) {
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../../../contact.html">Contact</a>
-    </li>
-    <li class="nav-item" style="padding-left: 18px">
         <a class="nav-link" href="../../release/notes/porret_gaming.html">Release Notes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="../../../FAQ.html">FAQ</a>
     </li>
 </ul>
     `;
@@ -777,10 +777,10 @@ if (rootNavBar) {
       </ul>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="./contact.html">Contact</a>
-    </li>
-    <li class="nav-item" style="padding-left: 18px">
         <a class="nav-link" href="plugins/release/notes/porret_gaming.html">Release Notes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="./faq.html">FAQ</a>
     </li>
   </ul>
     `;

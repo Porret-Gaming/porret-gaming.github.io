@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="dlNBu8NsYLxnSggBKxQuIAh92PmPK5p_zQ1dF7BVWkc" />
+    <title>Porret Gaming | FAQ</title>
+    <link rel="icon" type="image/png" href="images/PorretGaming_Logo_Cut.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PNJQ6P759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PNJQ6P759');
+</script>
+<body class="documentation-body">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/PorretGaming_Logo_Cut.png" alt="Logo" style="width: 40px; max-height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="root-navbar"></div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left: 7px">
+            <button class="mobile-button"></button>
+            <!-- Side Navigation Bar -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block sidebar sidebar-custom">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item" style="align-self: center;">
+                            <a class="nav-link disabled" style="font-size: 22px; padding-top: 0px; padding-bottom: 0px">Plugin Filters</a>
+                        </li>
+                        <hr style="margin-top: 4px"/>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="AAP" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/Admob/Admob_Plugin_Logo.png" alt="Advertising" class="dropdown-item-image">
+                                Advanced Ads Pro
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="ANS" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/AndroidSensors/Android_Sensors_Plugin_Logo.png" alt="Android Sensors" class="dropdown-item-image">
+                                Android Sensors
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="AUP" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png" alt="Android Utility Pack" class="dropdown-item-image">
+                                Android Utility Pack
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="ANN" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/AndroidNotifications/AdvancedNotifications_Plugin_Logo.png" alt="Android Sensors" class="dropdown-item-image">
+                                Android Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="BLU" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing" class="dropdown-item-image">
+                                Billing Library Update
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="PADP" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery" class="dropdown-item-image">
+                                Play: Asset Delivery Pro
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="PAD" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/AssetDelivery/AssetDelivery_Plugin_Logo.png" alt="Google Play Asset Delivery" class="dropdown-item-image">
+                                Play: Asset Delivery
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="PBS" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png" alt="Google Play Base Services" class="dropdown-item-image">
+                                Play: Base Services
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="PSB" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/Billing/GooglePlay_Billing_Plugin_Logo.png" alt="Google Play Billing" class="dropdown-item-image">
+                                Play: Billing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="PSE" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/Events/GooglePlay_Events_Plugin_Logo.png" alt="Google Play Events" class="dropdown-item-image">
+                                Play: Events
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="PSR" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/InAppReviews/GooglePlay_Reviews_Plugin_Logo.png" alt="Google Play Reviews" class="dropdown-item-image">
+                                Play: Reviews
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="PSG" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png" alt="Google Play Saved Games" class="dropdown-item-image">
+                                Play: Saved Games
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="PSU" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/InAppUpdates/GooglePlay_InAppUpdates_Plugin_Logo.png" alt="Google Play Updates" class="dropdown-item-image">
+                                Play: Updates
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link inactive" id="LGR" onclick="toggleActive(this)" style="padding-bottom: 0; padding-top: 0">
+                                <img src="images/LoginRewards/LoginRewards_Plugin_Logo.png" alt="Login Rewards" class="dropdown-item-image">
+                                Login Rewards
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="container border-bottom"
+                    style="margin-left: 0px; padding-left: 0px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Frequently Asked Questions</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="info" style="margin-top: 20px; margin-bottom: 20px">
+                                <p class="content">
+                                    Here you can find frequently asked questions about all the plugins. As time goes on, more will be added.
+                                    Simply select which plugins you use on the left and their corresponding questions will pop up for you to look into.
+                                </p>
+                                <p class="content" style="margin-bottom: 0rem;">
+                                    If you cant find your question, feel free to join our Discord to the right and open a new question!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-2" style="margin-top: 21px; padding-bottom: 0px;">
+                            <a href="https://discord.gg/GgtddXNYRN" target="_blank" class="text-decoration-none">
+                                <div class="card text-center card-custom discord-color" style="box-shadow: 0 0 15px rgb(114,137,218); border-radius: 30px;">
+                                    <img src="images/general/Discord.png" class="mx-auto d-block" style="width: 60%; padding-top: 10px; padding-bottom: 10px;" alt="...">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-card" id="AUP1" data-product-keys="AUP" style="padding-bottom: 10px; display: none;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" src="images/AndroidUtilityPack/UtilityPack_Plugin_Logo.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">Error: Cannot Find Symbol 'TIRAMISU'</div>
+                                        <div class="news-sub-title">Android Utility Pack</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When you attempt to package your application and you get the following error:
+                                                </p>
+                                                <div style="display: flex; justify-content: center; align-items: center; width: 100%; padding-bottom: 15px;">
+                                                    <img src="images/FAQ/UtlitiyPack_CannotFindSymbol.png" style="max-width: 90%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+                                                </div>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>Ensure you have followed the plugins <a href="plugins/android-native/utility-pack/getting_started.html?utm_source=FAQ">Getting Started Guide</a></li>
+                                                    <li>Download at least Android SDK 33 (Google Play Console may require a higher SDK)</li>
+                                                    <li>Navigate to <span class="code">Project Settings</span> / <span class="code">Platforms</span> / <span class="code">Android SDK</span></li>
+                                                    <li>Update <span class="code">SDK API Level</span> to <span class="code">android-&lt;X&gt;</span> where &lt;X&gt; is the SDK version you installed, eg. <span class="code">android-33</span></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="PB1" data-product-keys="PBS" style="padding-bottom: 10px; display: none;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" src="images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">An error occured attempting to retrieve Google Sign In Account from activity intent</div>
+                                        <div class="news-sub-title">Play Base Services V2</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When you attempt to login to your Google Account using the <span class="code">Launch Google Sign In</span> blueprint node, the failure delegate gets triggered with the following error:
+                                                </p>
+                                                <div class="content" style="padding-left: 30px; padding-bottom: 20px">
+                                                    <span style="font-weight: 450; color: red;">An error occured attempting to retrieve Google Sign In Account from activity intent</span>
+                                                </div>
+                                                <p class="content">
+                                                    This means that your Android application failed to authenticate with your Google Play Cloud project and there is some misconfiguration in the Google Play Console and/or your Google Cloud Project.
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Double Check the Following:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>You have followed the <a href="plugins/google-play-services/base-services/getting_started.html?utm_source=FAQ">Getting Started Guide</a> for the plugin</li>
+                                                    <li>You are using the <span class="code">SHA-1 key</span> from your <span style="font-weight: 500">App signing key certificate</span> in the Google Play Console for your Android Credential</li>
+                                                    <li>There are no spaces before or after your <span class="code">SHA-1 key</span>, <span class="code">Package Name</span> and <span class="code">Application Name</span> in your your Android Credential</li>
+                                                    <li>You have an OAuth consent screen setup</li>
+                                                    <li>You are registered as a test user for your OAuth Consent Screen and Google Play Console</li>
+                                                    <li>If you have made any changes to this configuration, they may take a while to propogate through</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="B1" data-product-keys="PSB,BLU" style="padding-bottom: 10px; display: none;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" src="images/Billing/GooglePlay_Billing_Plugin_Logo.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">Your App Currently uses Play Billing Library Version 4.0.0 or AIDL</div>
+                                        <div class="news-sub-title">Play Services: Billing / Billing Library Update</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When you still get errors that the billing library version is out of date after installing one of my billing plugins.
+                                                    You would see a simmilar error to the below when uploading your packaged bundle to the Google Play Console. The versions numbers below may change in your error over time.
+                                                </p>
+                                                <div style="display: flex; justify-content: center; align-items: center; width: 100%; padding-bottom: 15px;">
+                                                    <img src="images/FAQ/OldBillingLibraryVersion.png" style="max-width: 90%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+                                                </div>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>Ensure you have followed the Getting Started Guide for the respective plugin</li>
+                                                    <li>Ensure you have disabled any other billing plugins</li>
+                                                    <li>Try upload again</li>
+                                                    <li>If issue persists and you are using a Blueprint only project, convert it to a c++ project</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="B2" data-product-keys="PSB" style="padding-bottom: 10px; display: none;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" src="images/Billing/GooglePlay_Billing_Plugin_Logo.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">How do I Check if Someone has Purchased a Non-Consumable Item?</div>
+                                        <div class="news-sub-title">Play Services: Billing</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    Lets say you have a product for sale which you want to check if it has been purchased and activate / deactivate a feature in response to that.
+                                                    A common example of this is a "no-ads" product that can be purchased.
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>Ensure your purchase is <a href="plugins/google-play-services/billing/configure_purchase_handling.html?utm_source=FAQ">treated as a non-consumable product</a>, so that it can only be purchased once</li>
+                                                    <li>When you want to check if the purchase has been made, use the <a href="plugins/google-play-services/billing/query_purchases.html">Query Purchases Blueprint Node</a></li>
+                                                    <li>Enable / Disable ads depending on the result of the above query</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="A1" data-product-keys="ALL" style="padding-bottom: 10px;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" style="padding: 7px" src="images/PorretGaming_Logo_Cut.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">Packaging Error: *.uproject does not look like uproject file but no targets have been found!</div>
+                                        <div class="news-sub-title">General</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When packaging your application and you get the error:</br>
+                                                    <span style="font-weight: 450; color: red; padding-left: 30px;"> Error: *.uproject does not look like uproject file but no targets have been found!</span>
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>If you are using a Blueprint only project, convert it to a c++ project</li>
+                                                    <li>You should be prompted to install Visual Studio</li>
+                                                    <li>If not, you should install Visual Studio manually</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="A2" data-product-keys="ALL" style="padding-bottom: 10px;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" style="padding: 7px" src="images/PorretGaming_Logo_Cut.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">My Mobile Application is Crashing!</div>
+                                        <div class="news-sub-title">General</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When you open your application or when calling a specific blueprint node, if there is a crash, that means something is seriously wrong.
+                                                    In order to find the cause, you will need to retreive the logs from your device which will provide the cause of the crash.
+                                                </p>
+                                                <p class="content">
+                                                    The below solution takes you through how to use <span style="font-weight: 500">adb</span> to retrieve the logs.
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>If you have Android Studio, you should have adb installed by default. Confirm this by running <span class="code">adb</span> in a command prompt.</li>
+                                                    <li>Connect your device to your computer and run <span class="code">adb devices</span> to ensure you can see your device.</li>
+                                                    <li>If you cannot see your device, you may need to enable developer mode on your device and trust your PC</li>
+                                                    <li>Run <span class="code">adb logcat -c</span> to clear all current logs on your device to make room for new logs</li>
+                                                    <li>Run <span class="code">adb logcat</span> to begin streaming logs</li>
+                                                    <li>Open your application and trigger the crash</li>
+                                                    <li>Go back to your console and click <span class="code">CNTRL + C</span> to stop streaming logs</li>
+                                                    <li>The logs printed out should now contain information regarding your crash</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="A3" data-product-keys="ALL" style="padding-bottom: 10px;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" style="padding: 7px" src="images/PorretGaming_Logo_Cut.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">Failed to get default debug keystore location!</div>
+                                        <div class="news-sub-title">General</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When you package your application and you get a failure regarding the default debug keystore location as seen below.
+                                                </p>
+                                                <div style="display: flex; justify-content: center; align-items: center; width: 100%; padding-bottom: 15px;">
+                                                    <img src="images/FAQ/default_debug_keystore_location.png" style="max-width: 90%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+                                                </div>
+                                                <p class="content">
+                                                    This is related to your Android Installation and not specifically related to a plugin.
+                                                    Unfortunately, there can be many reasons as to why this can occur and can occur even after a random PC reboot. The below are some things you can try.
+                                                    Its always a good idea to make a backup of your project just in case before making any changes.
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Potential Solutions:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>Ensure your keystore is setup in Project Settings and stored in <span class="code">&lt;PROJECT_NAME&gt;/Build/Android</span></li>
+                                                    <li>Ensure your project is setup for shipping / distribution</li>
+                                                    <li>Try Updating Android Studio</li>
+                                                    <li>Add a <span class="code">FOLDER_DOT_ANDROID</span> environment variable and set it to <span class="code">.android</span></li>
+                                                    <li>Ensure you have a <span class="code">debug.keystore</span> in your <span class="code">.android</span> folder located at <span class="code">C:/Users/&lt;User&gt;/.android</span></li>
+                                                    <li>Ensure you have a <span class="code">debug.keystore</span> in your <span class="code">.android</span> folder located at <span class="code">&lt;Android SDK Installation&gt;/.android</span></li>
+                                                    <li>Add <span class="code">ANDROID_HOME</span> + <span class="code">ANDROID_SDK_HOME</span> environment variables and set them to the location of your Android Installation</li>
+                                                    <li>Delete your <span class="code">Binaries</span>, <span class="code">Intermediate</span>, <span class="code">Build</span>, <span class="code">DerivedDataCache</span>, <span class="code">Saved</span> and <span class="code">Script</span> folders then reopen your project</li>
+                                                    <li>Restart your PC</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="A4" data-product-keys="ALL" style="padding-bottom: 10px;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" style="padding: 7px" src="images/PorretGaming_Logo_Cut.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">Exception in phase 'semantic analysis' in source unit '_BuildScript_'</div>
+                                        <div class="news-sub-title">General</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When you package your application and you get a failure regarding the 'semantic analysis'. </br>
+                                                    <span style="font-weight: 450; color: red; padding-left: 30px;">BUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 67</span>
+                                                </p>
+                                                <p class="content">
+                                                    This is related to the compatiblity of your Gradle version and your Java version.
+                                                    You can take a look at the <a href="https://docs.gradle.org/current/userguide/compatibility.html" target="_blank">Official Gradle Java Runtime Compatibility Matrix</a> to determine which Java version you should have installed.
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>Determine what java version you are using to package your project</li>
+                                                    <li>Upgrade/downgrade your java version to be compatible</li>
+                                                    <li>Try Package again</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="A5" data-product-keys="ALL" style="padding-bottom: 10px;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" style="padding: 7px" src="images/PorretGaming_Logo_Cut.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">android:exported needs to be explicitly specified</div>
+                                        <div class="news-sub-title">General / UE4</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When you package your application and you get a failure regarding the 'android:exported'. </br>
+                                                </p>
+                                                <div class="content" style="padding-left: 30px; padding-bottom: 20px">
+                                                    <span style="font-weight: 450; color: red;">android:exported needs to be explicitly specified for element <activity#com.epicgames.ue4.GameActivity>. Apps targeting Android 12 and higher are required to specify an explicit value for `android:exported` when the corresponding component has an intent filter defined. See https://developer.android.com/guide/topics/
+                                                        manifest/activity-element#exported for details.</span>
+                                                </div>
+                                                <p class="content">
+                                                    Unreal Engine 4 did not update to comply with new Android 12 standards and requires you to specifically specify android:exported.
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>Navigate to <span class="code">Project Settings / Platforms / Android / Advanced APK Packaging</span></li>
+                                                    <li>Add <span class="code">android:exported="true"</span> to your <span class="code">UE4.GameActivity &lt;activity&gt; node</span> in Project Settings</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="A6" data-product-keys="ALL" style="padding-bottom: 10px;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" style="padding: 7px" src="images/PorretGaming_Logo_Cut.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">android:exported is a duplicate attribute name</div>
+                                        <div class="news-sub-title">General / UE5</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    When you package your application and you get a failure regarding the 'android:exported'. </br>
+                                                </p>
+                                                <div class="content" style="padding-left: 30px; padding-bottom: 20px">
+                                                    <span style="font-weight: 450; color: red;">AndroidManifest.xml is invalid System.Xml.XmlException: 'android:exported' is a duplicate attribute name</span>
+                                                </div>
+                                                <p class="content">
+                                                    Unreal Engine 5 now complies with Android 12 standards and automatically adds this for you, so there is no longer a need to manually add it in project settings.
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>Navigate to <span class="code">Project Settings / Platforms / Android / Advanced APK Packaging</span></li>
+                                                    <li>Remove <span class="code">android:exported="true"</span> to your <span class="code">UE4.GameActivity &lt;activity&gt; node</span> in Project Settings</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card" id="A7" data-product-keys="ALL" style="padding-bottom: 10px;">
+                        <div class="news-container">
+                            <div class="news-group-item">
+                                <div class="row">
+                                    <div class="col-auto" style="padding-right: 0">
+                                        <img class="news-badge" style="padding: 7px" src="images/PorretGaming_Logo_Cut.png">
+                                    </div>
+                                    <div class="col-9" style="padding-left: 10px">
+                                        <div class="news-title">Delegates are not being Triggered</div>
+                                        <div class="news-sub-title">General</div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="news-info">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="news-info-details" style="font-weight: 500; width: 100%;">
+                                        <div class="container" style="margin: 0 auto; padding: 0; max-width: 100%;">
+                                            <div class="faq-info" style="text-align: left;">
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Problem Definition:</span>
+                                                </p>
+                                                <p class="content">
+                                                    After setting up your blueprint nodes, your OnSuccess / OnFailure delegates are not being triggered.
+                                                </p>
+                                                <p class="content" style="margin-bottom: 0rem;">
+                                                    <span style="font-weight: 500">Solution:</span>
+                                                </p>
+                                                <ol class="step-list">
+                                                    <li>Ensure you are running your tests on an actual mobile device</li>
+                                                    <li>If running on your device directly doesnt work, try downloading from an internal testing branch in Google Play</li>
+                                                    <li>Billing or Google Play Services: you may be required to have downloaded your application from the Google Play Store</li>
+                                                    <li>Billing or Google Play Services: you may get inconsistant results when the version on the store differs to the one on your device</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="margin-bottom: 400px">
+                </div>
+            </main>
+            
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img src="images/PorretGaming_Logo_Cut.png" alt="Logo"
+                        style="width: 80px; max-height: 100%;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <a href="index.html" class="text-light">Home</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="contact.html" class="text-light">Contact</a>
+                    <span style="color: #2b1c07">|</span>
+                    <a href="privacy_policy.html" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 5px">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <hr style="border-color: #ff6000;">
+                </div>
+            </div>
+            <div class="bg-dark py-2">
+                <div class="container text-center">
+                    <p class="text-light mb-0">Copyright &copy; 2024
+                        <a href="index.html" class="text-light">Porret Gaming</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+    <script>
+        // Get all news cards (assuming the same `.news-card` class is used in FAQ.html)
+        const articles = document.querySelectorAll('.news-card');
+
+        // Add an additional click event listener to each news card
+        articles.forEach((card) => {
+            card.addEventListener('click', () => {
+                console.log(`Additional click event in FAQ.html for news card with ID ${card.id}!`);
+                
+                const url = new URL(window.location);
+                const expandedParam = url.searchParams.get('expanded') || '';
+                
+                let expandedIds = expandedParam ? expandedParam.split(',') : [];
+                
+                if (card.classList.contains("expanded")) {
+                    // Append the current card.id if it’s not already in the list
+                    if (!expandedIds.includes(card.id)) {
+                        expandedIds.push(card.id);
+                    }
+                } else {
+                    // Remove the current card.id from the list
+                    expandedIds = expandedIds.filter(id => id !== card.id);
+                }
+
+                // Update the 'expanded' query parameter with the modified list
+                if (expandedIds.length > 0) {
+                    url.searchParams.set('expanded', expandedIds.join(','));
+                } else {
+                    url.searchParams.delete('expanded');
+                }
+
+                // Push the updated URL to the browser history
+                window.history.pushState({}, '', url);
+            });
+        });
+
+
+        const allProducts = new Set([
+            'AAP',  // Advanced Ads Pro
+            'ANS',  // Android Sensors
+            'AUP',  // Android Utility Pack
+            'ANN',  // Android Notifications
+            'BLU',  // Billing Library Update
+            'PSB',  // Play Services Billing
+            'PADP', // Play Asset Delivery Pro
+            'PAD',  // Play Asset Delivery
+            'PBS',  // Play Base Services
+            'PSG',  // Play Saved Games
+            'PSE',  // Play Services Events
+            'PSR',  // Play Review
+            'PSU',  // Play Updates
+            'LGR'   // Login Rewards
+        ]);
+        const activeProducts = new Set();
+
+        function filterArticlesByProductKey(userKeys) {
+            const articles = document.querySelectorAll('.news-card');
+
+            articles.forEach(article => {
+                const productKeys = article.getAttribute('data-product-keys').split(',');
+
+                if (!productKeys.includes('ALL')) {
+                    // Check if any user key matches article's keys
+                    const isVisible = Array.from(userKeys).some(key => productKeys.includes(key)) ;
+                    // Toggle visibility based on match
+                    article.style.display = isVisible ? 'block' : 'none';
+                }
+                
+            });
+
+            updateURLWithFilters(userKeys);
+        }
+
+        function toggleActive(element) {
+            // Toggle between "active" and "inactive" classes
+            if (element.classList.contains("inactive")) {
+                element.classList.remove("inactive");
+                element.classList.add("active");
+                activeProducts.add(element.id);
+            } else {
+                element.classList.remove("active");
+                element.classList.add("inactive");
+                activeProducts.delete(element.id);
+            }
+
+            filterArticlesByProductKey(activeProducts);
+        }
+
+        function updateURLWithFilters(filters) {
+            const url = new URL(window.location);
+            if (filters.size > 0) {
+                url.searchParams.set('filters', Array.from(filters).join(','));
+            } else {
+                url.searchParams.delete('filters');
+            }
+            history.replaceState(null, '', url);
+        }
+
+        function applyFiltersFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filters = urlParams.get('filters');
+
+            if (filters) {
+                const filterKeys = filters.split(',');
+
+                filterKeys.forEach(productKey => {
+                    // Find the <a> element with the ID matching the product key
+                    const element = document.getElementById(productKey);
+                    if (element) {
+                        toggleActive(element);
+                    }
+                });
+            }
+
+            const expandedArticles = urlParams.get('expanded');
+            if (expandedArticles) {
+                const expandedArticlesKeys = expandedArticles.split(',');
+                expandedArticlesKeys.forEach(articleKey => {
+                    const element = document.getElementById(articleKey);
+                    element.classList.add("expanded");
+                });
+            }
+        }
+
+        // Initialize filters from URL on page load
+        document.addEventListener("DOMContentLoaded", applyFiltersFromURL);
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+</body>

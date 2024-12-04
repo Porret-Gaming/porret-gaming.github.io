@@ -79,6 +79,33 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                  <img style="padding: 6px;" class="news-badge" src="../../../images/PorretGaming_Logo_Cut.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">UE 5.5 Plugin Updates</div>
+                  <div class="news-sub-title">2024-12-04</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              UE 5.5 Plugin Updates
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>I am working on updating all plugins</li>
+                  <li>Join Discord for further updates</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/release/notes/porret_gaming.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img class="news-badge" src="../../../images/LoginRewards/LoginRewards_Plugin_Logo.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -209,34 +236,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/google-play-services/saved-games/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/Billing/GooglePlay_Billing_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-08-20</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Both Billing Plugins
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Upgrade to billing library 7.0.0</li>
-                  <li>Update code to be compatible</li>
-                  <li>Improve Logging</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/billing/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

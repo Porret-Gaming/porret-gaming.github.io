@@ -194,6 +194,26 @@
                                     <img style="max-width: 80%" src="../../../images/SavedGames/SavedGames_Plugin_Config.png">
                                 </div>
                             </div>
+                            <p class="content" style="padding-top: 10px; padding-left: 10px">
+                                <span style="font-weight: 500">NOTE Unreal Engine 5.4 and above:</span>
+                            </p>
+                            <p class="content" style="padding-left: 10px">
+                                With the release of Unreal Engine 5.5 (and since then 5.4), they removed the <span style="font-weight: 500">"Enable Snapshot Support"</span> checkbox in the Project Settings.
+                                As a result, you will have to do it manually yourself as follows:
+                                <div style="margin-left: 30px;">
+                                    <o>
+                                        <li>Ensure the Unreal Engine <span style="font-weight: 500">Online Subsystem Google</span> plugin is enabled.</li>
+                                        <li>Navigate to <span class="code">&lt;YOUR_UNREAL_ENGINE_5.4_INSTALLATION&gt;\Engine\Config\BaseEngine.ini</span></li>
+                                        <li>Open this file and locate the line <span class="code">[OnlineSubsystemGoogle.OnlineIdentityGoogle]</span> line</li>
+                                        <li>Below this line put <span class="code">+ScopeFields="https://www.googleapis.com/auth/drive.appdata"</span></li>
+                                    </o>
+                                </div>
+                            </p>
+                            <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img style="max-width: 80%" src="../../../images/SavedGames/ScopeFields_Configuration.png">
+                                </div>
+                            </div>
                             <li class="list-group-item">
                                 Login to Google Play Services
                             </li>

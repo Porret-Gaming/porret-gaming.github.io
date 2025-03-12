@@ -79,6 +79,34 @@ if (news) {
       <div class="news-group-item">
           <div class="row">
               <div class="col-auto" style="padding-right: 0">
+                <img class="news-badge" src="../../../images/PlayBaseServices/GooglePlay_BaseServices_Plugin_Logo.png">
+              </div>
+              <div class="col" style="padding-left: 10px">
+                  <div class="news-title">Release Notes</div>
+                  <div class="news-sub-title">2025-03-12</div>
+              </div>
+          </div>
+      </div>
+      <div class="news-info">
+          <div class="news-info-title">
+              Play Base Services V2
+          </div>
+          <div class="news-info-details">
+              <ul>
+                  <li>New BP node to Get Current Player</li>
+                  <li>Play Games Player Information</li>
+                  <li>Documentation Updated</li>
+              </ul>
+          </div>
+          <a class="btn-learn-more" href="../../../plugins/release/notes/play_base_services.html?utm_source=News">Learn more</a>
+      </div>
+  </div>
+</div>
+<div class="news-card">
+  <div class="news-container">
+      <div class="news-group-item">
+          <div class="row">
+              <div class="col-auto" style="padding-right: 0">
                   <img style="padding: 6px;" class="news-badge" src="../../../images/PorretGaming_Logo_Cut.png">
               </div>
               <div class="col" style="padding-left: 10px">
@@ -208,34 +236,6 @@ if (news) {
               </ul>
           </div>
           <a class="btn-learn-more" href="../../../plugins/advertising/admob/overview.html?utm_source=News">Learn more</a>
-      </div>
-  </div>
-</div>
-<div class="news-card">
-  <div class="news-container">
-      <div class="news-group-item">
-          <div class="row">
-              <div class="col-auto" style="padding-right: 0">
-                  <img class="news-badge" src="../../../images/SavedGames/GooglePlay_SavedGames_Plugin_Logo.png">
-              </div>
-              <div class="col" style="padding-left: 10px">
-                  <div class="news-title">Release Notes</div>
-                  <div class="news-sub-title">2024-08-23</div>
-              </div>
-          </div>
-      </div>
-      <div class="news-info">
-          <div class="news-info-title">
-              Saved Games & Events Plugin
-          </div>
-          <div class="news-info-details">
-              <ul>
-                  <li>Remove detection of Admob plugin</li>
-                  <li>Only detects Play Base Services V2</li>
-                  <li>Improve Logging</li>
-              </ul>
-          </div>
-          <a class="btn-learn-more" href="../../../plugins/google-play-services/saved-games/overview.html?utm_source=News">Learn more</a>
       </div>
   </div>
 </div>

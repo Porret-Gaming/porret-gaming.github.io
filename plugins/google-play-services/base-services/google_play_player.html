@@ -46,7 +46,7 @@
                             <a class="nav-link disabled">Developer Guidelines</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="overview.html">
+                            <a class="nav-link inactive" href="overview.html">
                                 Overview
                             </a>
                         </li>
@@ -112,7 +112,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="google_play_player.html">
+                            <a class="nav-link active" href="google_play_player.html">
                                 Google Play Games Player
                             </a>
                         </li>
@@ -137,88 +137,111 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
-                <div class="container border-bottom"
-                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Google Play Base Services V2 Overview</h1>
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom;">
+                    <h1 class="h2 text-white-shadow">Google Play Games Player</h1>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px">
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
                         <p class="content">
-                            <b>The Google Play Base Services Version 2</b>
-                        </p>
-                        <p class="content">
-                            Google Play Game Services include many amazing features for you to make use of to improve your game.
-                            Below you can find a list of services provided by Google Play Games with the extra services sold seperately.
-                        </p>
-                        <ul>
-                            <li class="blue-diamond">Google Sign-In</li>
-                            <li class="blue-diamond">Play Games Sign-In</li>
-                            <li class="blue-diamond">Achievements</li>
-                            <li class="blue-diamond">Leaderboards</li>
-                            <li class="blue-diamond">Players</li>
-                            <li class="blue-diamond">Saved Games [<a href="../saved-games/overview.html">Sold Seperately</a>]</li>
-                            <li class="blue-diamond">Events [<a href="../events/overview.html">Sold Seperately</a>]</li>
-                            <li class="blue-diamond">Admob Advertising [<a href="../../advertising/admob/overview.html">Sold Seperately</a>]</li>
-                        </ul>
-                        <p class="content" style="margin-bottom: 0rem;">
-                            These features solve many problems encountered during mobile Android game development for you.
-                        </p>
-                    </div>
-                    <div class="info" style="margin-top: 20px">
-                        <p class="content">
-                            <b>The Unreal Engine Plugin</b>
-                        </p>
-                        <p class="content">
-                            Introducing the Unreal Engine plugin for the Google Play Games service, a powerful tool that brings the features of <span style="font-weight: 500">Play Games Version 2</span> directly to your Unreal Engine projects.
-                            This plugin is designed to expose the Games default service's functionality to blueprint scripting, simplifying the integration process for game developers.
-                        </p>
-                        <p class="content">
-                            With an intuitive and user-friendly interface seamlessly integrated into the Unreal Engine editor, connecting to the service becomes a breeze.
-                            Whether you're a seasoned Unreal Engine developer or new to the platform, our plugin empowers you to easily perform all the default features provided by the Play Games V2 Library, enhancing the capabilities of your game.
-                        </p>
-                        <p class="content">
-                            When making use of this plugin, you must not use the built in Play Games blueprint nodes provided in Unreal Engine.
-                            All functionality has been replaced and enhanced by this plugin.
-                        </p>
-                        <p class="content">
-                            This plugin is <span style="font-weight: 500;">compatible with all our other plugins</span>, specifically our <a href="../../advertising/admob/overview.html">Advanced Admob Advertising Plugin</a> and our extended Google Play Games services (<a href="../saved-games/overview.html">Saved Games</a> and <a href="../events/overview.html">Events</a>).
+                            The Google Play Games Player struct is designed to mimic the object almost exactly as provided by the Google Play Service SDK.
+                            It contains various information about the Play Games user profile.
                         </p>
                         <p class="content" style="margin-bottom: 0rem;">
-                            Here is a summary of all the blueprint nodes the Play Base Services plugin has to offer.
+                            This is retrieved using the <a href="players.html">Google Play Get Current Player</a> blueprint node.
                         </p>
                     </div>
-                    <div class="container"
-                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
-                        <h1 class="list-group-item">Google Sign-In</h1>
-                    </div>
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/PlayBaseServices/Google_BlueprintNodes.png">
-                    </div>
-                    <div class="container"
-                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
-                        <h1 class="list-group-item">Google Play Games Sign In</h1>
-                    </div>
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/PlayBaseServices/GooglePlayGames_BlueprintNodes.png">
-                    </div>
-                    <div class="container"
-                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
-                        <h1 class="list-group-item">Achievements</h1>
-                    </div>
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/PlayBaseServices/Achivements_BlueprintNodes.png">
-                    </div>
-                    <div class="container"
-                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
-                        <h1 class="list-group-item">Leaderboards</h1>
-                    </div>
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/PlayBaseServices/Leaderboard_BlueprintNodes.png" style="width: 95%">
-                    </div>
-                    
-                    <div style="margin-bottom: 200px">
-                    </div>
-                    
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">FGooglePlayGamesPlayer</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-top: 20px; padding-left: 0px; overflow-x: auto;">
+                    <table class="table table-striped table-bordered table-documentation"
+                        style="margin-bottom: 0; box-shadow: 1px 1px 3px #ccc;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BannerImageLandscapeURI</td>
+                                <td>FString</td>
+                                <td>
+                                    The URI for loading this player's landscape banner image. Returns null if the player has no landscape banner image.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BannerImagePortraitURI</td>
+                                <td>FString</td>
+                                <td>
+                                    The URI for loading this player's portrait banner image. Returns null if the player has no portrait banner image.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DisplayName</td>
+                                <td>FString</td>
+                                <td>
+                                    The display name for this player.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>HighRestImageURI</td>
+                                <td>FString</td>
+                                <td>
+                                    The URI for loading this player's hi-res profile image. Returns null if the player has no profile image.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IconImageURI</td>
+                                <td>FString</td>
+                                <td>
+                                    The URI for loading this player's icon-size profile image. Returns null if the player has no profile image.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PlayerID</td>
+                                <td>FString</td>
+                                <td>
+                                    The ID of this player.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RetrievedTimestamp</td>
+                                <td>int64</td>
+                                <td>
+                                    The timestamp at which this player record was last updated locally.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Title</td>
+                                <td>FString</td>
+                                <td style="min-width: 300px">
+                                    The title of the player. This is based on the player's gameplay activity in apps using Google Play Games services.
+                                    Note that not all players have titles, and that a player's title may change over time.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>bHasHighResImage</td>
+                                <td>bool</td>
+                                <td style="min-width: 300px">
+                                    Indicates whether this player has a hi-res profile image to display.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>bHasIconImage</td>
+                                <td>bool</td>
+                                <td style="min-width: 300px">
+                                    Indicates whether this player has an icon-size profile image to display.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="margin-bottom: 300px">
                 </div>
             </main>
             <div class="col-md-3 d-none d-md-block">

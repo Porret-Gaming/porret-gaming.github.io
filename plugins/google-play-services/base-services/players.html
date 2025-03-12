@@ -46,7 +46,7 @@
                             <a class="nav-link disabled">Developer Guidelines</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="overview.html">
+                            <a class="nav-link inactive" href="overview.html">
                                 Overview
                             </a>
                         </li>
@@ -76,7 +76,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="players.html">
+                            <a class="nav-link active" href="players.html">
                                 Players
                             </a>
                         </li>
@@ -137,88 +137,78 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-7 px-4">
-                <div class="container border-bottom"
-                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
-                    <h1 class="h2 text-white-shadow">Google Play Base Services V2 Overview</h1>
+                <div class="container border-bottom" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h2 text-white-shadow">Google Play Players</h1>
                 </div>
-                <div class="container" style="margin-left: 0px; padding-left: 0px">
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
                     <div class="info">
-                        <p class="content">
-                            <b>The Google Play Base Services Version 2</b>
-                        </p>
-                        <p class="content">
-                            Google Play Game Services include many amazing features for you to make use of to improve your game.
-                            Below you can find a list of services provided by Google Play Games with the extra services sold seperately.
-                        </p>
-                        <ul>
-                            <li class="blue-diamond">Google Sign-In</li>
-                            <li class="blue-diamond">Play Games Sign-In</li>
-                            <li class="blue-diamond">Achievements</li>
-                            <li class="blue-diamond">Leaderboards</li>
-                            <li class="blue-diamond">Players</li>
-                            <li class="blue-diamond">Saved Games [<a href="../saved-games/overview.html">Sold Seperately</a>]</li>
-                            <li class="blue-diamond">Events [<a href="../events/overview.html">Sold Seperately</a>]</li>
-                            <li class="blue-diamond">Admob Advertising [<a href="../../advertising/admob/overview.html">Sold Seperately</a>]</li>
-                        </ul>
                         <p class="content" style="margin-bottom: 0rem;">
-                            These features solve many problems encountered during mobile Android game development for you.
+                            This section covers retrieving information about the Google Play Games Player.
                         </p>
                     </div>
-                    <div class="info" style="margin-top: 20px">
-                        <p class="content">
-                            <b>The Unreal Engine Plugin</b>
-                        </p>
-                        <p class="content">
-                            Introducing the Unreal Engine plugin for the Google Play Games service, a powerful tool that brings the features of <span style="font-weight: 500">Play Games Version 2</span> directly to your Unreal Engine projects.
-                            This plugin is designed to expose the Games default service's functionality to blueprint scripting, simplifying the integration process for game developers.
-                        </p>
-                        <p class="content">
-                            With an intuitive and user-friendly interface seamlessly integrated into the Unreal Engine editor, connecting to the service becomes a breeze.
-                            Whether you're a seasoned Unreal Engine developer or new to the platform, our plugin empowers you to easily perform all the default features provided by the Play Games V2 Library, enhancing the capabilities of your game.
-                        </p>
-                        <p class="content">
-                            When making use of this plugin, you must not use the built in Play Games blueprint nodes provided in Unreal Engine.
-                            All functionality has been replaced and enhanced by this plugin.
-                        </p>
-                        <p class="content">
-                            This plugin is <span style="font-weight: 500;">compatible with all our other plugins</span>, specifically our <a href="../../advertising/admob/overview.html">Advanced Admob Advertising Plugin</a> and our extended Google Play Games services (<a href="../saved-games/overview.html">Saved Games</a> and <a href="../events/overview.html">Events</a>).
-                        </p>
+                </div>
+                
+                <div class="container"
+                    style="margin-left: 0px; padding-left: 0px; margin-bottom: 5px; margin-top: 40px; margin-right: 20px; border-top-left-radius: 20px;">
+                    <h1 class="list-group-item">Available Blueprint Nodes</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info">
                         <p class="content" style="margin-bottom: 0rem;">
-                            Here is a summary of all the blueprint nodes the Play Base Services plugin has to offer.
+                            The below blueprint nodes allow you to retrieve information about the currently signed in Google Play Games player.
                         </p>
                     </div>
-                    <div class="container"
-                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
-                        <h1 class="list-group-item">Google Sign-In</h1>
+                </div>
+
+                <div class="container" style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px;">
+                    <h1 class="h3 text-white-shadow">Google Play Get Current Player</h1>
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px;">
+                    <div class="info" style="border-top-left-radius: 20px;">
+                        <p class="content" style="margin-bottom: 0rem;">
+                            This blueprint node retrieves the Player infromation for the currently signed in player.
+                        </p>
                     </div>
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/PlayBaseServices/Google_BlueprintNodes.png">
+                </div>
+                <div class="container" style="margin-left: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 20px">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="../../../images/PlayBaseServices/BPs/PlayBaseServices_BP_GetCurrentPlayer.png">
                     </div>
-                    <div class="container"
-                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
-                        <h1 class="list-group-item">Google Play Games Sign In</h1>
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">1</span>
+                        <div class="info">
+                            <p class="content">
+                                <b>On Success</b>
+                            </p>
+                            <p class="content">
+                                A delegate which produces a <a href="google_play_player.html">Player</a> struct.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/PlayBaseServices/GooglePlayGames_BlueprintNodes.png">
+                </div>
+                <div style="padding-top: 20px">
+                    <div class="container" style="margin-left: 0px; padding-left: 0px; position: relative;">
+                        <span class="badge badge-primary">2</span>
+                        <div class="info" style="border-bottom-left-radius: 20px;">
+                            <p class="content">
+                                <b>On Failure</b>
+                            </p>
+                            <p class="content">
+                                A delegate producing a message describing the failure.
+                            </p>
+                            <p class="content" style="margin-bottom: 0rem;">
+                                You can simply click and drag off this pin to create a custom event.
+                            </p>
+                        </div>
                     </div>
-                    <div class="container"
-                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
-                        <h1 class="list-group-item">Achievements</h1>
-                    </div>
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/PlayBaseServices/Achivements_BlueprintNodes.png">
-                    </div>
-                    <div class="container"
-                        style="margin-left: 0px; padding-left: 0px; margin-bottom: 20px; margin-top: 20px; margin-right: 20px; border-radius: 20px;">
-                        <h1 class="list-group-item">Leaderboards</h1>
-                    </div>
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                        <img src="../../../images/PlayBaseServices/Leaderboard_BlueprintNodes.png" style="width: 95%">
-                    </div>
-                    
-                    <div style="margin-bottom: 200px">
-                    </div>
-                    
+                </div>
+
+                <div style="margin-bottom: 200px">
                 </div>
             </main>
             <div class="col-md-3 d-none d-md-block">
